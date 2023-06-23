@@ -28,6 +28,33 @@
         </div>
     </header>
 
+    <div class="menu_bar">
+        <div class="bg"></div>
+        <menu>
+            <section>
+                <div class="log">
+                    <a href="#"><img src="../img/illust/log01.jpg">login</a>
+                    <span></span>
+                    <a href="#"><img src="../img/illust/log03.jpg">join</a>
+                </div>
+    
+                <a class="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </section>
+    
+            <ul>
+                <li><a href="#">브랜드 소개</a></li>
+                <li><a href="#">매트리스</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+            <img src="../img/illust/si_logo.png">
+        </menu>
+    </div>
 
     <main>
         <article class="spot_1">
@@ -125,13 +152,17 @@
                     안전한 공간을 만들어 갑니다.</h3>
             </div>
             <div class="br_right">
-                <p>BABY + COSMO</p>
-                <p><a>[아이]</a> <a>[우주]</a></p>
-                <a href="#">브랜드소개 보기<img src="../img/illust/view.png"></a>
+                <div>
+                    <p>BABY + COSMO</p>
+                    <p><a>[아이]</a> <a>[우주]</a></p>
+                </div>
+                <span class="br_bt">
+                    <a href="#">브랜드소개 보기<img src="../img/illust/view.png"></a>
+                </span>
             </div>
             <div class="ani">
                 <img class="basmo" src="../img/illust/ma_se02.png">
-                <img class="circle" src="../img/illust/ma_se03.png">
+                <img class="br_cir" src="../img/illust/ma_se03.png">
                 <img class="ob_1" src="../img/illust/ob01.png">
                 <img class="ob_2" src="../img/illust/ob02.png">
                 <img class="ob_3" src="../img/illust/ob03.png">
@@ -140,6 +171,7 @@
 
         <article class="main_ev">
             <h2>바스모가 준비한 이달의 이벤트</h2>
+
             <input id="d" type="radio" name="slide">
             <input id="e" type="radio" name="slide">
             <input id="f" type="radio" name="slide">
@@ -150,13 +182,22 @@
             <label for="f">선택1</label>
             <label for="g">선택1</label>
 
-            <div>
+            <div class="sign">
+                <img src="../img/illust/next01.png">
+                <img src="../img/illust/prev01.png">
+            </div>
+
+            <div class="ev">
                 <figure>
                     <a href="#"><img src="../img/ev/event01.jpg"></a>
                     <a href="#"><img src="../img/ev/event02.jpg"></a>
                     <a href="#"><img src="../img/ev/event03.jpg"></a>
                     <a href="#"><img src="../img/ev/event04.jpg"></a>
                 </figure>
+            </div>
+
+            <div class="ev_bar">
+                <progress value="25" max="100"></progress>
             </div>
         </article>
         
@@ -176,49 +217,70 @@
         </article>
     </main>
     
+
     <footer>
         <section class="ft_left">
-            <img src="">
-            <span>        
-                <a href="#">이용약관</a>
-                <a href="#">개인정보처리방침</a>
-                <a href="#">회사소개</a>
-            </span>
+            <img src="../img/illust/f_logo.png">
             <div>
+                <span>        
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">회사소개</a>
+                </span>
                 <address>
-                    이용약관개인정보처리방침회사소개
-                    상호명 바스모 대표자 임수한 사업자등록번호 389-41-00755 [ 사업자정보 확인 ]<br>
-                    통신판매업신고번호 제2022-경남김해-0641호<br>
-                    개인정보보호책임자 임수한(basmo_official@naver.com)<br>
-                    주소50853 경상남도 김해시 한림면 김해대로 1404 2층
+                    <div class="ad_1">
+                        <a>상호명</a>
+                        <a>바스모</a>
+                        <a>대표자</a>
+                        <a>임수한</a>
+                        <a>사업자등록번호</a>
+                        <a>389-41-00755 [ 사업자정보 확인 ]</a>
+                    </div>
+
+                    <div class="ad_2">
+                        <a>통신판매업신고번호</a>
+                        <a>제2022-경남김해-0641호</a>
+                    </div>
+
+                    <div class="ad_3">
+                        <a>개인정보보호책임자</a>
+                        <a href="#">임수한(basmo_official@naver.com)</a>
+                    </div>
+
+                    <div class="ad_4">
+                        <a>주소</a>
+                        <a>50853 경상남도 김해시 한림면 김해대로 1404 2층</a>
+                    </div>
+
+                    <p>Copyright © <b>바스모.</b> All rights reserved.</p>
                 </address>
-                <p>Copyright © <b>바스모.</b> All rights reserved.</p>
             </div>
-            </section>
+        </section>
 
-            <section class="ft_right">
-                <ul>
-                    <li>
-                        <h4>INFORMATION</h4>
-                        <p><a href="#">고객센터 바로가기</a></p>
-                        <p>평일 09:00 ~ 18:00</p>
-                        <p>(주말, 공휴일 휴무)</p>
-                    </li>
+        <section class="ft_right">
+            <ul>
+                <li>
+                    <h4>INFORMATION</h4>
+                    <p><a clas href="#">고객센터 바로가기</a></p>
+                    <p>평일 09:00 ~ 18:00</p>
+                    <p>(주말, 공휴일 휴무)</p>
+                    <span></span>
+                </li>
 
-                    <li>
-                        <h4>BANK INFO</h4>
-                        <p>BNK경남은행<br>207-0142-8616-03</p>
-                        <p>임수한(바스모)</p>
-                    </li>
+                <li>
+                    <h4>BANK INFO</h4>
+                    <p>BNK경남은행<br>207-0142-8616-03</p>
+                    <p>임수한(바스모)</p>
+                    <span></span>
+                </li>
 
-                    <li>
-                        <h4>SERVICE</h4>
-                        <p><a href="#">자주묻는질문</a></p>
-                    </li>
-                    
-                </ul>
-            </section>
-        </footer>
+                <li>
+                    <h4>SERVICE</h4>
+                    <p><a href="#">자주묻는질문</a></p>
+                </li>
+            </ul>
+        </section>
+    </footer>
 
 
 </body>

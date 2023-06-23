@@ -1,14 +1,14 @@
 @import url("../reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
-div {
+.menu_bar {
   position: relative;
 }
-div .bg {
+.menu_bar .bg {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
 }
-div menu {
+.menu_bar menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,29 +20,29 @@ div menu {
   background-color: #fff;
   z-index: 999;
 }
-div menu section .log {
+.menu_bar menu section .log {
   padding-top: 15%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;
 }
-div menu section .log span {
+.menu_bar menu section .log span {
   display: inline-block;
   height: 12px;
   border: 1px solid black;
   margin: 0 10px;
 }
-div menu section .log a {
+.menu_bar menu section .log a {
   text-decoration: none;
   color: #000;
 }
-div menu section .log a img {
+.menu_bar menu section .log a img {
   width: 13px;
   height: 17px;
   margin: 0 5px;
 }
-div menu section .menu-trigger {
+.menu_bar menu section .menu-trigger {
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -50,7 +50,7 @@ div menu section .menu-trigger {
   top: -50%;
   left: 87%;
 }
-div menu section .menu-trigger span {
+.menu_bar menu section .menu-trigger span {
   position: absolute;
   left: 0;
   width: 100%;
@@ -58,41 +58,41 @@ div menu section .menu-trigger span {
   background-color: #000;
   transition: 0.3s;
 }
-div menu section .menu-trigger span:nth-of-type(1) {
+.menu_bar menu section .menu-trigger span:nth-of-type(1) {
   top: 0;
 }
-div menu section .menu-trigger span:nth-of-type(2) {
+.menu_bar menu section .menu-trigger span:nth-of-type(2) {
   top: 9px;
 }
-div menu section .menu-trigger span:nth-of-type(3) {
+.menu_bar menu section .menu-trigger span:nth-of-type(3) {
   bottom: 11px;
 }
-div menu section .menu-trigger:hover span:nth-of-type(1) {
+.menu_bar menu section .menu-trigger:hover span:nth-of-type(1) {
   width: 70%;
   left: -10%;
   margin-top: 2px;
   transform: rotate(-45deg);
 }
-div menu section .menu-trigger:hover span:nth-of-type(3) {
+.menu_bar menu section .menu-trigger:hover span:nth-of-type(3) {
   width: 70%;
   left: -10%;
   margin-bottom: 2px;
   transform: rotate(45deg);
 }
-div menu ul {
+.menu_bar menu ul {
   padding: 0;
   margin-top: -25%;
 }
-div menu ul li {
+.menu_bar menu ul li {
   margin-bottom: 10%;
 }
-div menu ul li a {
+.menu_bar menu ul li a {
   text-decoration-line: none;
   color: #000;
   font-size: 20px;
   font-weight: 700;
 }
-div menu img {
+.menu_bar menu img {
   margin-bottom: 15%;
   margin-left: 17%;
   width: 220px;

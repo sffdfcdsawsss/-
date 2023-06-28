@@ -1,0 +1,130 @@
+@import url("../css/reset.css");
+header {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+main .sub_mat .mat_title {
+  width: 100%;
+  position: relative;
+}
+main .sub_mat .mat_title img {
+  width: 100%;
+  height: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .sub_mat .mat_title div {
+  font-family: "Montserrat";
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 61%;
+  left: 40%;
+}
+main .sub_mat .mat_title div h2 {
+  font-size: 38px;
+  transform: translateY(10%);
+  animation: br_title_1 1s forwards;
+  overflow: hidden;
+}
+@keyframes br_title_1 {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+main .sub_mat .mat_title div p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5%;
+  transform: translateY(10%);
+  animation: br_title_1 1s 0.5s forwards;
+  overflow: hidden;
+}
+@keyframes br_title_1 {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+main .sub_mat .mat_ele ul {
+  display: flex;
+  align-items: center;
+  padding: 5% 17% 3% 17%;
+  gap: 2.5%;
+}
+main .sub_mat .mat_ele ul li figure {
+  width: 395px;
+  height: 395px;
+}
+main .sub_mat .mat_ele ul li figure a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .sub_mat .mat_ele ul li figure a img:hover {
+  transform: scale(1.01);
+  transform: translateY(-1px) translateX(-1px);
+  transition: 1s;
+}
+main .sub_mat .mat_ele ul li figure figcaption {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.7;
+  margin: 10px 0;
+}
+main .sub_mat .mat_ele ul li p:nth-of-type(1) {
+  margin: 40px 0 20px 0;
+}
+main .sub_mat .mat_ele ul li p:nth-of-type(1) a {
+  margin-top: 10%;
+  font-size: 25px;
+  font-weight: 700;
+  color: #000;
+}
+main .sub_mat .mat_ele ul li span {
+  font-family: "Montserrat";
+}
+main .sub_mat .mat_ele ul li span a {
+  color: #0f4c82;
+  font-size: 30px;
+  font-weight: 800;
+}
+main .sub_mat .mat_ele ul li span a:nth-of-type(2) {
+  color: #000;
+}
+main .sub_mat .mat_ele ul li p:nth-of-type(2) {
+  margin-top: 5px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  color: #818181;
+  text-decoration: line-through;
+}
+main .sub_mat .page {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 5%;
+  font-size: 16px;
+  font-weight: 700;
+}
+main .sub_mat .page a {
+  border-bottom: 2px solid #495164;
+  color: #031d33;
+  display: inline-block;
+  width: 15px;
+  font-family: "Montserrat";
+}

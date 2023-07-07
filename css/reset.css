@@ -87,7 +87,7 @@ header .menu_bar {
 header .menu_bar nav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-start;
   position: absolute;
   padding-left: 3%;
   top: 0;
@@ -97,7 +97,7 @@ header .menu_bar nav {
   background-color: #fff;
 }
 header .menu_bar nav .log {
-  padding-top: 15%;
+  padding-top: 10%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -123,7 +123,7 @@ header .menu_bar nav .menu-trigger_2 {
   width: 32px;
   height: 32px;
   position: relative;
-  top: -34%;
+  top: -4%;
   left: 87%;
 }
 header .menu_bar nav .menu-trigger_2 span {
@@ -157,10 +157,10 @@ header .menu_bar nav .menu-trigger_2:hover span:nth-of-type(3) {
 }
 header .menu_bar ul {
   padding: 0;
-  margin-top: -130%;
+  margin-top: 10%;
 }
 header .menu_bar ul li {
-  margin-bottom: 10%;
+  margin-bottom: 40%;
 }
 header .menu_bar ul li a {
   text-decoration-line: none;
@@ -169,8 +169,7 @@ header .menu_bar ul li a {
   font-weight: 700;
 }
 header .menu_bar img {
-  margin-bottom: 15%;
-  margin-left: 13%;
+  margin: 25% 13%;
   width: 220px;
   height: 144.7px;
 }

@@ -39,12 +39,13 @@
             div{
                 img{ margin-left: 15px;
                   cursor: pointer;
-                opacity: 0.6;}
+                opacity: 0.5;}
             }
         }
     
         .ch_main{ 
           .top_text{
+            margin-bottom: 3%;
                 p{
                 color: rgba(0, 0, 0, 0.4);
                 font-size: 15.5px;
@@ -54,6 +55,9 @@
                 }
             }  
             .ch_box_1{
+              display: flex;
+              align-items: center;
+              flex-direction: column;
                 width: 342px; height: 200px;
                 margin: auto;
                 border-radius: 15px;
@@ -61,12 +65,12 @@
                 box-shadow:1px 1px 10px rgba(173, 173, 173, 0.671) ;
                 .box_text{
                     display: flex;
-                    margin: 10px 0 ;
+                    margin: 5px 0 7px 0 ;
                     padding: 3% 3% ;
                     cursor: pointer;
+                    width:97%;
                     img{width: 35px; height: 35px;}
-                    div{
-                        width: 100%;
+                    div{width:95%;
                         h3{font-size: 13px;
                         padding: 0 15px ;}
                         p{
@@ -84,11 +88,11 @@
                             background-size: contain;
                         }
                     }
+                    &:hover{
+                    background: rgb(245, 245, 245);
+                    border-radius: 15px;
+                    transition: 0.5s;
                 }
-                .box_text :hover{
-                  background: rgb(245, 245, 245);
-                  border-radius: 10px;
-                  transition: 0.5s;
                 }
     
                 .button{
@@ -238,6 +242,6 @@
                     margin-right: 3px;
                 }
             }
-            a:hover {color: #000;}
+            p:hover {color: #000;}
         }
     }

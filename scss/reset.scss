@@ -1,17 +1,16 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap');
+
 html,body{margin: 0;}
-body{font-family: 'Noto Sans KR', sans-serif;}
+body{font-family: Montserrat, "Noto Sans KR";}
 
 *{box-sizing: border-box;}
-ul,li,figure,figcaption,p,h1,h2,h3,h4,h5,h6,div,{margin: 0;}
+ul,li,figure,figcaption,p,h1,h2,h3,h4,h5,h6,div {margin:0;}
 ul{list-style: none;}
 
 a{text-decoration: none;}
 
-
-header {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +60,7 @@ header {
     }
   
     .menu_bar{
-      display: none;
+      display: block;
       position: absolute;
       position: fixed;
       text-align: start;
@@ -186,13 +185,12 @@ header {
     }
   }
 
-
   .chat{
     position: absolute;
-    left: 96%;
-    top: 91.5%;
+    right: 1%;
+    top: 90%;
     position: fixed;
-    z-index: 9999;
+    margin-bottom: 10px;
     div{
       a{
         img{
@@ -207,9 +205,9 @@ header {
   .chat_bot{
     position: relative;
     position: fixed;
-    top: 27%; left: 79.5%;
+    top: 27%; right: 3%;
     width: 370px;
-    height: 680px;
+    height: 69%;
     border-radius: 30px;
     box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
     background-color: rgba(247, 247, 248, 0.9);
@@ -242,6 +240,7 @@ header {
     
         .ch_main{ 
           .top_text{
+            margin-bottom: 3%;
                 p{
                 color: rgba(0, 0, 0, 0.4);
                 font-size: 15.5px;
@@ -251,6 +250,9 @@ header {
                 }
             }  
             .ch_box_1{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 width: 342px; height: 200px;
                 margin: auto;
                 border-radius: 15px;
@@ -258,12 +260,12 @@ header {
                 box-shadow:1px 1px 10px rgba(173, 173, 173, 0.671) ;
                 .box_text{
                     display: flex;
-                    margin: 10px 0 ;
+                    margin: 5px 0 7px 0 ;
                     padding: 3% 3% ;
                     cursor: pointer;
+                    width:97%;
                     img{width: 35px; height: 35px;}
-                    div{
-                        width: 100%;
+                    div{width: 95%;
                         h3{font-size: 13px;
                         padding: 0 15px ;}
                         p{
@@ -272,7 +274,6 @@ header {
                         color: #000;
                         font-weight: 200;
                         padding-left: 15px;
-                        letter-spacing: 0.5px;
                         }
 
                         P:nth-of-type(1)::after{
@@ -284,11 +285,11 @@ header {
                             background-size: contain;
                         }
                     }
-                }
-                .box_text :hover{
-                  background: rgb(245, 245, 245);
-                  border-radius: 10px;
-                  transition: 0.5s;
+                    &:hover{
+                      background: rgb(245, 245, 245);
+                      border-radius: 15px;
+                      transition: 0.5s;
+                  }
                 }
     
                 .button{
@@ -408,11 +409,11 @@ header {
                         transform: scale(1.1);
                         transition: 0.5s;} 
 
-                      .i-1:hover  .kakao{
+                      i-1:hover.kakao{
                         opacity: 1;
                       }
 
-                      .i-2:hover + .naver{
+                      .i-2:hover.naver{
                         opacity: 1;
                       }
                 }
@@ -449,7 +450,6 @@ header {
 
 
   footer {
-    font-family: 'Montserrat';
     padding-top: 2.8%;
     display: flex;
     justify-content: center;
@@ -460,12 +460,13 @@ header {
     .ft_left{
       width: 33%;
       display: flex;
+      justify-content: center;
       *a,p{margin-left: 6px;
         font-weight: 500;}
-      img{width: 134px; height: 89px;}
+      img{width: 20%; height: 30%;}
       div{
         padding-left: 3%;
-        width: 700px;
+        width: 100%;
         span{
           padding-left: 2%;
           font-size: 14px;
@@ -500,7 +501,7 @@ header {
       }
     }
     
-    .ft_right{width: 30%;
+    .ft_right{width: 37%;
       ul{
         display: flex;
         li{
@@ -516,7 +517,6 @@ header {
             text-decoration: underline ;
             font-size: 17px;
             font-weight:700;
-            font-family: 'Noto Sans KR'
           }
             a{color: #fff;}
           }
@@ -525,15 +525,11 @@ header {
           a{
             font-weight: 600;
             font-size: 16px;
-            font-family: 'Noto Sans KR';
             text-decoration: underline;
           }
         }
       }
     }
   }
-
-
-
 
 

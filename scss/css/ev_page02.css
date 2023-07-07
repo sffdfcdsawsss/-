@@ -1,0 +1,219 @@
+@import url("../css/reset.css");
+header {
+  background-color: #fff !important;
+}
+header span {
+  background-color: #353535 !important;
+}
+
+main .ev_01_box {
+  color: #353535;
+  width: 65%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 7%;
+}
+main .ev_01_box .ev_01_title p {
+  font-size: 18px;
+  font-weight: 500;
+}
+main .ev_01_box .ev_01_title h3 {
+  text-align: start;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 30px 0 35px 0;
+  border-bottom: 1px solid #353535;
+  padding-bottom: 15px;
+}
+main .ev_01_box figure img {
+  vertical-align: top;
+}
+main .ev_01_box .ev_01_text {
+  margin-top: 8%;
+  font-weight: 400;
+}
+main .ev_01_box .ev_01_text h4 {
+  font-size: 24px;
+}
+main .ev_01_box .ev_01_text a {
+  display: block;
+}
+main .ev_01_box .ev_01_text a:nth-of-type(3) {
+  margin: 1% 0;
+}
+main .ev_01_box .ev_01_text p {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 3%;
+}
+main .ev_01_box .ev_01_bottom {
+  margin-top: 3%;
+  text-align: start;
+  font-size: 12px;
+}
+main .ev_01_box .ev_01_bottom button {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  padding: 7px 35px;
+  margin-bottom: 3%;
+}
+main .ev_01_box .ev_01_bottom button a {
+  color: #353535;
+}
+main .ev_01_box .ev_01_bottom button:hover {
+  background-color: #f3f3f3;
+}
+main .ev_01_box .ev_01_bottom p {
+  border: 1px solid #e9e9e9;
+  background-color: #fbfafa;
+  font-size: 12px;
+  padding: 20px 20px;
+}
+main .ev_01_box .ev_01_bottom table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5% 0 7% 0;
+}
+main .ev_01_box .ev_01_bottom table tbody tr td {
+  border: 1px solid #e9e9e9;
+}
+main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(1) {
+  padding: 10px 20px;
+  width: 10%;
+}
+main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(1)::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/ev/ico_move_prev.gif) 0 2px no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(2) {
+  padding: 10px 20px;
+  border-left: 1px solid #e9e9e9;
+}
+main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(2) a {
+  color: #353535;
+  font-weight: 500;
+}
+main .ev_01_box .ev_01_bottom table tbody tr:nth-of-type(2) td:nth-of-type(1)::before {
+  content: "";
+  display: inline-block;
+  background: url(../img/ev/ico_move_next.gif) 0 2px no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+@media (min-width: 340px) and (max-width: 480px) {
+  @import url("../css/reset.css");
+  header {
+    background-color: #fff !important;
+  }
+  header span {
+    background-color: #353535 !important;
+  }
+  main .ev_01_box {
+    color: #353535;
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 7%;
+  }
+  main .ev_01_box .ev_01_title p {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  main .ev_01_box .ev_01_title h3 {
+    text-align: start;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 11% 0 8% 0;
+    border-bottom: 1px solid #353535;
+    padding-bottom: 15px;
+  }
+  main .ev_01_box figure img {
+    margin-top: 3%;
+    width: 100%;
+  }
+  main .ev_01_box .ev_01_text {
+    margin: 20% 0;
+    font-weight: 400;
+  }
+  main .ev_01_box .ev_01_text h4 {
+    font-size: 1.5rem;
+  }
+  main .ev_01_box .ev_01_text a {
+    display: block;
+  }
+  main .ev_01_box .ev_01_text a:nth-of-type(3) {
+    margin: 5% 0;
+  }
+  main .ev_01_box .ev_01_text p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 7%;
+  }
+  main .ev_01_box .ev_01_bottom {
+    margin-top: 8%;
+    text-align: start;
+    font-size: 0.9rem;
+  }
+  main .ev_01_box .ev_01_bottom button {
+    background-color: #4a5164;
+    border: 1px solid #373d4b;
+    padding: 1% 2%;
+    margin-bottom: 4%;
+  }
+  main .ev_01_box .ev_01_bottom button a {
+    color: #fff;
+  }
+  main .ev_01_box .ev_01_bottom button:hover {
+    background-color: #f3f3f3;
+    display: none;
+  }
+  main .ev_01_box .ev_01_bottom p {
+    border: 1px solid #e9e9e9;
+    background-color: #fbfafa;
+    font-size: 12px;
+    padding: 20px 20px;
+  }
+  main .ev_01_box .ev_01_bottom table {
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    font-size: 0.8rem;
+    margin: 4% 0 15% 0;
+  }
+  main .ev_01_box .ev_01_bottom table tbody tr td {
+    border: 1px solid #e9e9e9;
+  }
+  main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(1) {
+    padding: 1% 2%;
+    width: 17%;
+  }
+  main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(1)::before {
+    content: "";
+    display: inline-block;
+    background: url(../img/ev/ico_move_prev.gif) 0 2px no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(2) {
+    padding: 10px 20px;
+    border-left: 1px solid #e9e9e9;
+  }
+  main .ev_01_box .ev_01_bottom table tbody tr td:nth-of-type(2) a {
+    color: #353535;
+    font-weight: 500;
+  }
+  main .ev_01_box .ev_01_bottom table tbody tr:nth-of-type(2) td:nth-of-type(1)::before {
+    content: "";
+    display: inline-block;
+    background: url(../img/ev/ico_move_next.gif) 0 2px no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+}/*# sourceMappingURL=ev_page02.css.map */

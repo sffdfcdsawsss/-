@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
 html, body {
   margin: 0;
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: Montserrat, "Noto Sans KR";
 }
 
 * {
@@ -74,7 +73,7 @@ header .menu-trigger:hover span:nth-of-type(3) {
   transform: rotate(-45deg);
 }
 header .menu_bar {
-  display: none;
+  display: block;
   position: absolute;
   position: fixed;
   text-align: start;
@@ -190,10 +189,10 @@ header .ic a img {
 
 .chat {
   position: absolute;
-  left: 96%;
-  top: 91.5%;
+  right: 1%;
+  top: 90%;
   position: fixed;
-  z-index: 9999;
+  margin-bottom: 10px;
 }
 .chat div a img {
   margin-right: 26px;
@@ -205,9 +204,9 @@ header .ic a img {
   position: relative;
   position: fixed;
   top: 27%;
-  left: 79.5%;
+  right: 3%;
   width: 370px;
-  height: 680px;
+  height: 69%;
   border-radius: 30px;
   box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
   background-color: rgba(247, 247, 248, 0.9);
@@ -242,6 +241,9 @@ header .ic a img {
   cursor: pointer;
   opacity: 0.6;
 }
+.chat_bot .ch_contents .ch_main .top_text {
+  margin-bottom: 3%;
+}
 .chat_bot .ch_contents .ch_main .top_text p {
   color: rgba(0, 0, 0, 0.4);
   font-size: 15.5px;
@@ -250,6 +252,9 @@ header .ic a img {
   padding-left: 12px;
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 342px;
   height: 200px;
   margin: auto;
@@ -259,16 +264,17 @@ header .ic a img {
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 .box_text {
   display: flex;
-  margin: 10px 0;
+  margin: 5px 0 7px 0;
   padding: 3% 3%;
   cursor: pointer;
+  width: 97%;
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 .box_text img {
   width: 35px;
   height: 35px;
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div {
-  width: 100%;
+  width: 95%;
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div h3 {
   font-size: 13px;
@@ -280,7 +286,6 @@ header .ic a img {
   color: #000;
   font-weight: 200;
   padding-left: 15px;
-  letter-spacing: 0.5px;
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div P:nth-of-type(1)::after {
   content: "";
@@ -291,9 +296,9 @@ header .ic a img {
   display: inline-block;
   background-size: contain;
 }
-.chat_bot .ch_contents .ch_main .ch_box_1 .box_text :hover {
+.chat_bot .ch_contents .ch_main .ch_box_1 .box_text:hover {
   background: rgb(245, 245, 245);
-  border-radius: 10px;
+  border-radius: 15px;
   transition: 0.5s;
 }
 .chat_bot .ch_contents .ch_main .ch_box_1 .button {
@@ -414,10 +419,10 @@ header .ic a img {
   transform: scale(1.1);
   transition: 0.5s;
 }
-.chat_bot .ch_contents .ch_main .ch_box_2 span .i-1:hover .kakao {
+.chat_bot .ch_contents .ch_main .ch_box_2 span i-1:hover.kakao {
   opacity: 1;
 }
-.chat_bot .ch_contents .ch_main .ch_box_2 span .i-2:hover + .naver {
+.chat_bot .ch_contents .ch_main .ch_box_2 span .i-2:hover.naver {
   opacity: 1;
 }
 .chat_bot .ch_footer p {
@@ -449,7 +454,6 @@ header .ic a img {
 }
 
 footer {
-  font-family: "Montserrat";
   padding-top: 2.8%;
   display: flex;
   justify-content: center;
@@ -461,18 +465,19 @@ footer {
 footer .ft_left {
   width: 33%;
   display: flex;
+  justify-content: center;
 }
 footer .ft_left * a, footer .ft_left p {
   margin-left: 6px;
   font-weight: 500;
 }
 footer .ft_left img {
-  width: 134px;
-  height: 89px;
+  width: 20%;
+  height: 30%;
 }
 footer .ft_left div {
   padding-left: 3%;
-  width: 700px;
+  width: 100%;
 }
 footer .ft_left div span {
   padding-left: 2%;
@@ -509,7 +514,7 @@ footer .ft_left div p {
   margin: 7% 0;
 }
 footer .ft_right {
-  width: 30%;
+  width: 37%;
 }
 footer .ft_right ul {
   display: flex;
@@ -531,7 +536,6 @@ footer .ft_right ul li p .line {
   text-decoration: underline;
   font-size: 17px;
   font-weight: 700;
-  font-family: "Noto Sans KR";
 }
 footer .ft_right ul li p a {
   color: #fff;
@@ -539,6 +543,5 @@ footer .ft_right ul li p a {
 footer .ft_right ul li:nth-child(1) a {
   font-weight: 600;
   font-size: 16px;
-  font-family: "Noto Sans KR";
   text-decoration: underline;
 }

@@ -87,7 +87,6 @@ header .menu_bar {
 header .menu_bar nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   position: absolute;
   padding-left: 3%;
   top: 0;
@@ -95,6 +94,7 @@ header .menu_bar nav {
   width: 440px;
   height: 100%;
   background-color: #fff;
+  z-index: 50;
 }
 header .menu_bar nav .log {
   padding-top: 10%;
@@ -117,13 +117,14 @@ header .menu_bar nav .log a img {
   width: 13px;
   height: 17px;
   margin: 0 5px;
+  position: static;
 }
 header .menu_bar nav .menu-trigger_2 {
   display: inline-block;
   width: 32px;
   height: 32px;
   position: relative;
-  top: -4%;
+  top: -30px;
   left: 87%;
 }
 header .menu_bar nav .menu-trigger_2 span {
@@ -158,6 +159,8 @@ header .menu_bar nav .menu-trigger_2:hover span:nth-of-type(3) {
 header .menu_bar ul {
   padding: 0;
   margin-top: 10%;
+  position: absolute;
+  top: 10%;
 }
 header .menu_bar ul li {
   margin-bottom: 40%;
@@ -172,6 +175,9 @@ header .menu_bar img {
   margin: 35% 0 0 13%;
   width: 220px;
   height: 144.7px;
+  position: absolute;
+  bottom: 6%;
+  z-index: -1;
 }
 header h1 {
   margin-left: 5.5%;

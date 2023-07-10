@@ -71,7 +71,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -85,7 +85,6 @@
   header .menu_bar nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: absolute;
     padding-left: 5%;
     top: 0;
@@ -95,11 +94,11 @@
     background-color: #fff;
   }
   header .menu_bar nav .log {
-    padding-top: 30%;
+    padding-top: 10%;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   header .menu_bar nav .log span {
     display: inline-block;
@@ -121,7 +120,7 @@
     width: 30px;
     height: 30px;
     position: relative;
-    top: -22%;
+    top: -3%;
     left: 87%;
   }
   header .menu_bar nav .menu-trigger_2 span {
@@ -161,10 +160,9 @@
   }
   header .menu_bar ul {
     padding: 0;
-    margin-top: -30%;
   }
   header .menu_bar ul li {
-    margin-bottom: 10%;
+    margin-bottom: 20%;
   }
   header .menu_bar ul li a {
     text-decoration-line: none;
@@ -173,8 +171,8 @@
     font-weight: 700;
   }
   header .menu_bar img {
-    margin-bottom: 15%;
-    margin-left: 19%;
+    margin-bottom: 3%;
+    margin-left: 15%;
     width: 60%;
     height: 20%;
   }
@@ -662,7 +660,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -676,7 +674,6 @@
   header .menu_bar nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: absolute;
     padding-left: 4%;
     top: 0;
@@ -713,7 +710,7 @@
     height: 30px;
     position: relative;
     top: -3%;
-    left: 80%;
+    left: 82%;
   }
   header .menu_bar nav .menu-trigger_2 span {
     position: absolute;
@@ -732,7 +729,7 @@
     display: none;
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(3) {
-    bottom: -1.5px;
+    bottom: 28.5px;
     transform: rotate(45deg);
   }
   header .menu_bar nav .menu-trigger_2:hover {
@@ -755,7 +752,7 @@
     margin-top: 10%;
   }
   header .menu_bar ul li {
-    margin-bottom: 5%;
+    margin-bottom: 15%;
   }
   header .menu_bar ul li a {
     text-decoration-line: none;
@@ -764,9 +761,9 @@
     font-weight: 700;
   }
   header .menu_bar img {
-    margin-bottom: 18%;
-    margin-left: 24%;
-    width: 45%;
+    margin-bottom: 3%;
+    margin-left: 23%;
+    width: 40%;
     height: 20%;
   }
   header h1 {
@@ -1261,7 +1258,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -1275,7 +1272,6 @@
   header .menu_bar nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: absolute;
     padding-left: 4%;
     top: 0;
@@ -1311,7 +1307,7 @@
     width: 30px;
     height: 30px;
     position: relative;
-    top: -40%;
+    top: -2.5%;
     left: 84%;
   }
   header .menu_bar nav .menu-trigger_2 span {
@@ -1351,10 +1347,9 @@
   }
   header .menu_bar ul {
     padding: 0;
-    margin-top: -200%;
   }
   header .menu_bar ul li {
-    margin-bottom: 10%;
+    margin-bottom: 40%;
   }
   header .menu_bar ul li a {
     text-decoration-line: none;
@@ -1365,8 +1360,8 @@
   header .menu_bar img {
     width: 50%;
     height: 12%;
-    margin-bottom: 18%;
-    margin-left: 19%;
+    margin-bottom: 6%;
+    margin-left: 18%;
   }
   header h1 {
     margin-left: 11%;
@@ -1838,7 +1833,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -1852,7 +1847,6 @@
   header .menu_bar nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     position: absolute;
     padding-left: 4%;
     top: 0;
@@ -1888,7 +1882,6 @@
     width: 30px;
     height: 30px;
     position: relative;
-    top: -10%;
     left: 83%;
   }
   header .menu_bar nav .menu-trigger_2 span {
@@ -1928,10 +1921,9 @@
   }
   header .menu_bar ul {
     padding: 0;
-    margin-top: 5%;
   }
   header .menu_bar ul li {
-    margin-bottom: 8%;
+    margin-bottom: 40%;
   }
   header .menu_bar ul li a {
     text-decoration-line: none;
@@ -1940,8 +1932,8 @@
     font-weight: 700;
   }
   header .menu_bar img {
-    margin-bottom: 18%;
-    margin-left: 19%;
+    margin-bottom: 3%;
+    margin-left: 14%;
   }
   header h1 {
     margin-left: 8%;

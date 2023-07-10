@@ -73,7 +73,7 @@ header .menu-trigger:hover span:nth-of-type(3) {
   transform: rotate(-45deg);
 }
 header .menu_bar {
-  display: block;
+  display: none;
   position: absolute;
   position: fixed;
   text-align: start;

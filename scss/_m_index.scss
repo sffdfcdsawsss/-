@@ -1538,17 +1538,17 @@ a:nth-of-type(7){top: 210px;}
   
     .main_mat{
       width: 100%;
-      height: 100vh;
+      height: 100%;
       background-color: #e9ebf1;
         .title{
-          padding-top: 15%;
+          padding-top:20%;
           text-align: center;
-          color:#031d33;
-          p{font-size: 0.9rem;
-            padding-left: 1%;
-            padding-bottom: 1%;
-            transform: translateY(500%);
-            animation: Mt_title_1 1s forwards; 
+          color: #000;
+          p{font-size: 1rem;
+          padding-left: 1%;
+          padding-bottom: 1%;
+          transform: translateY(500%);
+          animation: Mt_title_1 1s forwards; 
           }
           @keyframes Mt_title_1{
             0%{transform: translateY(500%)
@@ -1558,7 +1558,7 @@ a:nth-of-type(7){top: 210px;}
             }
     
           h2{
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             transform: translateY(500%);
@@ -1573,12 +1573,9 @@ a:nth-of-type(7){top: 210px;}
           }
         }
     
-      .ele{
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        .id2_left{position: relative;
-          figure{margin-top:8%;
+      .ele{display: block;
+        .id2_left{
+          figure{margin-top:10%;
             img{
               width: 50%; height: 50%;
               animation: mt_img_1 1.6s forwards ease-out;
@@ -1592,36 +1589,39 @@ a:nth-of-type(7){top: 210px;}
               }
             }
             figcaption{
-              padding: 0 0 0 10%;
-              text-align: start;
-              h4{font-size: 0.8rem;
+              padding: 0%;
+              text-align: center;
+              h4{font-size: 1rem;
                 font-weight: 500;
-              margin-bottom: 6px;}
-              h3{font-size: 1.3rem;
+              margin-bottom: 6px;
+              display: none;}
+              h3{font-size: 1.2rem;
                 font-weight: 700;
                 padding-bottom: 5px;
               }
-              span{}
-              p{font-size: 1rem;
+              span{
+                display: none;}
+              p{font-size: 0.85rem;
               font-weight: 100;
-              line-height: 160%;
+              line-height: 150%;
               margin-top: 1.5%;
               margin-bottom: 3%;}
               a{border: solid 1px black;
-                font-size: 0.8rem;
+                font-size: 1rem;
                 text-decoration: none;
                 color: #031d33;
                 display: inline-block;
-                 height: 30px;
+                width: 55%; height: 38px;
                 text-align: center;
-                padding-top: 4px;
+                padding-top: 5px;
                 margin-bottom: 1%;
               }
             }
           }
           .circle{
             position: absolute;
-            top:20%; left: 50%;
+            display: none;
+            top:67%; left: 55%;
             animation: circle 10s linear infinite;
           }
           @keyframes circle {
@@ -1631,14 +1631,13 @@ a:nth-of-type(7){top: 210px;}
         }
         
         .id2_right{
-          position: relative;
-          margin-top: -30%;
           figure{
-            margin-top:8%;
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            flex-direction: column-reverse;
+            margin-top:12%;
             img{
+              position: absolute;
+              right: 0;top: -2%;
               width: 50%; height: 30%;
               animation: mt_img_2 1.6s forwards ease-out;
             }
@@ -1651,45 +1650,41 @@ a:nth-of-type(7){top: 210px;}
               }
     
             figcaption{
-              text-align: end;
-              padding-top: -10px;
-              padding-right: 10%;
-              h4{
-                font-size: 0.8rem;
+              padding: 0%;
+              text-align: center;
+              margin-top: 22%;
+              h4{font-size: 1rem;
                 font-weight: 500;
-                margin-bottom: 6px;
-              }
-              h3{
-                font-size: 1.5rem;
+              margin-bottom: 6px;
+              display: none;}
+              h3{font-size: 1.2rem;
                 font-weight: 700;
                 padding-bottom: 5px;
               }
               span{
-                border-bottom: 2px solid black;
-                width: 100px;
-              }
-              p{
+                display: none;}
+              p{font-size: 0.85rem;
+              font-weight: 100;
+              line-height: 150%;
+              margin-top: 1.5%;
+              margin-bottom: 3%;}
+              a{border: solid 1px black;
                 font-size: 1rem;
-                font-weight: 100;
-                line-height: 160%;
-              }
-              a{
-                border: solid 1px black;
-                font-size: 0.8rem;
                 text-decoration: none;
                 color: #031d33;
                 display: inline-block;
-                 height: 30px;
+                width: 55%; height: 38px;
                 text-align: center;
                 padding-top: 5px;
-                margin-bottom: 5%;
+                margin-bottom: 12%;
               }
             }
           }
-          .circle_2{
-            position: absolute;
-            top:50%; left: 30%;
-            animation: circle 10s linear infinite;
+          .circle_2
+          {position: absolute;
+            display: none;
+          top:25%; left: 20%;
+          animation: circle 10s linear infinite;
           }
         @keyframes circle{
           from{transform: rotate(0deg);}
@@ -1698,8 +1693,7 @@ a:nth-of-type(7){top: 210px;}
           }
     
           figcaption
-          {margin-bottom: 3%;
-            animation: Mt_ele 1s forwards;
+          {animation: Mt_ele 1s forwards;
             @keyframes Mt_ele
             {
             0%{opacity: 0;
@@ -1858,7 +1852,7 @@ a:nth-of-type(7){top: 210px;}
       object-fit: cover;
       width: 15%; 
       position: absolute;
-      top:77%; left: 70%;
+      top:70%; left: 70%;
       animation: a_3 5s linear infinite;
     }
   
@@ -2036,7 +2030,7 @@ a:nth-of-type(7){top: 210px;}
         border-radius: 10px;
         width: 7px; height: 7px;
   
-          &:nth-of-type(1)::after{
+          &:nth-of-type(1)::after.cir_white{
             content: "";
             position: absolute;
             text-align: center;
@@ -2053,6 +2047,45 @@ a:nth-of-type(7){top: 210px;}
   a:nth-of-type(5){top: 140px;}
   a:nth-of-type(6){top: 175px;}
   a:nth-of-type(7){top: 210px;}
+    }
+    .right.black {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      left: 97%;
+      top: 38%;
+      position: fixed;
+      z-index: 9999;
+      span {
+        position: relative;
+        border-right: solid 1px #000;
+        display: inline-block;
+        height: 210px;
+      }
+      a {position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        background-color: #000;
+        border-radius: 10px;
+        width: 7px; height: 7px;
+    
+          &:nth-of-type(1)::after.cir_black{
+            content: "";
+            position: absolute;
+            text-align: center;
+            display: inline-block;
+            border: solid 1px #000;
+            border-radius: 100px;
+            width: 35px; height: 35px;
+            top: 20px; left: -15px; background-color: #ffffff00;
+            }
+      }
+    a:nth-of-type(2){top: 35px;}
+    a:nth-of-type(3){top: 70px;}
+    a:nth-of-type(4){top: 105px;}
+    a:nth-of-type(5){top: 140px;}
+    a:nth-of-type(6){top: 175px;}
+    a:nth-of-type(7){top: 210px;}
     }
 }
 
@@ -2545,7 +2578,7 @@ a:nth-of-type(7){top: 210px;}
       object-fit: cover;
       width: 15%; 
       position: absolute;
-      top:74%; left: 71%;
+      top:86%; left: 71%;
       animation: a_3 5s linear infinite;
     }
   
@@ -2723,7 +2756,7 @@ a:nth-of-type(7){top: 210px;}
         border-radius: 10px;
         width: 7px; height: 7px;
   
-          &:nth-of-type(1)::after{
+          &:nth-of-type(1)::after.cir_white{
             content: "";
             position: absolute;
             text-align: center;
@@ -2740,5 +2773,44 @@ a:nth-of-type(7){top: 210px;}
   a:nth-of-type(5){top: 140px;}
   a:nth-of-type(6){top: 175px;}
   a:nth-of-type(7){top: 210px;}
+    }
+    .right.black {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      left: 97%;
+      top: 38%;
+      position: fixed;
+      z-index: 9999;
+      span {
+        position: relative;
+        border-right: solid 1px #000;
+        display: inline-block;
+        height: 210px;
+      }
+      a {position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        background-color: #000;
+        border-radius: 10px;
+        width: 7px; height: 7px;
+    
+          &:nth-of-type(1)::after.cir_black{
+            content: "";
+            position: absolute;
+            text-align: center;
+            display: inline-block;
+            border: solid 1px #000;
+            border-radius: 100px;
+            width: 35px; height: 35px;
+            top: 20px; left: -15px; background-color: #ffffff00;
+            }
+      }
+    a:nth-of-type(2){top: 35px;}
+    a:nth-of-type(3){top: 70px;}
+    a:nth-of-type(4){top: 105px;}
+    a:nth-of-type(5){top: 140px;}
+    a:nth-of-type(6){top: 175px;}
+    a:nth-of-type(7){top: 210px;}
     }
 }

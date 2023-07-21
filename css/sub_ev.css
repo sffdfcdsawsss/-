@@ -1041,8 +1041,7 @@
   .chat_bot .ch_contents .ch_main .ch_box_2 span a img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .chat_bot .ch_footer p {
     display: flex;
@@ -2373,8 +2372,7 @@ main .sub_event .ev_title {
 main .sub_event .ev_title img {
   width: 100%;
   height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .sub_event .ev_title div {
   text-align: center;
@@ -2448,8 +2446,7 @@ main .sub_event .page a {
   main .sub_event .ev_title img {
     width: 100%;
     height: 15rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_event .ev_title div {
     text-align: center;
@@ -2546,8 +2543,7 @@ main .sub_event .page a {
   main .sub_event .ev_title img {
     width: 100%;
     height: 22rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_event .ev_title div {
     text-align: center;
@@ -2644,8 +2640,7 @@ main .sub_event .page a {
   main .sub_event .ev_title img {
     width: 100%;
     height: 25rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_event .ev_title div {
     text-align: center;
@@ -2742,8 +2737,7 @@ main .sub_event .page a {
   main .sub_event .ev_title img {
     width: 100%;
     height: 22rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_event .ev_title div {
     text-align: center;
@@ -2827,4 +2821,4 @@ main .sub_event .page a {
     display: none;
     width: 15px;
   }
-}
+}/*# sourceMappingURL=sub_ev.css.map */

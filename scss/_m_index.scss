@@ -1358,6 +1358,7 @@ main{
             width: 70%; height: 20%;
             margin-bottom: 0px;
             overflow: hidden;
+            display: none;
           
           p {
             text-align: center;
@@ -1429,6 +1430,7 @@ main{
             width: 70%; height: 20%;
             margin-bottom: 0px;
             overflow: hidden;
+            display: none;
   
             p
             {
@@ -1497,59 +1499,60 @@ main{
   
     .main_mat{
       width: 100%;
-      height: 100%;
+      height: 100vh;
       background-color: #e9ebf1;
-        .title{
-          padding-top:20%;
-          text-align: center;
-          color: #000;
-          p{font-size: 1rem;
-          padding-left: 1%;
-          padding-bottom: 1%;
-          transform: translateY(500%);
-          animation: Mt_title_1 1s forwards; 
-          }
-          @keyframes Mt_title_1{
-            0%{transform: translateY(500%)
-              ;opacity: 0;}
-            50%{opacity: 0.5;}
-            100%{transform: translateY(0%);}
-            }
-    
-          h2{
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            transform: translateY(500%);
-            animation: Mt_title_2 1s forwards; 
-          }
-    
-          @keyframes Mt_title_2{
-            0%{transform: translateY(500%)
-              ;opacity: 0;}
-            50%{opacity: 0.5;}
-            100%{transform: translateY(0%);}
-          }
+      .title{
+        padding-top:10%;
+        text-align: center;
+        color: #000;
+        height: 15%;
+        p{font-size: 1rem;
+        padding-left: 1%;
+        padding-bottom: 1%;
+        transform: translateY(500%);
+        animation: Mt_title_1 1s forwards; 
         }
+        @keyframes Mt_title_1{
+          0%{transform: translateY(500%)
+            ;opacity: 0;}
+          100%{transform: translateY(0%);}
+          }
+  
+        h2{
+          font-size: 1.2rem;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          transform: translateY(500%);
+          animation: Mt_title_2 1s forwards; 
+        }
+  
+        @keyframes Mt_title_2{
+          0%{transform: translateY(500%)
+            ;opacity: 0;}
+          100%{transform: translateY(0%);}
+        }
+      }
     
-      .ele{display: block;
+      .ele{
+        display: flex;
+        flex-direction: column;
         .id2_left{
-          figure{margin-top:10%;
+          figure{margin-top:5%;
             img{
+              transform:translateX(-200%);
               width: 50%; height: 50%;
-              animation: mt_img_1 1.6s forwards ease-out;
+              animation: mt_img_1 1.6s .5s forwards ease-out;
             }
-    
+  
             @keyframes mt_img_1{
-              0%{transform: translateX(-500%)
-                ;opacity: 0;}
-              50%{opacity: 0.5;}
+              0%{opacity: 0;}
               100%{transform: translateX(0%);}
               }
             }
             figcaption{
               padding: 0%;
               text-align: center;
+              animation: mat 1s forwards ease-out;
               h4{font-size: 1rem;
                 font-weight: 500;
               margin-bottom: 6px;
@@ -1576,6 +1579,11 @@ main{
                 margin-bottom: 1%;
               }
             }
+            @keyframes mat{
+              0%{opacity: 0;}
+              30%{transform: scale(.9); opacity: 0;}
+              100%{transform: scale(1);}
+              }
           }
           .circle{
             position: absolute;
@@ -1587,81 +1595,68 @@ main{
             from{transform: rotate(0deg);}
             to{transform: rotate(360deg);}
           }
-        }
-        
-        .id2_right{
-          figure{
-            display: flex;
-            flex-direction: column-reverse;
-            margin-top:12%;
-            img{
-              position: absolute;
-              right: 0;top: -2%;
-              width: 50%; height: 30%;
-              animation: mt_img_2 1.6s forwards ease-out;
-            }
-    
-            @keyframes mt_img_2{
-              0%{transform: translateX(500%)
-                ;opacity: 0;}
-              50%{opacity: 0.5;}
-              100%{transform: translateX(0%);}
-              }
-    
-            figcaption{
-              padding: 0%;
-              text-align: center;
-              margin-top: 22%;
-              h4{font-size: 1rem;
-                font-weight: 500;
-              margin-bottom: 6px;
-              display: none;}
-              h3{font-size: 1.2rem;
-                font-weight: 700;
-                padding-bottom: 5px;
-              }
-              span{
-                display: none;}
-              p{font-size: 0.85rem;
-              font-weight: 100;
-              line-height: 150%;
-              margin-top: 1.5%;
-              margin-bottom: 3%;}
-              a{border: solid 1px black;
-                font-size: 1rem;
-                text-decoration: none;
-                color: #031d33;
-                display: inline-block;
-                width: 55%; height: 38px;
-                text-align: center;
-                padding-top: 5px;
-                margin-bottom: 12%;
-              }
-            }
-          }
-          .circle_2
-          {position: absolute;
+          .id2_right{
             display: none;
-          top:25%; left: 20%;
-          animation: circle 10s linear infinite;
-          }
-        @keyframes circle{
-          from{transform: rotate(0deg);}
-          to{transform: rotate(360deg);}
+            flex-direction: column;
+            figure{
+              flex-direction: column-reverse;
+              margin-top:12%;
+              img{
+                position: absolute;
+                right: 0;top: 10%;
+                width: 50%; height: 30%;
+                transform: translateX(200%);
+                animation: mt_img_1 1.6s .5s forwards ease-out;
+              }
+      
+      
+              figcaption{
+                padding: 0%;
+                text-align: center;
+                margin-top: 15%;
+                animation: mat 1s forwards ease-out;
+                h4{font-size: 1rem;
+                  font-weight: 500;
+                margin-bottom: 6px;
+                display: none;}
+                h3{font-size: 1.2rem;
+                  font-weight: 700;
+                  padding-bottom: 5px;
+                }
+                span{
+                  display: none;}
+                p{font-size: 0.85rem;
+                font-weight: 100;
+                line-height: 150%;
+                margin-top: 1.5%;
+                margin-bottom: 3%;}
+                a{border: solid 1px black;
+                  font-size: 1rem;
+                  text-decoration: none;
+                  color: #031d33;
+                  display: inline-block;
+                  width: 55%; height: 38px;
+                  text-align: center;
+                  padding-top: 5px;
+                  margin-bottom: 12%;
+                }
+              }
             }
-          }
-    
-          figcaption
-          {animation: Mt_ele 1s forwards;
-            @keyframes Mt_ele
-            {
-            0%{opacity: 0;
-            transform: scale(0.8);}
-            80%{opacity: 0.6;}
-            100%{opacity: 1;}
+            .circle_2
+            {position: absolute;
+              display: none;
+            top:25%; left: 20%;
+            animation: circle 10s linear infinite;
             }
-          }
+          @keyframes circle{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+              }
+            }
         }
+    }
+
+    .main_mat.active .ele .id2_right { display: flex;}
   
     .main_br{
       color: #fff;
@@ -1669,173 +1664,180 @@ main{
       width: 100%;
       height: 100vh;
       overflow: hidden;
-    .br_bg{img
-      {object-fit:cover;
-      width: 100%; height: 100vh;}
-    }
-    .br_left{
-      position: absolute;
-      top: 40%; left: 5%;
-      h2{
-        font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 3%;
-        transform: translateY(10%);
-        animation: br_title_1 1s forwards; 
-        overflow: hidden;
-        }
-  
-        @keyframes br_title_1{
-          0%{transform: translateY(50%)
-            ;opacity: 0;}
-          50%{opacity: 0.5;}
-          100%{transform: translateY(0%);}
-        }
-      h3{
-        font-size: 0.8rem;
-        line-height: 150%;
-        font-weight: 300;
-        transform: translateY(10%);
-        animation: br_title_2 1s 0.2s forwards;
-        overflow: hidden; 
+      display: block;
+      .br_bg{img
+        {object-fit:cover;
+        width: 100%; height: 100vh;}
       }
-      @keyframes br_title_2{
-        0%{transform: translateY(100%)
-          ;opacity: 0;}
-        50%{opacity: 0.5;}
-        100%{transform: translateY(0%);}
-      }
-  
-    }
-    .br_right{
-      position: absolute;
-      top: 40%; left: 72%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      div{
-      transform: translateY(10%);
-      animation: br_title_3 1s 0.7s forwards; 
-      overflow: hidden;
-      
-      @keyframes br_title_3
-      {
-        0%{transform: translateY(50%)
-          ;opacity: 0;}
-        50%{opacity: 0.5;}
-        100%{transform: translateY(0%);}
-      }
-  
-        p:nth-child(1){
-          font-family: 'Noto Serif', serif;
-          font-size: 1.1rem;
-          font-weight: 400;
-          margin-bottom: 1%;
-        }
-        p:nth-child(2){
-          font-weight: 400;
-          margin-bottom:10% ;
-          text-align: center;
-          display: flex;
-          justify-content: space-around;
-          a{margin-left: -20px;
-            font-size: 0.8rem;
-            }
-          }
-        }
-        .br_but{
-          display: flex;
-          flex-direction: column;
-          transform: translateY(10%);
-          animation: br_title_4 1s 1.1s forwards; 
+      .br_ele{
+        .br_left{
+          position: absolute;
+          top: 13%;
+          left: 50%;
+          transform: translate(-50%, 0%);
           overflow: hidden;
-          width: 150%;
-          z-index: 900;
-          font-size: 0.7rem;
-      
-          @keyframes br_title_4
-          {
-            0%{transform: translateY(100%);opacity: 0;}
-            50%{opacity: 0.5;}
+          h2{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 3%;
+            transform: translateY(100%);
+            animation: br_title_1 1s forwards;
+          }
+  
+          @keyframes br_title_1{
+            0%{opacity: 0;}
+            100%{transform: translateY(0%);}
+          100%{transform: translateY(0%);}
+            }
+          h3{
+            font-size: 1rem;
+            line-height: 150%;
+            font-weight: 300;
+            text-align: center;
+            transform: translateY(100%);
+            animation: br_title_2 1s 0.2s forwards;
+            animation: br_title_2 1s 0.4s forwards;
+            overflow: hidden; 
+          }
+          @keyframes br_title_2{
+            0%{opacity: 0;}
             100%{transform: translateY(0%);}
           }
-          a{
-            font-size: 0.9rem;
-            text-decoration: none;
-            color: #fff;
-            cursor: pointer;
-          }
-          a::after{
-            content: "";
-            display: inline-block;
-            width: 20%; height: 15px;
-            background: url('../img/illust/view.png') 0 4px no-repeat;
-            background-size: contain;
-            margin-left:2%;
-            margin-top: 10px;
-          }
+      
         }
-      }
-  
-  .ani{
-    width: 50%; height: 37%;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    .basmo,.br_cir{
-      width: 100%;
-      object-fit: cover;
-      position: absolute;
-      top:0%; left:0%;}
-  
-      .br_cir{ 
-        animation: a_0 10s linear infinite;
-      }
-  
-    .ob_1{
-      object-fit: cover;
-      width: 15%;
-      position: absolute;
-      top: 8%; left: 60%;
-      animation: a_1 5s linear infinite;
-    }
-    .ob_2{
-      object-fit: cover;
-      width: 15%; 
-      position: absolute;
-      top: 57%; left: 5%;
-      animation: a_2 5s linear infinite;
-    }
-    .ob_3{
-      object-fit: cover;
-      width: 15%; 
-      position: absolute;
-      top:70%; left: 70%;
-      animation: a_3 5s linear infinite;
-    }
-  
-      @keyframes a_0{
-        from{transform: rotate(0deg);}
-        to{transform: rotate(360deg);}
-        }
-  
-        @keyframes a_1{
-          from{transform: rotate(0deg);}
-          to{transform: rotate(360deg);}
+        .br_right{
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          top: 80%;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          div{
+          transform: translateY(150%);
+          animation: br_title_3 1s .6s forwards;
+          overflow: hidden;
+          
+          @keyframes br_title_3{
+            0%{opacity: 0;}
+            50%{opacity: 0.3;}
+            100%{transform: translateY(0%);}
           }
-  
-        @keyframes a_2{
-          from{transform: rotate(0deg);}
-          to{transform: rotate(360deg);}
+      
+            p:nth-child(1){
+              font-family: 'Noto Serif', serif;
+              font-size: 1.5rem;
+              font-weight: 400;
+              margin-bottom: 1%;
+            }
+            p:nth-child(2){
+              font-weight: 400;
+              margin-bottom:10% ;
+              text-align: center;
+              display: flex;
+              justify-content: space-around;
+              a{margin-left: -20px;
+                font-size: 0.8rem;
+                }
+              }
+            }
+            .br_but{
+              display: flex;
+              flex-direction: column;
+              transform: translateY(150%);
+              animation: br_title_4 1s .8s forwards; 
+              overflow: hidden;
+              width: 220px;
+              z-index: 900;
+          
+              @keyframes br_title_4
+              {
+                0%{opacity: 0;}
+                50%{opacity: 0.2;}
+                100%{transform: translateY(0%);}
+              }
+              a{
+                font-size: 1rem;
+                text-align: center;
+                text-decoration: none;
+                color: #fff;
+                cursor: pointer;
+              }
+              a::after{
+                content: "";
+                display: inline-block;
+                width: 26%; height: 15px;
+                background: url('../img/illust/view.png') 0 4px no-repeat;
+                background-size: contain;
+                margin-left:2%;
+                margin-top: 10px;
+              }
+            }
           }
-  
-        @keyframes a_3{
-          from{transform: rotate(0deg);}
-          to{transform: rotate(360deg);}
+        .ani{
+          width: 70%; height: 37%;
+          position: absolute;
+          top: 25%;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          .basmo,.br_cir{
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top:0%; left:0%;}
+        
+            .br_cir{ 
+              animation: a_0 10s linear infinite;
+            }
+        
+          .ob_1{
+            object-fit: cover;
+            width: 13%;
+            position: absolute;
+            top: 10%; left: 60%;
+            animation: a_1 5s linear infinite;
           }
+          .ob_2{
+            object-fit: cover;
+            width: 13%; 
+            position: absolute;
+            top: 70%; left: 5%;
+            animation: a_2 5s linear infinite;
+          }
+          .ob_3{
+            object-fit: cover;
+            width: 13%; 
+            position: absolute;
+            top:100%; left: 70%;
+            animation: a_3 5s linear infinite;
+          }
+        
+            @keyframes a_0{
+              from{transform: rotate(0deg);}
+              to{transform: rotate(360deg);}
+              }
+        
+              @keyframes a_1{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+                }
+        
+              @keyframes a_2{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+                }
+        
+              @keyframes a_3{
+                from{transform: rotate(0deg);}
+                to{transform: rotate(360deg);}
+                }
+            }
       }
     }
+    
+    .main_br.active .br_ele {display: block;}
+    .main_br.active .br_ele .ani {
+      transition: 1s;}
   
     .main_ev{
       position: relative;
@@ -1845,33 +1847,39 @@ main{
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
       
       h2{
+        display: none;
         font-size: 1.8rem;
         font-weight: 700;
         color: #fff;
         text-align: center;
         padding-top: 0%;
-        transform: translateY(15%);
+        transform: translateY(100%);
         animation: ev_title 1s forwards; 
         overflow: hidden;
         }
       @keyframes ev_title{
-      0%{transform: translateY(70%);opacity: 0;}
-      50%{opacity: 0.5;}
+      0%{opacity: 0;}
       100%{transform: translateY(0%);}
       }
   
       .ev_all{
-        transform: translateY(10%);
-        animation: ev_img 1s 0.5s forwards; 
+        display: none;
+        transform: translateY(200%);
+        animation:ev_all 1s .2s forwards;
         margin: 5% 0;
+        .mySwiper {
+          width: 90%;
+          height: 100%;
+      }
   
-        @keyframes ev_img{
-          0%{transform: translateY(50%);opacity: 0;}
-          50%{opacity: 0.3;}
-          100%{transform: translateY(0%);}
-        }
+      @keyframes ev_all{
+        0%{opacity: 0;}
+        50%{opacity: 0.4;}
+        100%{transform: translateY(0%);}
+      } 
   
         .sign{
           button:nth-child(1){
@@ -1923,6 +1931,7 @@ main{
       }
     }
   
+  
     .main_vd{
       figure{
         width: 100%; height: 100vh;
@@ -1940,34 +1949,39 @@ main{
       width: 100%; height: 100vh;
       background-color: #fff;
       div{
-        height: 100%;
-        padding-top: 40%; 
-        text-align: center;
-        transform: translateY(10%);
-        animation: int 5s forwards ease; 
+        height: 55%;
         overflow: hidden;
-        
-        @keyframes int{
-    0%{transform: translateY(20%);opacity: 0;}
-    50%{opacity: 1; transform: translateY(0%);}
-    100%{transform: translateY(20%); opacity: 0;}
-      } 
-  
-        a{
-          img{width: 20%;}
+        .ins_ani{
+          height: 100%;
+          padding-top: 40%; 
+          text-align: center;
+          transform: translateY(100%);
+          transition: 2s;
+          
+          a{
+            img{width: 20%;}
+          }
+          h3
+          {
+          margin-top: 10px;
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #9c9c9c;
+          font-family: 'Montserrat';
+          }
         }
-        h3
-        {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        font-weight: 400;
-        color: #9c9c9c;
-        font-family: 'Montserrat';
-        }
-      }
+    }
+    }
+
+  .main_insta.active div .ins_ani{ 
+    transition: 2s; transform: translateY(0%);
+   animation: ins 2s forwards ease-in;}
+
+    @keyframes ins{
+      0%{opacity: 0;}
+      100%{opacity: 1;}
     }
   }
-  
   .right {
     display: none;
    }

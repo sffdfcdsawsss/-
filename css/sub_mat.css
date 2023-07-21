@@ -1041,8 +1041,7 @@
   .chat_bot .ch_contents .ch_main .ch_box_2 span a img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .chat_bot .ch_footer p {
     display: flex;
@@ -2373,8 +2372,7 @@ main .sub_mat .mat_title {
 main .sub_mat .mat_title img {
   width: 100%;
   height: 380px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .sub_mat .mat_title div {
   text-align: center;
@@ -2440,8 +2438,7 @@ main .sub_mat .mat_ele ul li figure {
 }
 main .sub_mat .mat_ele ul li figure a img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .sub_mat .mat_ele ul li figure a img:hover {
   transform: scale(1.01);
@@ -2505,8 +2502,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_title img {
     width: 100%;
     height: 15rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_title div {
     text-align: center;
@@ -2585,8 +2581,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_ele ul li figure a img {
     width: 43vw;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_ele ul li figure a img:hover {
     display: none;
@@ -2662,8 +2657,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_title img {
     width: 100%;
     height: 15rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_title div {
     text-align: center;
@@ -2742,8 +2736,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_ele ul li figure a img {
     width: 45vw;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_ele ul li figure a img:hover {
     display: none;
@@ -2815,8 +2808,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_title img {
     width: 100%;
     height: 25rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_title div {
     text-align: center;
@@ -2895,8 +2887,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_ele ul li figure a img {
     width: 45vw;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_ele ul li figure a img:hover {
     display: none;
@@ -2968,8 +2959,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_title img {
     width: 100%;
     height: 30rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_title div {
     text-align: center;
@@ -3048,8 +3038,7 @@ main .sub_mat .page a {
   main .sub_mat .mat_ele ul li figure a img {
     width: 45vw;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .sub_mat .mat_ele ul li figure a img:hover {
     display: none;
@@ -3109,4 +3098,4 @@ main .sub_mat .page a {
     display: none;
     width: 15px;
   }
-}
+}/*# sourceMappingURL=sub_mat.css.map */

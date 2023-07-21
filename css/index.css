@@ -1041,8 +1041,7 @@
   .chat_bot .ch_contents .ch_main .ch_box_2 span a img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .chat_bot .ch_footer p {
     display: flex;
@@ -2391,8 +2390,7 @@ main .index .spot_1 figure {
 main .index .spot_1 figure img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .index .spot_1 div {
   display: flex;
@@ -2406,6 +2404,7 @@ main .index .spot_1 div {
   margin-bottom: 0px;
   overflow: hidden;
   padding: 1%;
+  display: none;
 }
 main .index .spot_1 div p {
   font-size: 24px;
@@ -2473,8 +2472,7 @@ main .index .spot_2 figure {
 }
 main .index .spot_2 figure img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .index .spot_2 figure div {
   display: flex;
@@ -2487,6 +2485,7 @@ main .index .spot_2 figure div {
   margin-bottom: 0px;
   overflow: hidden;
   padding: 1%;
+  display: none;
 }
 main .index .spot_2 figure div p {
   font-size: 24px;
@@ -2572,6 +2571,12 @@ main .index .bottom div span {
 main .index .bottom div span.active {
   background-color: white;
 }
+main .index.active .spot_1 figure div {
+  display: flex;
+}
+main .index.active .spot_2 figure div {
+  display: flex;
+}
 main .main_mat {
   width: 100%;
   height: 100vh;
@@ -2581,6 +2586,9 @@ main .main_mat .title {
   padding-top: 6%;
   text-align: center;
   color: #031d33;
+  overflow: hidden;
+  height: 25%;
+  display: none;
 }
 main .main_mat .title p {
   font-size: 20px;
@@ -2593,9 +2601,6 @@ main .main_mat .title p {
   0% {
     transform: translateY(500%);
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0%);
@@ -2613,9 +2618,6 @@ main .main_mat .title h2 {
     transform: translateY(500%);
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
-  }
   100% {
     transform: translateY(0%);
   }
@@ -2624,25 +2626,24 @@ main .main_mat .ele {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  display: none;
 }
 main .main_mat .ele .id2_left {
   position: relative;
+  display: none;
 }
 main .main_mat .ele .id2_left figure {
   margin-top: 8%;
 }
 main .main_mat .ele .id2_left figure img {
+  transform: translateX(-200%);
   width: 720px;
   height: 280px;
-  animation: mt_img_1 1.6s forwards ease-out;
+  animation: mt_img_1 1.6s 0.5s forwards ease-out;
 }
 @keyframes mt_img_1 {
   0% {
-    transform: translateX(-500%);
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     transform: translateX(0%);
@@ -2650,6 +2651,7 @@ main .main_mat .ele .id2_left figure img {
 }
 main .main_mat .ele .id2_left figcaption {
   padding-left: 26%;
+  animation: mat 1s forwards ease-out;
 }
 main .main_mat .ele .id2_left figcaption h4 {
   font-size: 22px;
@@ -2685,7 +2687,7 @@ main .main_mat .ele .id2_left figcaption a {
   padding-top: 5px;
   margin-bottom: 12%;
 }
-main .main_mat .ele .circle {
+main .main_mat .ele .id2_left .circle {
   position: absolute;
   top: 67%;
   left: 55%;
@@ -2699,57 +2701,60 @@ main .main_mat .ele .circle {
     transform: rotate(360deg);
   }
 }
-main .main_mat .id2_right {
-  position: relative;
-}
-main .main_mat .id2_right figure {
-  margin-top: 8%;
-}
-main .main_mat .id2_right figure img {
-  width: 720px;
-  height: 280px;
-  animation: mt_img_2 1.6s forwards ease-out;
-}
-@keyframes mt_img_2 {
+@keyframes mat {
   0% {
-    transform: translateX(500%);
     opacity: 0;
   }
-  50% {
-    opacity: 0.5;
+  30% {
+    transform: scale(0.9);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0%);
+    transform: scale(1);
   }
 }
-main .main_mat .id2_right figure figcaption {
+main .main_mat .ele .id2_right {
+  display: none;
+  position: relative;
+}
+main .main_mat .ele .id2_right figure {
+  margin-top: 8%;
+}
+main .main_mat .ele .id2_right figure img {
+  transform: translateX(200%);
+  width: 720px;
+  height: 280px;
+  animation: mt_img_1 1.6s 0.5s forwards ease-out;
+}
+main .main_mat .ele .id2_right figure figcaption {
   text-align: end;
   padding-top: -10px;
   padding-right: 26%;
+  animation: mat 1s forwards ease-out;
 }
-main .main_mat .id2_right figure figcaption h4 {
+main .main_mat .ele .id2_right figure figcaption h4 {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 6px;
 }
-main .main_mat .id2_right figure figcaption h3 {
+main .main_mat .ele .id2_right figure figcaption h3 {
   font-size: 30px;
   font-weight: 700;
   padding-bottom: 5px;
 }
-main .main_mat .id2_right figure figcaption span {
+main .main_mat .ele .id2_right figure figcaption span {
   border-bottom: 2px solid black;
   width: 100px;
   display: inline-block;
 }
-main .main_mat .id2_right figure figcaption p {
+main .main_mat .ele .id2_right figure figcaption p {
   font-size: 15.6px;
   font-weight: 100;
   line-height: 28px;
   margin-top: 15px;
   margin-bottom: 20px;
 }
-main .main_mat .id2_right figure figcaption a {
+main .main_mat .ele .id2_right figure figcaption a {
   border: solid 1px black;
   font-size: 14px;
   text-decoration: none;
@@ -2761,7 +2766,7 @@ main .main_mat .id2_right figure figcaption a {
   padding-top: 5px;
   margin-bottom: 12%;
 }
-main .main_mat .id2_right .circle_2 {
+main .main_mat .ele .id2_right .circle_2 {
   position: absolute;
   top: 25%;
   left: 20%;
@@ -2775,20 +2780,17 @@ main .main_mat .id2_right .circle_2 {
     transform: rotate(360deg);
   }
 }
-main .main_mat figcaption {
-  animation: Mt_ele 1s forwards;
+main .main_mat.active .title {
+  display: block;
 }
-@keyframes Mt_ele {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  80% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+main .main_mat.active .ele {
+  display: flex;
+}
+main .main_mat.active .ele .id2_left {
+  display: block;
+}
+main .main_mat.active .ele .id2_right {
+  display: block;
 }
 main .main_br {
   color: #fff;
@@ -2796,128 +2798,122 @@ main .main_br {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  display: block;
 }
 main .main_br .br_bg {
   height: 100%;
 }
 main .main_br .br_bg img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
-main .main_br .br_left {
+main .main_br .br_ele {
+  display: none;
+}
+main .main_br .br_ele .br_left {
   position: absolute;
   top: 40%;
   left: 5%;
+  overflow: hidden;
 }
-main .main_br .br_left h2 {
+main .main_br .br_ele .br_left h2 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 3%;
-  transform: translateY(10%);
+  transform: translateY(100%);
   animation: br_title_1 1s forwards;
-  overflow: hidden;
 }
 @keyframes br_title_1 {
   0% {
-    transform: translateY(50%);
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0%);
   }
 }
-main .main_br .br_left h3 {
+main .main_br .br_ele .br_left h3 {
   font-size: 20px;
   line-height: 32px;
   font-weight: 300;
-  transform: translateY(10%);
-  animation: br_title_2 1s 0.2s forwards;
+  transform: translateY(100%);
+  animation: br_title_2 1s 0.4s forwards;
   overflow: hidden;
 }
 @keyframes br_title_2 {
   0% {
-    transform: translateY(100%);
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0%);
   }
 }
-main .main_br .br_right {
+main .main_br .br_ele .br_right {
   position: absolute;
   top: 40%;
   left: 73%;
+  overflow: hidden;
 }
-main .main_br .br_right div {
-  transform: translateY(10%);
-  animation: br_title_3 1s 0.7s forwards;
+main .main_br .br_ele .br_right div {
+  transform: translateY(130%);
+  animation: br_title_3 1s 0.6s forwards;
   overflow: hidden;
 }
 @keyframes br_title_3 {
   0% {
-    transform: translateY(50%);
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.3;
   }
   100% {
     transform: translateY(0%);
   }
 }
-main .main_br .br_right div p:nth-child(1) {
+main .main_br .br_ele .br_right div p:nth-child(1) {
   font-family: "Noto Serif", serif;
   font-size: 28px;
   font-weight: 400;
   margin-bottom: 5px;
 }
-main .main_br .br_right div p:nth-child(2) {
+main .main_br .br_ele .br_right div p:nth-child(2) {
   font-weight: 400;
   margin-bottom: 10%;
   text-align: center;
   display: flex;
   justify-content: space-around;
 }
-main .main_br .br_right div p:nth-child(2) a {
+main .main_br .br_ele .br_right div p:nth-child(2) a {
   margin-left: -20px;
   font-size: 16px;
 }
-main .main_br .br_right .br_but {
+main .main_br .br_ele .br_right .br_but {
   display: flex;
   flex-direction: column;
-  transform: translateY(10%);
-  animation: br_title_4 1s 1.1s forwards;
+  transform: translateY(200%);
+  animation: br_title_4 1s 0.8s forwards;
   overflow: hidden;
   width: 220px;
   z-index: 900;
 }
 @keyframes br_title_4 {
   0% {
-    transform: translateY(100%);
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
   100% {
     transform: translateY(0%);
   }
 }
-main .main_br .br_right .br_but a {
+main .main_br .br_ele .br_right .br_but a {
   font-size: 17px;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
 }
-main .main_br .br_right .br_but a::after {
+main .main_br .br_ele .br_right .br_but a::after {
   content: "";
   display: inline-block;
   width: 90px;
@@ -2926,34 +2922,35 @@ main .main_br .br_right .br_but a::after {
   margin-left: 10px;
   margin-top: 10px;
 }
-main .main_br .ani {
+main .main_br .br_ele .ani {
   width: 544px;
   height: 544px;
   position: absolute;
-  top: 23%;
-  left: 36%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
-main .main_br .ani .basmo, main .main_br .ani .br_cir {
+main .main_br .br_ele .ani .basmo, main .main_br .br_ele .ani .br_cir {
   position: absolute;
   top: 0%;
   left: 0%;
 }
-main .main_br .ani .br_cir {
+main .main_br .br_ele .ani .br_cir {
   animation: a_0 10s linear infinite;
 }
-main .main_br .ani .ob_1 {
+main .main_br .br_ele .ani .ob_1 {
   position: absolute;
   top: 13%;
   left: 67%;
   animation: a_1 5s linear infinite;
 }
-main .main_br .ani .ob_2 {
+main .main_br .br_ele .ani .ob_2 {
   position: absolute;
   top: 45%;
   left: 1%;
   animation: a_2 5s linear infinite;
 }
-main .main_br .ani .ob_3 {
+main .main_br .br_ele .ani .ob_3 {
   position: absolute;
   top: 74%;
   left: 68%;
@@ -2991,47 +2988,51 @@ main .main_br .ani .ob_3 {
     transform: rotate(360deg);
   }
 }
+main .main_br.active .br_ele {
+  display: block;
+}
+main .main_br.active .br_ele .ani {
+  transition: 1s;
+}
 main .main_ev {
   position: relative;
   width: 100%;
   height: 100vh;
   background-image: url(../img/ma_event.png);
   background-size: cover;
+  overflow: hidden;
 }
 main .main_ev h2 {
+  display: none;
   font-size: 42px;
   font-weight: 700;
   color: #fff;
   text-align: center;
   padding-top: 8%;
-  transform: translateY(10%);
+  transform: translateY(100%);
   animation: ev_title 1s forwards;
   overflow: hidden;
 }
 @keyframes ev_title {
   0% {
-    transform: translateY(50%);
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
   }
   100% {
     transform: translateY(0%);
   }
 }
 main .main_ev .ev_all {
-  transform: translateY(10%);
-  animation: ev_all 1s forwards;
+  display: none;
+  transform: translateY(200%);
+  animation: ev_all 1s 0.2s forwards;
   margin: 3% 0;
 }
 @keyframes ev_all {
   0% {
-    transform: translateY(50%);
     opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.4;
   }
   100% {
     transform: translateY(0%);
@@ -3078,9 +3079,7 @@ main .main_ev .ev_all .mySwiper .swiper-pagination {
   width: 100%;
   height: 6px;
   margin: 0 auto;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: #fff;
 }
 main .main_ev .ev_all .mySwiper .swiper-pagination span {
@@ -3088,6 +3087,12 @@ main .main_ev .ev_all .mySwiper .swiper-pagination span {
   transform-origin: left top;
   display: block;
   background-color: #9c9c9c;
+}
+main .main_ev.active h2 {
+  display: block;
+}
+main .main_ev.active .ev_all {
+  display: block;
 }
 main .main_vd {
   width: 100%;
@@ -3099,8 +3104,7 @@ main .main_vd figure {
 }
 main .main_vd figure video {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .main_insta {
   width: 100%;
@@ -3108,33 +3112,34 @@ main .main_insta {
   background-color: #fff;
 }
 main .main_insta div {
+  overflow: hidden;
   height: 600px;
+}
+main .main_insta div .ins_ani {
   padding-top: 15%;
   text-align: center;
-  transform: translateY(10%);
-  display: none;
-  overflow: hidden;
+  transform: translateY(100%);
+  transition: 2s;
 }
-main .main_insta h3 {
+main .main_insta div .ins_ani h3 {
   margin-top: 10px;
   font-size: 22px;
   font-weight: 400;
   color: #9c9c9c;
 }
 
-.main_insta.active .ins_ani {
-  display: block;
-  animation: int 1s forwards ease;
+.main_insta.active div .ins_ani {
+  transition: 2s;
+  transform: translateY(0%);
+  animation: ins 2s forwards ease-in;
 }
 
-@keyframes int {
+@keyframes ins {
   0% {
-    transform: translateY(20%);
     opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateY(0%);
   }
 }
 .right {
@@ -3276,8 +3281,7 @@ main .main_insta h3 {
     position: absolute;
     left: -60%;
     width: 800px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_1 div {
     display: flex;
@@ -3358,8 +3362,7 @@ main .main_insta h3 {
     left: -40%;
     width: 800px;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_2 figure div {
     display: flex;
@@ -3668,8 +3671,7 @@ main .main_insta h3 {
     overflow: hidden;
   }
   main .main_br .br_bg img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     height: 100vh;
   }
@@ -3807,8 +3809,7 @@ main .main_insta h3 {
   }
   main .main_br .ani .basmo, main .main_br .ani .br_cir {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -3817,8 +3818,7 @@ main .main_insta h3 {
     animation: a_0 10s linear infinite;
   }
   main .main_br .ani .ob_1 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 11%;
@@ -3826,8 +3826,7 @@ main .main_insta h3 {
     animation: a_1 5s linear infinite;
   }
   main .main_br .ani .ob_2 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 45%;
@@ -3835,8 +3834,7 @@ main .main_insta h3 {
     animation: a_2 5s linear infinite;
   }
   main .main_br .ani .ob_3 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 75%;
@@ -3966,9 +3964,7 @@ main .main_insta h3 {
     width: 100%;
     height: 6px;
     margin: 0 auto;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
   }
   main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-bar {
     background-color: #fff;
@@ -3986,8 +3982,7 @@ main .main_insta h3 {
   main .main_vd figure video {
     width: 100%;
     height: 50%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .main_insta {
     width: 100%;
@@ -4058,8 +4053,7 @@ main .main_insta h3 {
     position: absolute;
     left: 0%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_1 div {
     display: flex;
@@ -4140,8 +4134,7 @@ main .main_insta h3 {
     left: 0%;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_2 figure div {
     display: flex;
@@ -4456,8 +4449,7 @@ main .main_insta h3 {
     overflow: hidden;
   }
   main .main_br .br_bg img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     height: 100vh;
   }
@@ -4596,8 +4588,7 @@ main .main_insta h3 {
   }
   main .main_br .ani .basmo, main .main_br .ani .br_cir {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -4606,8 +4597,7 @@ main .main_insta h3 {
     animation: a_0 10s linear infinite;
   }
   main .main_br .ani .ob_1 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 11%;
@@ -4615,8 +4605,7 @@ main .main_insta h3 {
     animation: a_1 5s linear infinite;
   }
   main .main_br .ani .ob_2 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 45%;
@@ -4624,8 +4613,7 @@ main .main_insta h3 {
     animation: a_2 5s linear infinite;
   }
   main .main_br .ani .ob_3 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 75%;
@@ -4755,9 +4743,7 @@ main .main_insta h3 {
     width: 100%;
     height: 6px;
     margin: 0 auto;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
   }
   main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-bar {
     background-color: #fff;
@@ -4775,8 +4761,7 @@ main .main_insta h3 {
   main .main_vd figure video {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .main_insta {
     width: 100%;
@@ -4847,8 +4832,7 @@ main .main_insta h3 {
     position: absolute;
     left: 0%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_1 div {
     display: flex;
@@ -4862,6 +4846,7 @@ main .main_insta h3 {
     height: 20%;
     margin-bottom: 0px;
     overflow: hidden;
+    display: none;
   }
   main .index .spot_1 div p {
     text-align: center;
@@ -4929,8 +4914,7 @@ main .main_insta h3 {
     left: 0%;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_2 figure div {
     display: flex;
@@ -4944,6 +4928,7 @@ main .main_insta h3 {
     height: 20%;
     margin-bottom: 0px;
     overflow: hidden;
+    display: none;
   }
   main .index .spot_2 figure div p {
     text-align: center;
@@ -5015,13 +5000,14 @@ main .main_insta h3 {
   }
   main .main_mat {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #e9ebf1;
   }
   main .main_mat .title {
-    padding-top: 20%;
+    padding-top: 10%;
     text-align: center;
     color: #000;
+    height: 15%;
   }
   main .main_mat .title p {
     font-size: 1rem;
@@ -5034,9 +5020,6 @@ main .main_insta h3 {
     0% {
       transform: translateY(500%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateY(0%);
@@ -5054,31 +5037,26 @@ main .main_insta h3 {
       transform: translateY(500%);
       opacity: 0;
     }
-    50% {
-      opacity: 0.5;
-    }
     100% {
       transform: translateY(0%);
     }
   }
   main .main_mat .ele {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   main .main_mat .ele .id2_left figure {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   main .main_mat .ele .id2_left figure img {
+    transform: translateX(-200%);
     width: 50%;
     height: 50%;
-    animation: mt_img_1 1.6s forwards ease-out;
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
   }
   @keyframes mt_img_1 {
     0% {
-      transform: translateX(-500%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateX(0%);
@@ -5087,6 +5065,7 @@ main .main_insta h3 {
   main .main_mat .ele .id2_left figcaption {
     padding: 0%;
     text-align: center;
+    animation: mat 1s forwards ease-out;
   }
   main .main_mat .ele .id2_left figcaption h4 {
     font-size: 1rem;
@@ -5121,6 +5100,18 @@ main .main_insta h3 {
     padding-top: 5px;
     margin-bottom: 1%;
   }
+  @keyframes mat {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   main .main_mat .ele .circle {
     position: absolute;
     display: none;
@@ -5136,58 +5127,51 @@ main .main_insta h3 {
       transform: rotate(360deg);
     }
   }
-  main .main_mat .id2_right figure {
-    display: flex;
+  main .main_mat .ele .id2_right {
+    display: none;
+    flex-direction: column;
+  }
+  main .main_mat .ele .id2_right figure {
     flex-direction: column-reverse;
     margin-top: 12%;
   }
-  main .main_mat .id2_right figure img {
+  main .main_mat .ele .id2_right figure img {
     position: absolute;
     right: 0;
-    top: -2%;
+    top: 10%;
     width: 50%;
     height: 30%;
-    animation: mt_img_2 1.6s forwards ease-out;
+    transform: translateX(200%);
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
   }
-  @keyframes mt_img_2 {
-    0% {
-      transform: translateX(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  main .main_mat .id2_right figure figcaption {
+  main .main_mat .ele .id2_right figure figcaption {
     padding: 0%;
     text-align: center;
-    margin-top: 22%;
+    margin-top: 15%;
+    animation: mat 1s forwards ease-out;
   }
-  main .main_mat .id2_right figure figcaption h4 {
+  main .main_mat .ele .id2_right figure figcaption h4 {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 6px;
     display: none;
   }
-  main .main_mat .id2_right figure figcaption h3 {
+  main .main_mat .ele .id2_right figure figcaption h3 {
     font-size: 1.2rem;
     font-weight: 700;
     padding-bottom: 5px;
   }
-  main .main_mat .id2_right figure figcaption span {
+  main .main_mat .ele .id2_right figure figcaption span {
     display: none;
   }
-  main .main_mat .id2_right figure figcaption p {
+  main .main_mat .ele .id2_right figure figcaption p {
     font-size: 0.85rem;
     font-weight: 100;
     line-height: 150%;
     margin-top: 1.5%;
     margin-bottom: 3%;
   }
-  main .main_mat .id2_right figure figcaption a {
+  main .main_mat .ele .id2_right figure figcaption a {
     border: solid 1px black;
     font-size: 1rem;
     text-decoration: none;
@@ -5199,7 +5183,7 @@ main .main_insta h3 {
     padding-top: 5px;
     margin-bottom: 12%;
   }
-  main .main_mat .id2_right .circle_2 {
+  main .main_mat .ele .id2_right .circle_2 {
     position: absolute;
     display: none;
     top: 25%;
@@ -5214,20 +5198,8 @@ main .main_insta h3 {
       transform: rotate(360deg);
     }
   }
-  main .main_mat figcaption {
-    animation: Mt_ele 1s forwards;
-  }
-  @keyframes Mt_ele {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    80% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
+  main .main_mat.active .ele .id2_right {
+    display: flex;
   }
   main .main_br {
     color: #fff;
@@ -5235,181 +5207,174 @@ main .main_insta h3 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    display: block;
   }
   main .main_br .br_bg img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     height: 100vh;
   }
-  main .main_br .br_left {
+  main .main_br .br_ele .br_left {
     position: absolute;
-    top: 40%;
-    left: 5%;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    overflow: hidden;
   }
-  main .main_br .br_left h2 {
-    font-size: 1rem;
+  main .main_br .br_ele .br_left h2 {
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 3%;
-    transform: translateY(10%);
+    transform: translateY(100%);
     animation: br_title_1 1s forwards;
-    overflow: hidden;
   }
   @keyframes br_title_1 {
     0% {
-      transform: translateY(50%);
       opacity: 0;
     }
-    50% {
-      opacity: 0.5;
+    100% {
+      transform: translateY(0%);
     }
     100% {
       transform: translateY(0%);
     }
   }
-  main .main_br .br_left h3 {
-    font-size: 0.8rem;
+  main .main_br .br_ele .br_left h3 {
+    font-size: 1rem;
     line-height: 150%;
     font-weight: 300;
-    transform: translateY(10%);
+    text-align: center;
+    transform: translateY(100%);
     animation: br_title_2 1s 0.2s forwards;
+    animation: br_title_2 1s 0.4s forwards;
     overflow: hidden;
   }
   @keyframes br_title_2 {
     0% {
-      transform: translateY(100%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateY(0%);
     }
   }
-  main .main_br .br_right {
+  main .main_br .br_ele .br_right {
     position: absolute;
-    top: 40%;
-    left: 72%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
-  main .main_br .br_right div {
-    transform: translateY(10%);
-    animation: br_title_3 1s 0.7s forwards;
+  main .main_br .br_ele .br_right div {
+    transform: translateY(150%);
+    animation: br_title_3 1s 0.6s forwards;
     overflow: hidden;
   }
   @keyframes br_title_3 {
     0% {
-      transform: translateY(50%);
       opacity: 0;
     }
     50% {
-      opacity: 0.5;
+      opacity: 0.3;
     }
     100% {
       transform: translateY(0%);
     }
   }
-  main .main_br .br_right div p:nth-child(1) {
+  main .main_br .br_ele .br_right div p:nth-child(1) {
     font-family: "Noto Serif", serif;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1%;
   }
-  main .main_br .br_right div p:nth-child(2) {
+  main .main_br .br_ele .br_right div p:nth-child(2) {
     font-weight: 400;
     margin-bottom: 10%;
     text-align: center;
     display: flex;
     justify-content: space-around;
   }
-  main .main_br .br_right div p:nth-child(2) a {
+  main .main_br .br_ele .br_right div p:nth-child(2) a {
     margin-left: -20px;
     font-size: 0.8rem;
   }
-  main .main_br .br_right .br_but {
+  main .main_br .br_ele .br_right .br_but {
     display: flex;
     flex-direction: column;
-    transform: translateY(10%);
-    animation: br_title_4 1s 1.1s forwards;
+    transform: translateY(150%);
+    animation: br_title_4 1s 0.8s forwards;
     overflow: hidden;
-    width: 150%;
+    width: 220px;
     z-index: 900;
-    font-size: 0.7rem;
   }
   @keyframes br_title_4 {
     0% {
-      transform: translateY(100%);
       opacity: 0;
     }
     50% {
-      opacity: 0.5;
+      opacity: 0.2;
     }
     100% {
       transform: translateY(0%);
     }
   }
-  main .main_br .br_right .br_but a {
-    font-size: 0.9rem;
+  main .main_br .br_ele .br_right .br_but a {
+    font-size: 1rem;
+    text-align: center;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
   }
-  main .main_br .br_right .br_but a::after {
+  main .main_br .br_ele .br_right .br_but a::after {
     content: "";
     display: inline-block;
-    width: 20%;
+    width: 26%;
     height: 15px;
     background: url("../img/illust/view.png") 0 4px no-repeat;
     background-size: contain;
     margin-left: 2%;
     margin-top: 10px;
   }
-  main .main_br .ani {
-    width: 50%;
+  main .main_br .br_ele .ani {
+    width: 70%;
     height: 37%;
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
-  main .main_br .ani .basmo, main .main_br .ani .br_cir {
+  main .main_br .br_ele .ani .basmo, main .main_br .br_ele .ani .br_cir {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 0%;
     left: 0%;
   }
-  main .main_br .ani .br_cir {
+  main .main_br .br_ele .ani .br_cir {
     animation: a_0 10s linear infinite;
   }
-  main .main_br .ani .ob_1 {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 15%;
+  main .main_br .br_ele .ani .ob_1 {
+    object-fit: cover;
+    width: 13%;
     position: absolute;
-    top: 8%;
+    top: 10%;
     left: 60%;
     animation: a_1 5s linear infinite;
   }
-  main .main_br .ani .ob_2 {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 15%;
+  main .main_br .br_ele .ani .ob_2 {
+    object-fit: cover;
+    width: 13%;
     position: absolute;
-    top: 57%;
+    top: 70%;
     left: 5%;
     animation: a_2 5s linear infinite;
   }
-  main .main_br .ani .ob_3 {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 15%;
+  main .main_br .br_ele .ani .ob_3 {
+    object-fit: cover;
+    width: 13%;
     position: absolute;
-    top: 70%;
+    top: 100%;
     left: 70%;
     animation: a_3 5s linear infinite;
   }
@@ -5445,6 +5410,12 @@ main .main_insta h3 {
       transform: rotate(360deg);
     }
   }
+  main .main_br.active .br_ele {
+    display: block;
+  }
+  main .main_br.active .br_ele .ani {
+    transition: 1s;
+  }
   main .main_ev {
     position: relative;
     width: 100%;
@@ -5454,41 +5425,43 @@ main .main_insta h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
   }
   main .main_ev h2 {
+    display: none;
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
     text-align: center;
     padding-top: 0%;
-    transform: translateY(15%);
+    transform: translateY(100%);
     animation: ev_title 1s forwards;
     overflow: hidden;
   }
   @keyframes ev_title {
     0% {
-      transform: translateY(70%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateY(0%);
     }
   }
   main .main_ev .ev_all {
-    transform: translateY(10%);
-    animation: ev_img 1s 0.5s forwards;
+    display: none;
+    transform: translateY(200%);
+    animation: ev_all 1s 0.2s forwards;
     margin: 5% 0;
   }
-  @keyframes ev_img {
+  main .main_ev .ev_all .mySwiper {
+    width: 90%;
+    height: 100%;
+  }
+  @keyframes ev_all {
     0% {
-      transform: translateY(50%);
       opacity: 0;
     }
     50% {
-      opacity: 0.3;
+      opacity: 0.4;
     }
     100% {
       transform: translateY(0%);
@@ -5536,9 +5509,7 @@ main .main_insta h3 {
     width: 100%;
     height: 8px;
     margin: 0 auto;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
   }
   main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-bar {
     background-color: #fff;
@@ -5556,8 +5527,7 @@ main .main_insta h3 {
   main .main_vd figure video {
     width: 100%;
     height: 50%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .main_insta {
     width: 100%;
@@ -5565,36 +5535,38 @@ main .main_insta h3 {
     background-color: #fff;
   }
   main .main_insta div {
+    height: 55%;
+    overflow: hidden;
+  }
+  main .main_insta div .ins_ani {
     height: 100%;
     padding-top: 40%;
     text-align: center;
-    transform: translateY(10%);
-    animation: int 5s forwards ease;
-    overflow: hidden;
+    transform: translateY(100%);
+    transition: 2s;
   }
-  @keyframes int {
-    0% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-  }
-  main .main_insta div a img {
+  main .main_insta div .ins_ani a img {
     width: 20%;
   }
-  main .main_insta div h3 {
+  main .main_insta div .ins_ani h3 {
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: 400;
     color: #9c9c9c;
     font-family: "Montserrat";
+  }
+  main .main_insta.active div .ins_ani {
+    transition: 2s;
+    transform: translateY(0%);
+    animation: ins 2s forwards ease-in;
+  }
+  @keyframes ins {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .right {
     display: none;
@@ -5628,8 +5600,7 @@ main .main_insta h3 {
     position: absolute;
     left: 0%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_1 div {
     display: flex;
@@ -5711,8 +5682,7 @@ main .main_insta h3 {
     left: 0%;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .index .spot_2 figure div {
     display: flex;
@@ -6019,8 +5989,7 @@ main .main_insta h3 {
     overflow: hidden;
   }
   main .main_br .br_bg img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 100%;
     height: 100vh;
   }
@@ -6159,8 +6128,7 @@ main .main_insta h3 {
   }
   main .main_br .ani .basmo, main .main_br .ani .br_cir {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -6169,8 +6137,7 @@ main .main_insta h3 {
     animation: a_0 10s linear infinite;
   }
   main .main_br .ani .ob_1 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 7%;
@@ -6178,8 +6145,7 @@ main .main_insta h3 {
     animation: a_1 5s linear infinite;
   }
   main .main_br .ani .ob_2 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 45%;
@@ -6187,8 +6153,7 @@ main .main_insta h3 {
     animation: a_2 5s linear infinite;
   }
   main .main_br .ani .ob_3 {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     width: 15%;
     position: absolute;
     top: 86%;
@@ -6318,9 +6283,7 @@ main .main_insta h3 {
     width: 100%;
     height: 8px;
     margin: 0 auto;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    appearance: none;
   }
   main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-bar {
     background-color: #fff;
@@ -6338,8 +6301,7 @@ main .main_insta h3 {
   main .main_vd figure video {
     width: 100%;
     height: 75%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   main .main_insta {
     width: 100%;
@@ -6384,4 +6346,4 @@ main .main_insta h3 {
   .right.black {
     display: none;
   }
-}
+}/*# sourceMappingURL=index.css.map */

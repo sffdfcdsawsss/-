@@ -1,6 +1,6 @@
 
 $('body').prepend('<header></header>');
-$('header').load('./header.html .menu-trigger,.menu_bar,h1,.ic',menu, contentsMove);
+$('header').load('./header.html .menu-trigger,.menu_bar,h1,.ic', menu, contentsMove);
 chat();
 idx();
 
@@ -18,10 +18,6 @@ function contentsMove(){
 
     let str1 = image.src;
     let changeStr = str1.replace('.png','2.png'); 
-
-
-
-console.log(elIc);
     
     let cIdx = 0;
     let move = 0;
@@ -35,7 +31,7 @@ console.log(elIc);
             posY.push(ele.getBoundingClientRect().y - (window.innerHeight - ele.offsetHeight));
         }
     })
-    document.body.style= `height:${elMain.offsetHeight}px`;
+    document.body.style= `height:${elMain.offsetHeight*2}px`;
 
 
     //move
@@ -46,14 +42,18 @@ console.log(elIc);
             elRight.classList.add('black')
             elBurger.classList.add('black')
             image.src = changeStr;
-
-
             
+            elIc.forEach(function(img,k){
+                let str = img.getAttribute('src');
+                if(!str.match('_1')) img.src = img.src.replace('.png','_1.png');
+            })
         }else{
             elRight.classList.remove('black')
             elBurger.classList.remove('black')
             image.src = str1;
-
+            elIc.forEach(function(img,k){
+                img.src = img.src.replace('_1.png','.png');
+            })
         }
     }
 
@@ -80,8 +80,13 @@ console.log(elIc);
             conMove();
         }
     });
+
+    setTimeout(()=>{
+        elMain.style = `transform:translateY(0px); `;
+        document.documentElement.scrollTop = 0;
+    },150)
 }
-window.addEventListener('load',contentsMove,menu);
+window.addEventListener('load',contentsMove);
 
 
 function menu(){
@@ -150,8 +155,14 @@ function idx(){
 
 const elSection = document.querySelectorAll('.section');
 
-const callback = ([entry], observer) => {
-    entry.target.classList.add('active')
+const callback = (entry, observer) => {
+    entry.forEach(function(ele){
+        if( ele.isIntersecting ){
+            ele.target.classList.add('active')
+        }else{
+            ele.target.classList.remove('active')
+        }
+    })
 }
 
 let options = {
@@ -159,13 +170,9 @@ let options = {
 }
 let observer = new IntersectionObserver(callback, options);
 
+elSection.forEach(function(selector){
+    observer.observe( selector)
+})
 
-observer.observe( elSection[0])
-observer.observe( elSection[1])
-observer.observe( elSection[2])
-observer.observe( elSection[3])
-observer.observe( elSection[4])
-observer.observe( elSection[5])
-observer.observe( elSection[6])
 
 

@@ -17,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     left: 0; top: 0;
-    z-index: 9999;
+    z-index: 100;
     width: 100%;
     height: 70px;
     padding: 4%;
@@ -86,7 +86,7 @@
       }
     
       .menu_bar{
-        display: none;
+        display: block;
         position: absolute;
         position: fixed;
         text-align: start;
@@ -109,7 +109,6 @@
                 .log{ 
                     padding-top: 10%;
                     text-transform: uppercase;
-                    font-family: 'Montserrat', sans-serif;
                     font-weight: 600;
                     font-size: 0.8rem;
       
@@ -151,7 +150,7 @@
                     }
                     span:nth-of-type(2) {
                     top: 9px;
-                    display: none;
+                    opacity: 0;
                     }
                     span:nth-of-type(3) {
                     bottom: 28px;
@@ -218,14 +217,14 @@
               margin-left: 0px;
           }
         }
-        a:nth-of-type(3){
+        a:nth-of-type(1){
           img{display: none;}}
       }
     }
 
     .chat{
-      left: 85%;
-      top: 92%;
+      right: 6%;
+      bottom: 3%;
       position: fixed;
       z-index: 999;
       div{
@@ -244,25 +243,24 @@
     }
 
     .chat_bot{
-      display: none;
+      display: block;
       z-index: 10000;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
       background-color: #2020209f;
       border-radius: 0px;
+      transition: 1s;
       .ch_contents{
         margin-left: 0%;
         position: fixed;
         left: 0; bottom: 0%;
         width: 100%;
         height: 100%;
-        top: 5%;
+        top: 8%;
         border-radius: 30px;
         box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
         background-color: rgba(247, 247, 248, 0.9);
-    /*     opacity:0;
-        transition: all 0.3s; */
   
         .ch_bg{filter: blur(30px);}
           
@@ -494,12 +492,7 @@
                 a:hover {color: #000;}
             }
         }
-  
 
-
-  .chat:hover+ .chat_bot{
-    opacity:1 ;
-    }
 
     footer {
       padding-top: 0%;
@@ -625,7 +618,7 @@
       justify-content: space-between;
       align-items: center;
       left: 0; top: 0;
-      z-index: 9999;
+      z-index: 100;
       width: 100%;
       height: 70px;
       padding: 4% 2%;
@@ -694,7 +687,7 @@
         }
       
         .menu_bar{
-          display: none;
+          display: block;
           position: absolute;
           position: fixed;
           text-align: start;
@@ -759,7 +752,7 @@
                       }
                       span:nth-of-type(2) {
                       top: 9px;
-                      display: none;
+                      opacity: 0;
                       }
                       span:nth-of-type(3) {
                       bottom:28.5px;
@@ -831,8 +824,9 @@
   
   
       .chat{
-        left: 91%;
-        top: 85%;
+        top:auto;
+        right: 3%;
+        bottom: 3%;
         position: fixed;
         z-index: 999;
         div{
@@ -851,7 +845,7 @@
       }
   
       .chat_bot{
-        display: none;
+        display: block;
         z-index: 10000;
         top: 0; left: 0;
         width: 100%;
@@ -863,13 +857,11 @@
           position: fixed;
           left: 0; bottom: 0%;
           width: 100%;
-          height: 100%;
-          top: 5%;
+          height: 105%;
+          top: 6%;
           border-radius: 30px;
           box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
           background-color: rgba(247, 247, 248, 0.9);
-      /*     opacity:0;
-          transition: all 0.3s; */
     
           .ch_bg{filter: blur(30px);}
             
@@ -1031,55 +1023,8 @@
                               object-fit: cover;
                               }
                             }
-    
-                          .ic_hov{
-                            .kakao{
-                              position: absolute;
-                              left: 55%;
-                              display: inline-block;
-                              text-align: center;
-                              width: 45px; height: 25px;
-                              background-color: #3f3f3f;
-                              border-radius: 6px;
-                              padding: 2px 2px;
-                              color: #fff;
-                              font-size: 12px;
-                              font-weight: 200;
-                              box-shadow:1px 1px 5px rgba(122, 122, 122, 0.445);
-                              transition: 1s;
-                              opacity: 0;
-                            }
-            
-                            .naver{
-                                position: absolute;
-                                left: 70%;
-                                display: inline-block;
-                                text-align: center;
-                                width: 45px; height: 25px;
-                                background-color: #3f3f3f;
-                                border-radius: 6px;
-                                padding: 2px 2px;
-                                color: #fff;
-                                font-size: 12px;
-                                font-weight: 200;
-                                box-shadow:1px 1px 2px rgba(122, 122, 122, 0.445);
-                                transition: 1s;
-                                opacity: 0;
-                              }
+
                           }
-    
-                            img:hover{
-                              transform: scale(1.1);
-                              transition: 0.5s;} 
-    
-                            i-1:hover.kakao{
-                              opacity: 1;
-                            }
-    
-                            .i-2:hover.naver{
-                              opacity: 1;
-                            }
-                      }
                     }
                   }
               }
@@ -1293,7 +1238,6 @@
         }
       }
       .menu-trigger:hover {
-        display: none;
     
         span:nth-of-type(1) {
           width: 70%;
@@ -1306,7 +1250,7 @@
       }
     
       .menu_bar{
-        display: none;
+        display: block;
         position: absolute;
         position: fixed;
         text-align: start;
@@ -1371,7 +1315,7 @@
                     }
                     span:nth-of-type(2) {
                     top: 9px;
-                    display: none;
+                    opacity: 0;
                     }
                     span:nth-of-type(3) {
                     bottom:28px;
@@ -1440,7 +1384,7 @@
 
 
     .chat{
-      right: 0%;
+      right: 3%;
       top: 91%;
       position: fixed;
       margin-bottom: 10px;
@@ -1449,7 +1393,7 @@
         a{
           img{
             display: inline-block;
-            border-radius: 15px;
+            border-radius: 30px;
             overflow: hidden;
             box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
           }
@@ -1885,7 +1829,6 @@
           }
         }
         .menu-trigger:hover {
-          display: none;
       
           span:nth-of-type(1) {
             width: 70%;
@@ -1898,7 +1841,7 @@
         }
       
         .menu_bar{
-          display: none;
+          display: block;
           position: absolute;
           position: fixed;
           text-align: start;
@@ -1963,7 +1906,7 @@
                       }
                       span:nth-of-type(2) {
                       top: 9px;
-                      display: none;
+                      opacity: 0;
                       }
                       span:nth-of-type(3) {
                       bottom:28px;
@@ -1972,7 +1915,6 @@
                   }
                   
                   .menu-trigger_2:hover{
-                    display: none;
                       span:nth-of-type(1) {
                       width: 70%;
                       left: -10%; margin-top: 2px;
@@ -2031,7 +1973,7 @@
   
   
       .chat{
-        right: 1%;
+        right: 3%;
         top: 88%;
         position: fixed;
         margin-bottom: 10px;
@@ -2040,7 +1982,7 @@
             img{
               display: inline-block;
               width: 60px;
-              border-radius: 15px;
+              border-radius: 30px;
               overflow: hidden;
               box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
             }
@@ -2287,11 +2229,6 @@
                 a:hover {color: #000;}
             }
         }
-    
-
-    .chat:hover+ .chat_bot{
-      opacity:1 ;
-      }
   
       footer {
         padding-top: 0%;

@@ -6,9 +6,12 @@ body::-webkit-scrollbar
 -ms-overflow-style: none;}
 
 main{
+  position: fixed;
+  transition: 1s;
   .index{
+    position: relative;
     .spot_1{
-      display: flex;
+      display: block;
       position: relative;
       width: 100%;
       height: 100vh;
@@ -25,10 +28,12 @@ main{
           flex-direction: column;
           position: absolute;
           top: 25.1%;
-          left: 10.7%;
-          width: 560px; height: 500px;
-          margin-bottom: 300px;
+          left: 3.7%;
+          width: 560px;
+          height: 230px;
+          margin-bottom: 0px;
           overflow: hidden;
+          padding: 1%;
         
         p {
           font-size: 24px;
@@ -39,11 +44,11 @@ main{
           margin-bottom: 20px;
           text-shadow: 3px 3px 10px rgba(0, 0, 0, 46%);
           color: #ffffff;
-          transform: translateY(500%);
-          animation: title_1 1s forwards; 
+          animation: title_1 1s forwards;
+          transform: translateY(200%);
         }
         @keyframes title_1{
-          0%{transform: translateY(500%)
+          0%{transform: translateY(200%)
             ;opacity: 0;}
           50%{opacity: 0.5;}
           100%{transform: translateY(0%);}
@@ -57,35 +62,33 @@ main{
           color: #ffffff;
           text-align: end;
           text-shadow: 3px 3px 10px rgba(0, 0, 0, 46%);
-          transform: translateY(300%);
-          animation: title_2 1s forwards; 
+          animation: title_2 1s 0.3s forwards;
+          transform: translateY(200%);
+          
         }
         @keyframes title_2{
-          0%{transform: translateY(300%)
+          0%{transform: translateY(150%)
             ;opacity: 0;}
           50%{opacity: 0.2;}
           100%{transform: translateY(0%);}
         }
       }
     }
-  
+    .spot_1.active{
+      animation:fadein 1s ease-in-out ;
+    }
+
     .spot_2{
-  
+      display: block;
       position: absolute;
+      width: 100%;
       top: 0; left: 0;
-  
+      z-index: -1;
       figure{
         display: flex;
         position: relative;
         width: 100%;
         height: 100vh;
-        animation: fadein 7s infinite;
-  
-        @keyframes fadein {
-          0% {opacity:0;}
-        50% {opacity:1;}
-        100% {opacity:0;}
-        }
   
         img{width: 100%;
           object-fit: cover;}
@@ -96,11 +99,12 @@ main{
           position: absolute;
           top: 25.1%;
           left: 10.7%;
-          width: 560px; height: 190px;
+          height: 230px;
+          margin-bottom: 0px;
+          overflow: hidden;
+          padding: 1%;
           
-          
-          p
-          {
+          p{
             font-size: 24px;
             font-weight: 400;
             margin-bottom: 25px;
@@ -109,52 +113,66 @@ main{
             padding-bottom: 5px;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 46%);
             color: #ffffff;
-            transition: 1s;
+            transform: translateY(200%);
+            animation: title_3 1s forwards;
           }
-          h2
-          {font-size: 50px;
+          @keyframes title_3{
+            0%{transform: translateY(200%)
+              ;opacity: 0;}
+            50%{opacity: 0.5;}
+            100%{transform: translateY(0%);}
+          }
+          h2{
+            font-size: 50px;
             margin: 0;
             font-weight: 700;
             line-height: 70px;
             color: #ffffff;
             text-align: end;
             text-shadow: 3px 3px 10px rgba(0, 0, 0, 46%);
-            transition: 1s;
+            animation: title_4 1s 0.3s forwards;
+            transform: translateY(200%);
+          }
+          @keyframes title_4{
+            0%{transform: translateY(150%)
+              ;opacity: 0;}
+            50%{opacity: 0.2;}
+            100%{transform: translateY(0%);}
           }
         }
       }
     }
-  
-  
+    .spot_2.active{
+      animation:fadein 1s ease-in-out ;
+      z-index: 0;
+    }
+    @keyframes fadein {
+      0% {opacity:0;}
+    100% {opacity:1;
+      display: block;}
+    }
+
     .bottom {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      justify-content: center;
       width: 100%;
       position: absolute;
-      top: 90.5%; left: -2%; 
+      bottom: 4%;
+      left: 50%;
+      transform: translate(-50%, 0%);
   
       div{
-        padding-right:43.5%;
+        padding-right:0%;
         z-index: 99;
-  
-            span{
+            span {
               margin-left: 8px;
               background-color: rgba(255, 255, 255, 0.2);
               width: 55px;
               height: 5px;
               display: inline-block;
               cursor: pointer;
-            
-              &:hover{
-                margin-left: 8px;
-                background-color: #fff;
-                width: 55px;
-                height: 5px;
-                display: inline-block;
-                cursor: pointer;
-              }
             }
+            span.active{background-color: white;}
           }
       }
   }
@@ -181,7 +199,7 @@ main{
         }
 
       h2{
-        font-size: 41px;
+        font-size: 45px;
         font-weight: 700;
         letter-spacing: -2px;
         transform: translateY(500%);
@@ -511,83 +529,87 @@ main{
 
     .ev_all{
       transform: translateY(10%);
-      animation: ev_img 1s 0.5s forwards; 
+      animation:ev_all 1s forwards;
       margin: 3% 0;
 
-      @keyframes ev_img{
+        @keyframes ev_all{
         0%{transform: translateY(50%);opacity: 0;}
-        50%{opacity: 0.3;}
+        50%{opacity: 0.5;}
         100%{transform: translateY(0%);}
-      }
+      } 
 
       .sign{
-        button:nth-child(1){
+        .swiper-button-prev{
           background: url(../img/illust/prev01.png)no-repeat;
           width: 50px;
           height: 90px;
           border: none;
           position: absolute;
           top: 42%; left: 14%;
+          cursor: pointer;
         }
-        button:nth-child(2){
+        .swiper-button-next{
           background: url(../img/illust/next01.png)no-repeat;
           width: 50px;
           height: 90px;
           border: none;
           position: absolute;
           top: 42%; left: 84%;
+          cursor: pointer;
         }
       }
   
-      .ev_img{
+      .mySwiper{
           width: 66%;
           height: 100%;
           margin: 0 auto;
           overflow:hidden;
-        figure{
+        .swiper-wrapper{
           white-space: nowrap;
           margin:0;
-          transition: 0.5s;
-          a{img{width: 100%;}}
+          width: 100%;
+          margin-bottom: 4%;
+          .swiper-slide{img{width: 100%;}}
         }
-        .ev_bar{
-          text-align: center; margin-top: 2%;
-          progress{
-            width: 100%;
-            height: 6px;
-            margin: 0 auto;
-            appearance: none;
+        .swiper-pagination{
+          text-align: center; 
+          margin-top: 2%;
+          width: 100%;
+          height: 6px;
+          margin: 0 auto;
+          appearance: none;
+          background-color: #fff;
+          span{
+            height:100%; 
+            transform-origin: left top;
+            display: block;
+            background-color: #9c9c9c;
           }
-          progress::-webkit-progress-bar{
-            background-color: #fff;
-            border: #fff;
-          }
-          progress::-webkit-progress-value{background-color: #9c9c9c;}
         }
       }
     }
   }
 
   .main_vd{
-    width: 100%; height: 100vh;
-    object-fit: cover;
+    width: 100%; height:100vh; overflow:hidden;
+    figure{height: 100%;
+      video{
+        width: 100%;
+        object-fit: cover;}
+    }
   }
 
   .main_insta{
     width: 100%; height: 100vh;
     background-color: #fff;
     div{
-      height: 500px;
-      padding-top: 20%; 
+      height: 600px;
+      padding-top: 15%; 
       text-align: center;
       transform: translateY(10%);
-      animation: int 5s forwards ease; 
+      display: none;
       overflow: hidden;
-      
-      @keyframes int{
-  0%{transform: translateY(20%);opacity: 0;}
-  50%{opacity: 1; transform: translateY(0%);}
-  100%{transform: translateY(20%); opacity: 0;}
+
     }
 
       h3{
@@ -598,7 +620,11 @@ main{
       }
     }
   }
-}
+.main_insta.active .ins_ani{ display: block; animation: int 1s forwards ease;}
+@keyframes int{
+  0%{transform: translateY(20%);opacity: 0;}
+  100%{opacity: 1; transform: translateY(0%);}
+    }
 
 .right {
     position: absolute;
@@ -607,7 +633,8 @@ main{
     left: 97%;
     top: 38%;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
+    transition:.5s;
     span {
       position: relative;
       border-right: solid 1px #fff;
@@ -620,18 +647,18 @@ main{
       background-color: #fff;
       border-radius: 10px;
       width: 7px; height: 7px;
-
-        &:nth-of-type(1)::after.cir_white{
-          content: "";
-          position: absolute;
-          text-align: center;
-          display: inline-block;
-          border: solid 1px #fff;
-          border-radius: 100px;
-          width: 35px; height: 35px;
-          top: -15px; left: -15px; background-color: #ffffff00;
-          }
     }
+    .act{
+      position: absolute;
+      text-align: center;
+      display: inline-block;
+      border: solid 1px #fff;
+      border-radius: 100px;
+      width: 35px; height: 35px;
+      top: -15px; left: -17px;
+      transition: 0.5s;
+      background-color: #ffffff00;
+      }
 a:nth-of-type(2){top: 35px;}
 a:nth-of-type(3){top: 70px;}
 a:nth-of-type(4){top: 105px;}
@@ -647,7 +674,8 @@ a:nth-of-type(7){top: 210px;}
   left: 97%;
   top: 38%;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
+  transition:.5s;
   span {
     position: relative;
     border-right: solid 1px #000;
@@ -660,18 +688,18 @@ a:nth-of-type(7){top: 210px;}
     background-color: #000;
     border-radius: 10px;
     width: 7px; height: 7px;
-
-      &:nth-of-type(1)::after.cir_black{
-        content: "";
-        position: absolute;
-        text-align: center;
-        display: inline-block;
-        border: solid 1px #000;
-        border-radius: 100px;
-        width: 35px; height: 35px;
-        top: 20px; left: -15px; background-color: #ffffff00;
-        }
   }
+  .act{
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    border: solid 1px #000;
+    border-radius: 100px;
+    width: 35px; height: 35px;
+    top: -15px; left: -17px; 
+    transition: 0.5s;
+    background-color: #ffffff00;
+    }
 a:nth-of-type(2){top: 35px;}
 a:nth-of-type(3){top: 70px;}
 a:nth-of-type(4){top: 105px;}

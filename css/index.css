@@ -26,7 +26,7 @@
     align-items: center;
     left: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 100;
     width: 100%;
     height: 70px;
     padding: 4%;
@@ -95,7 +95,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -120,7 +120,6 @@
   header .menu_bar nav .log {
     padding-top: 10%;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 0.8rem;
   }
@@ -161,7 +160,7 @@
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(2) {
     top: 9px;
-    display: none;
+    opacity: 0;
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(3) {
     bottom: 28px;
@@ -223,12 +222,12 @@
     transform: translateY(-5px);
     margin-left: 0px;
   }
-  header .ic a:nth-of-type(3) img {
+  header .ic a:nth-of-type(1) img {
     display: none;
   }
   .chat {
-    left: 85%;
-    top: 92%;
+    right: 6%;
+    bottom: 3%;
     position: fixed;
     z-index: 999;
   }
@@ -241,7 +240,7 @@
     box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
   }
   .chat_bot {
-    display: none;
+    display: block;
     z-index: 10000;
     top: 0;
     left: 0;
@@ -249,6 +248,7 @@
     height: 100%;
     background-color: rgba(32, 32, 32, 0.6235294118);
     border-radius: 0px;
+    transition: 1s;
   }
   .chat_bot .ch_contents {
     margin-left: 0%;
@@ -257,12 +257,10 @@
     bottom: 0%;
     width: 100%;
     height: 100%;
-    top: 5%;
+    top: 8%;
     border-radius: 30px;
     box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
     background-color: rgba(247, 247, 248, 0.9);
-    /*     opacity:0;
-        transition: all 0.3s; */
   }
   .chat_bot .ch_contents .ch_bg {
     filter: blur(30px);
@@ -497,9 +495,6 @@
   .chat_bot .ch_footer a:hover {
     color: #000;
   }
-  .chat:hover + .chat_bot {
-    opacity: 1;
-  }
   footer {
     padding-top: 0%;
     display: flex;
@@ -639,7 +634,7 @@
     align-items: center;
     left: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 100;
     width: 100%;
     height: 70px;
     padding: 4% 2%;
@@ -708,7 +703,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -774,7 +769,7 @@
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(2) {
     top: 9px;
-    display: none;
+    opacity: 0;
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(3) {
     bottom: 28.5px;
@@ -838,8 +833,9 @@
     display: none;
   }
   .chat {
-    left: 91%;
-    top: 85%;
+    top: auto;
+    right: 3%;
+    bottom: 3%;
     position: fixed;
     z-index: 999;
   }
@@ -852,7 +848,7 @@
     box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
   }
   .chat_bot {
-    display: none;
+    display: block;
     z-index: 10000;
     top: 0;
     left: 0;
@@ -867,13 +863,11 @@
     left: 0;
     bottom: 0%;
     width: 100%;
-    height: 100%;
-    top: 5%;
+    height: 105%;
+    top: 6%;
     border-radius: 30px;
     box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
     background-color: rgba(247, 247, 248, 0.9);
-    /*     opacity:0;
-        transition: all 0.3s; */
   }
   .chat_bot .ch_contents .ch_bg {
     filter: blur(30px);
@@ -1049,50 +1043,6 @@
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .chat_bot .ch_contents .ch_main .ch_box_2 span .ic_hov .kakao {
-    position: absolute;
-    left: 55%;
-    display: inline-block;
-    text-align: center;
-    width: 45px;
-    height: 25px;
-    background-color: #3f3f3f;
-    border-radius: 6px;
-    padding: 2px 2px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 200;
-    box-shadow: 1px 1px 5px rgba(122, 122, 122, 0.445);
-    transition: 1s;
-    opacity: 0;
-  }
-  .chat_bot .ch_contents .ch_main .ch_box_2 span .ic_hov .naver {
-    position: absolute;
-    left: 70%;
-    display: inline-block;
-    text-align: center;
-    width: 45px;
-    height: 25px;
-    background-color: #3f3f3f;
-    border-radius: 6px;
-    padding: 2px 2px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 200;
-    box-shadow: 1px 1px 2px rgba(122, 122, 122, 0.445);
-    transition: 1s;
-    opacity: 0;
-  }
-  .chat_bot .ch_contents .ch_main .ch_box_2 span img:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-  }
-  .chat_bot .ch_contents .ch_main .ch_box_2 span i-1:hover.kakao {
-    opacity: 1;
-  }
-  .chat_bot .ch_contents .ch_main .ch_box_2 span .i-2:hover.naver {
-    opacity: 1;
   }
   .chat_bot .ch_footer p {
     display: flex;
@@ -1314,9 +1264,6 @@
   header .menu-trigger.black span:nth-of-type(3) {
     bottom: 11px;
   }
-  header .menu-trigger:hover {
-    display: none;
-  }
   header .menu-trigger:hover span:nth-of-type(1) {
     width: 70%;
     left: 40%;
@@ -1330,7 +1277,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -1396,7 +1343,7 @@
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(2) {
     top: 9px;
-    display: none;
+    opacity: 0;
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(3) {
     bottom: 28px;
@@ -1457,14 +1404,14 @@
     display: none;
   }
   .chat {
-    right: 0%;
+    right: 3%;
     top: 91%;
     position: fixed;
     margin-bottom: 10px;
   }
   .chat div a img {
     display: inline-block;
-    border-radius: 15px;
+    border-radius: 30px;
     overflow: hidden;
     box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
   }
@@ -1913,9 +1860,6 @@
   header .menu-trigger.black span:nth-of-type(3) {
     bottom: 11px;
   }
-  header .menu-trigger:hover {
-    display: none;
-  }
   header .menu-trigger:hover span:nth-of-type(1) {
     width: 70%;
     left: 40%;
@@ -1929,7 +1873,7 @@
     transform: rotate(-45deg);
   }
   header .menu_bar {
-    display: none;
+    display: block;
     position: absolute;
     position: fixed;
     text-align: start;
@@ -1994,14 +1938,11 @@
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(2) {
     top: 9px;
-    display: none;
+    opacity: 0;
   }
   header .menu_bar nav .menu-trigger_2 span:nth-of-type(3) {
     bottom: 28px;
     transform: rotate(45deg);
-  }
-  header .menu_bar nav .menu-trigger_2:hover {
-    display: none;
   }
   header .menu_bar nav .menu-trigger_2:hover span:nth-of-type(1) {
     width: 70%;
@@ -2053,7 +1994,7 @@
     display: none;
   }
   .chat {
-    right: 1%;
+    right: 3%;
     top: 88%;
     position: fixed;
     margin-bottom: 10px;
@@ -2061,7 +2002,7 @@
   .chat div a img {
     display: inline-block;
     width: 60px;
-    border-radius: 15px;
+    border-radius: 30px;
     overflow: hidden;
     box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
   }
@@ -2312,9 +2253,6 @@
   .chat_bot .ch_footer a:hover {
     color: #000;
   }
-  .chat:hover + .chat_bot {
-    opacity: 1;
-  }
   footer {
     padding-top: 0%;
     display: flex;
@@ -2433,8 +2371,15 @@ body::-webkit-scrollbar {
   -ms-overflow-style: none;
 }
 
+main {
+  position: fixed;
+  transition: 1s;
+}
+main .index {
+  position: relative;
+}
 main .index .spot_1 {
-  display: flex;
+  display: block;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -2455,11 +2400,12 @@ main .index .spot_1 div {
   flex-direction: column;
   position: absolute;
   top: 25.1%;
-  left: 10.7%;
+  left: 3.7%;
   width: 560px;
-  height: 500px;
-  margin-bottom: 300px;
+  height: 230px;
+  margin-bottom: 0px;
   overflow: hidden;
+  padding: 1%;
 }
 main .index .spot_1 div p {
   font-size: 24px;
@@ -2470,12 +2416,12 @@ main .index .spot_1 div p {
   margin-bottom: 20px;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
   color: #ffffff;
-  transform: translateY(500%);
   animation: title_1 1s forwards;
+  transform: translateY(200%);
 }
 @keyframes title_1 {
   0% {
-    transform: translateY(500%);
+    transform: translateY(200%);
     opacity: 0;
   }
   50% {
@@ -2493,12 +2439,12 @@ main .index .spot_1 div h2 {
   color: #ffffff;
   text-align: end;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-  transform: translateY(300%);
-  animation: title_2 1s forwards;
+  animation: title_2 1s 0.3s forwards;
+  transform: translateY(200%);
 }
 @keyframes title_2 {
   0% {
-    transform: translateY(300%);
+    transform: translateY(150%);
     opacity: 0;
   }
   50% {
@@ -2508,28 +2454,22 @@ main .index .spot_1 div h2 {
     transform: translateY(0%);
   }
 }
+main .index .spot_1.active {
+  animation: fadein 1s ease-in-out;
+}
 main .index .spot_2 {
+  display: block;
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 main .index .spot_2 figure {
   display: flex;
   position: relative;
   width: 100%;
   height: 100vh;
-  animation: fadein 7s infinite;
-}
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 main .index .spot_2 figure img {
   width: 100%;
@@ -2543,8 +2483,10 @@ main .index .spot_2 figure div {
   position: absolute;
   top: 25.1%;
   left: 10.7%;
-  width: 560px;
-  height: 190px;
+  height: 230px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  padding: 1%;
 }
 main .index .spot_2 figure div p {
   font-size: 24px;
@@ -2555,7 +2497,20 @@ main .index .spot_2 figure div p {
   padding-bottom: 5px;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
   color: #ffffff;
-  transition: 1s;
+  transform: translateY(200%);
+  animation: title_3 1s forwards;
+}
+@keyframes title_3 {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 main .index .spot_2 figure div h2 {
   font-size: 50px;
@@ -2565,19 +2520,45 @@ main .index .spot_2 figure div h2 {
   color: #ffffff;
   text-align: end;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-  transition: 1s;
+  animation: title_4 1s 0.3s forwards;
+  transform: translateY(200%);
+}
+@keyframes title_4 {
+  0% {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+main .index .spot_2.active {
+  animation: fadein 1s ease-in-out;
+  z-index: 0;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
 }
 main .index .bottom {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   position: absolute;
-  top: 90.5%;
-  left: -2%;
+  bottom: 4%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 main .index .bottom div {
-  padding-right: 43.5%;
+  padding-right: 0%;
   z-index: 99;
 }
 main .index .bottom div span {
@@ -2588,13 +2569,8 @@ main .index .bottom div span {
   display: inline-block;
   cursor: pointer;
 }
-main .index .bottom div span:hover {
-  margin-left: 8px;
-  background-color: #fff;
-  width: 55px;
-  height: 5px;
-  display: inline-block;
-  cursor: pointer;
+main .index .bottom div span.active {
+  background-color: white;
 }
 main .main_mat {
   width: 100%;
@@ -2626,7 +2602,7 @@ main .main_mat .title p {
   }
 }
 main .main_mat .title h2 {
-  font-size: 41px;
+  font-size: 45px;
   font-weight: 700;
   letter-spacing: -2px;
   transform: translateY(500%);
@@ -3046,22 +3022,22 @@ main .main_ev h2 {
 }
 main .main_ev .ev_all {
   transform: translateY(10%);
-  animation: ev_img 1s 0.5s forwards;
+  animation: ev_all 1s forwards;
   margin: 3% 0;
 }
-@keyframes ev_img {
+@keyframes ev_all {
   0% {
     transform: translateY(50%);
     opacity: 0;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
   100% {
     transform: translateY(0%);
   }
 }
-main .main_ev .ev_all .sign button:nth-child(1) {
+main .main_ev .ev_all .sign .swiper-button-prev {
   background: url(../img/illust/prev01.png) no-repeat;
   width: 50px;
   height: 90px;
@@ -3069,8 +3045,9 @@ main .main_ev .ev_all .sign button:nth-child(1) {
   position: absolute;
   top: 42%;
   left: 14%;
+  cursor: pointer;
 }
-main .main_ev .ev_all .sign button:nth-child(2) {
+main .main_ev .ev_all .sign .swiper-button-next {
   background: url(../img/illust/next01.png) no-repeat;
   width: 50px;
   height: 90px;
@@ -3078,43 +3055,50 @@ main .main_ev .ev_all .sign button:nth-child(2) {
   position: absolute;
   top: 42%;
   left: 84%;
+  cursor: pointer;
 }
-main .main_ev .ev_all .ev_img {
+main .main_ev .ev_all .mySwiper {
   width: 66%;
   height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
-main .main_ev .ev_all .ev_img figure {
+main .main_ev .ev_all .mySwiper .swiper-wrapper {
   white-space: nowrap;
   margin: 0;
-  transition: 0.5s;
+  width: 100%;
+  margin-bottom: 4%;
 }
-main .main_ev .ev_all .ev_img figure a img {
+main .main_ev .ev_all .mySwiper .swiper-wrapper .swiper-slide img {
   width: 100%;
 }
-main .main_ev .ev_all .ev_img .ev_bar {
+main .main_ev .ev_all .mySwiper .swiper-pagination {
   text-align: center;
   margin-top: 2%;
-}
-main .main_ev .ev_all .ev_img .ev_bar progress {
   width: 100%;
   height: 6px;
   margin: 0 auto;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-bar {
   background-color: #fff;
-  border: #fff;
 }
-main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-value {
+main .main_ev .ev_all .mySwiper .swiper-pagination span {
+  height: 100%;
+  transform-origin: left top;
+  display: block;
   background-color: #9c9c9c;
 }
 main .main_vd {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+}
+main .main_vd figure {
+  height: 100%;
+}
+main .main_vd figure video {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -3124,34 +3108,35 @@ main .main_insta {
   background-color: #fff;
 }
 main .main_insta div {
-  height: 500px;
-  padding-top: 20%;
+  height: 600px;
+  padding-top: 15%;
   text-align: center;
   transform: translateY(10%);
-  animation: int 5s forwards ease;
+  display: none;
   overflow: hidden;
 }
-@keyframes int {
-  0% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(20%);
-    opacity: 0;
-  }
-}
-main .main_insta div h3 {
+main .main_insta h3 {
   margin-top: 10px;
   font-size: 22px;
   font-weight: 400;
   color: #9c9c9c;
 }
 
+.main_insta.active .ins_ani {
+  display: block;
+  animation: int 1s forwards ease;
+}
+
+@keyframes int {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .right {
   position: absolute;
   display: flex;
@@ -3159,7 +3144,8 @@ main .main_insta div h3 {
   left: 97%;
   top: 38%;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
+  transition: 0.5s;
 }
 .right span {
   position: relative;
@@ -3176,8 +3162,7 @@ main .main_insta div h3 {
   width: 7px;
   height: 7px;
 }
-.right a:nth-of-type(1)::after.cir_white {
-  content: "";
+.right .act {
   position: absolute;
   text-align: center;
   display: inline-block;
@@ -3186,7 +3171,8 @@ main .main_insta div h3 {
   width: 35px;
   height: 35px;
   top: -15px;
-  left: -15px;
+  left: -17px;
+  transition: 0.5s;
   background-color: rgba(255, 255, 255, 0);
 }
 .right a:nth-of-type(2) {
@@ -3215,7 +3201,8 @@ main .main_insta div h3 {
   left: 97%;
   top: 38%;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
+  transition: 0.5s;
 }
 .right.black span {
   position: relative;
@@ -3232,8 +3219,7 @@ main .main_insta div h3 {
   width: 7px;
   height: 7px;
 }
-.right.black a:nth-of-type(1)::after.cir_black {
-  content: "";
+.right.black .act {
   position: absolute;
   text-align: center;
   display: inline-block;
@@ -3241,8 +3227,9 @@ main .main_insta div h3 {
   border-radius: 100px;
   width: 35px;
   height: 35px;
-  top: 20px;
-  left: -15px;
+  top: -15px;
+  left: -17px;
+  transition: 0.5s;
   background-color: rgba(255, 255, 255, 0);
 }
 .right.black a:nth-of-type(2) {
@@ -3301,8 +3288,8 @@ main .main_insta div h3 {
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 25%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_1 div p {
@@ -3315,12 +3302,12 @@ main .main_insta div h3 {
     margin-bottom: 6%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(500%);
+    transform: translateY(200%);
     animation: title_1 1s forwards;
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(500%);
+      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -3338,12 +3325,12 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transform: translateY(300%);
-    animation: title_2 1s forwards;
+    transform: translateY(200%);
+    animation: title_2 1s 0.3s forwards;
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(300%);
+      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -3365,18 +3352,6 @@ main .main_insta div h3 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    animation: fadein 7s infinite;
-  }
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   main .index .spot_2 figure img {
     position: absolute;
@@ -3395,8 +3370,8 @@ main .main_insta div h3 {
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 25%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_2 figure div p {
@@ -3409,7 +3384,20 @@ main .main_insta div h3 {
     margin-bottom: 6%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transition: 1s;
+    transform: translateY(200%);
+    animation: title_3 1s forwards;
+  }
+  @keyframes title_3 {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .spot_2 figure div h2 {
     font-size: 1.5rem;
@@ -3419,15 +3407,29 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transition: 1s;
+    animation: title_4 1s 0.3s forwards;
+    transform: translateY(200%);
+  }
+  @keyframes title_4 {
+    0% {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .bottom {
+    display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     position: absolute;
-    top: 94%;
-    left: 0%;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
   main .index .bottom div {
     padding-right: 0%;
@@ -4026,58 +4028,9 @@ main .main_insta div h3 {
   }
   .right {
     display: none;
-    position: absolute;
-    justify-content: center;
-    left: 0%;
-    top: 0%;
-    position: fixed;
-    z-index: 9999;
   }
-  .right span {
-    position: relative;
-    border-right: solid 1px #fff;
-    display: inline-block;
-    height: 210px;
-  }
-  .right a {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 7px;
-    height: 7px;
-  }
-  .right a:nth-of-type(1)::after {
-    content: "";
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    border: solid 1px #fff;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    top: -15px;
-    left: -15px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .right a:nth-of-type(2) {
-    top: 35px;
-  }
-  .right a:nth-of-type(3) {
-    top: 70px;
-  }
-  .right a:nth-of-type(4) {
-    top: 105px;
-  }
-  .right a:nth-of-type(5) {
-    top: 140px;
-  }
-  .right a:nth-of-type(6) {
-    top: 175px;
-  }
-  .right a:nth-of-type(7) {
-    top: 210px;
+  .right.black {
+    display: none;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -4117,8 +4070,8 @@ main .main_insta div h3 {
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 40%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_1 div p {
@@ -4131,12 +4084,12 @@ main .main_insta div h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(500%);
+    transform: translateY(200%);
     animation: title_1 1s forwards;
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(500%);
+      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -4154,12 +4107,12 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transform: translateY(300%);
-    animation: title_2 1s forwards;
+    animation: title_2 1s 0.3s forwards;
+    transform: translateY(200%);
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(300%);
+      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -4181,18 +4134,6 @@ main .main_insta div h3 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    animation: fadein 7s infinite;
-  }
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   main .index .spot_2 figure img {
     position: absolute;
@@ -4211,8 +4152,8 @@ main .main_insta div h3 {
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 40%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_2 figure div p {
@@ -4225,7 +4166,20 @@ main .main_insta div h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transition: 1s;
+    transform: translateY(200%);
+    animation: title_3 1s forwards;
+  }
+  @keyframes title_3 {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .spot_2 figure div h2 {
     font-size: 1.5rem;
@@ -4235,15 +4189,29 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transition: 1s;
+    animation: title_4 1s 0.3s forwards;
+    transform: translateY(200%);
+  }
+  @keyframes title_4 {
+    0% {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .bottom {
+    display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     position: absolute;
-    top: 90%;
-    left: 0%;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
   main .index .bottom div {
     padding-right: 0%;
@@ -4849,58 +4817,9 @@ main .main_insta div h3 {
   }
   .right {
     display: none;
-    position: absolute;
-    justify-content: center;
-    left: 0%;
-    top: 0%;
-    position: fixed;
-    z-index: 9999;
   }
-  .right span {
-    position: relative;
-    border-right: solid 1px #fff;
-    display: inline-block;
-    height: 210px;
-  }
-  .right a {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 7px;
-    height: 7px;
-  }
-  .right a:nth-of-type(1)::after {
-    content: "";
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    border: solid 1px #fff;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    top: -15px;
-    left: -15px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .right a:nth-of-type(2) {
-    top: 35px;
-  }
-  .right a:nth-of-type(3) {
-    top: 70px;
-  }
-  .right a:nth-of-type(4) {
-    top: 105px;
-  }
-  .right a:nth-of-type(5) {
-    top: 140px;
-  }
-  .right a:nth-of-type(6) {
-    top: 175px;
-  }
-  .right a:nth-of-type(7) {
-    top: 210px;
+  .right.black {
+    display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
@@ -4940,8 +4859,8 @@ main .main_insta div h3 {
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 20%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_1 div p {
@@ -4954,12 +4873,12 @@ main .main_insta div h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(500%);
     animation: title_1 1s forwards;
+    transform: translateY(200%);
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(500%);
+      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -4977,12 +4896,12 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transform: translateY(300%);
-    animation: title_2 1s forwards;
+    animation: title_2 1s 0.3s forwards;
+    transform: translateY(200%);
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(300%);
+      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -5004,18 +4923,6 @@ main .main_insta div h3 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    animation: fadein 7s infinite;
-  }
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   main .index .spot_2 figure img {
     position: absolute;
@@ -5034,8 +4941,8 @@ main .main_insta div h3 {
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 20%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_2 figure div p {
@@ -5048,7 +4955,20 @@ main .main_insta div h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transition: 1s;
+    transform: translateY(200%);
+    animation: title_3 1s forwards;
+  }
+  @keyframes title_3 {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .spot_2 figure div h2 {
     font-size: 1.8rem;
@@ -5058,15 +4978,28 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transition: 1s;
+    transform: translateY(200%);
+  }
+  @keyframes title_4 {
+    0% {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .bottom {
+    display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     position: absolute;
-    top: 90%;
-    left: 0%;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
   main .index .bottom div {
     padding-right: 0%;
@@ -5664,114 +5597,10 @@ main .main_insta div h3 {
     font-family: "Montserrat";
   }
   .right {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    left: 95%;
-    top: 35%;
-    position: fixed;
-    z-index: 9999;
-  }
-  .right span {
-    position: relative;
-    border-right: solid 1px #fff;
-    display: inline-block;
-    height: 210px;
-  }
-  .right a {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 7px;
-    height: 7px;
-  }
-  .right a:nth-of-type(1)::after.cir_white {
-    content: "";
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    border: solid 1px #fff;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    top: -15px;
-    left: -15px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .right a:nth-of-type(2) {
-    top: 35px;
-  }
-  .right a:nth-of-type(3) {
-    top: 70px;
-  }
-  .right a:nth-of-type(4) {
-    top: 105px;
-  }
-  .right a:nth-of-type(5) {
-    top: 140px;
-  }
-  .right a:nth-of-type(6) {
-    top: 175px;
-  }
-  .right a:nth-of-type(7) {
-    top: 210px;
+    display: none;
   }
   .right.black {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 97%;
-    top: 38%;
-    position: fixed;
-    z-index: 9999;
-  }
-  .right.black span {
-    position: relative;
-    border-right: solid 1px #000;
-    display: inline-block;
-    height: 210px;
-  }
-  .right.black a {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #000;
-    border-radius: 10px;
-    width: 7px;
-    height: 7px;
-  }
-  .right.black a:nth-of-type(1)::after.cir_black {
-    content: "";
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    border: solid 1px #000;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    top: 20px;
-    left: -15px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .right.black a:nth-of-type(2) {
-    top: 35px;
-  }
-  .right.black a:nth-of-type(3) {
-    top: 70px;
-  }
-  .right.black a:nth-of-type(4) {
-    top: 105px;
-  }
-  .right.black a:nth-of-type(5) {
-    top: 140px;
-  }
-  .right.black a:nth-of-type(6) {
-    top: 175px;
-  }
-  .right.black a:nth-of-type(7) {
-    top: 210px;
+    display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
@@ -5812,8 +5641,8 @@ main .main_insta div h3 {
     left: 20%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 30%;
+    margin-bottom: 0px;
     overflow: hidden;
   }
   main .index .spot_1 div p {
@@ -5826,12 +5655,12 @@ main .main_insta div h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(500%);
     animation: title_1 1s forwards;
+    transform: translateY(200%);
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(500%);
+      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -5849,12 +5678,12 @@ main .main_insta div h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transform: translateY(300%);
-    animation: title_2 1s forwards;
+    animation: title_2 1s 0.3s forwards;
+    transform: translateY(200%);
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(300%);
+      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -5876,18 +5705,6 @@ main .main_insta div h3 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    animation: fadein 7s infinite;
-  }
-  @keyframes fadein {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
   main .index .spot_2 figure img {
     position: absolute;
@@ -5906,8 +5723,8 @@ main .main_insta div h3 {
     left: 20%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 50%;
-    margin-bottom: 300px;
+    height: 30%;
+    margin-bottom: 0px;
     overflow: hidden;
     align-items: flex-end;
   }
@@ -5921,7 +5738,19 @@ main .main_insta div h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transition: 1s;
+    animation: title_3 1s forwards;
+  }
+  @keyframes title_3 {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .spot_2 figure div h2 {
     font-size: 2.5rem;
@@ -5930,15 +5759,29 @@ main .main_insta div h3 {
     line-height: 160%;
     color: #ffffff;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transition: 1s;
+    animation: title_4 1s 0.3s forwards;
+    transform: translateY(200%);
+  }
+  @keyframes title_4 {
+    0% {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
   main .index .bottom {
+    display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     position: absolute;
-    top: 90%;
-    left: 0%;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
   main .index .bottom div {
     padding-right: 0%;
@@ -6536,113 +6379,9 @@ main .main_insta div h3 {
     font-family: "Montserrat";
   }
   .right {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    left: 95%;
-    top: 30%;
-    position: fixed;
-    z-index: 9999;
-  }
-  .right span {
-    position: relative;
-    border-right: solid 1px #fff;
-    display: inline-block;
-    height: 210px;
-  }
-  .right a {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #fff;
-    border-radius: 10px;
-    width: 7px;
-    height: 7px;
-  }
-  .right a:nth-of-type(1)::after.cir_white {
-    content: "";
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    border: solid 1px #fff;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    top: -15px;
-    left: -15px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .right a:nth-of-type(2) {
-    top: 35px;
-  }
-  .right a:nth-of-type(3) {
-    top: 70px;
-  }
-  .right a:nth-of-type(4) {
-    top: 105px;
-  }
-  .right a:nth-of-type(5) {
-    top: 140px;
-  }
-  .right a:nth-of-type(6) {
-    top: 175px;
-  }
-  .right a:nth-of-type(7) {
-    top: 210px;
+    display: none;
   }
   .right.black {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 97%;
-    top: 38%;
-    position: fixed;
-    z-index: 9999;
-  }
-  .right.black span {
-    position: relative;
-    border-right: solid 1px #000;
-    display: inline-block;
-    height: 210px;
-  }
-  .right.black a {
-    position: absolute;
-    cursor: pointer;
-    display: inline-block;
-    background-color: #000;
-    border-radius: 10px;
-    width: 7px;
-    height: 7px;
-  }
-  .right.black a:nth-of-type(1)::after.cir_black {
-    content: "";
-    position: absolute;
-    text-align: center;
-    display: inline-block;
-    border: solid 1px #000;
-    border-radius: 100px;
-    width: 35px;
-    height: 35px;
-    top: 20px;
-    left: -15px;
-    background-color: rgba(255, 255, 255, 0);
-  }
-  .right.black a:nth-of-type(2) {
-    top: 35px;
-  }
-  .right.black a:nth-of-type(3) {
-    top: 70px;
-  }
-  .right.black a:nth-of-type(4) {
-    top: 105px;
-  }
-  .right.black a:nth-of-type(5) {
-    top: 140px;
-  }
-  .right.black a:nth-of-type(6) {
-    top: 175px;
-  }
-  .right.black a:nth-of-type(7) {
-    top: 210px;
+    display: none;
   }
 }

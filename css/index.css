@@ -1,24 +1,5 @@
 @import url("../css/reset.css");
 @media (max-width: 480px) {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
-  html, body {
-    margin: 0;
-  }
-  body {
-    font-family: Montserrat, "Noto Sans KR";
-  }
-  * {
-    box-sizing: border-box;
-  }
-  ul, li, figure, figcaption, p, h1, h2, h3, h4, h5, h6, div {
-    margin: 0;
-  }
-  ul {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-  }
   header {
     position: fixed;
     display: flex;
@@ -200,7 +181,7 @@
     height: 20%;
   }
   header h1 {
-    margin-left: 8%;
+    margin-left: 2%;
     width: 50%;
   }
   header h1 a img {
@@ -240,7 +221,7 @@
     box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
   }
   .chat_bot {
-    display: block;
+    position: fixed;
     z-index: 10000;
     top: 0;
     left: 0;
@@ -248,9 +229,13 @@
     height: 100%;
     background-color: rgba(32, 32, 32, 0.6235294118);
     border-radius: 0px;
-    transition: 1s;
+    transition: 0.3s;
+    transform: translateY(100%);
+    opacity: 0;
   }
   .chat_bot .ch_contents {
+    transform: translateY(100%);
+    transition: 0.3s;
     margin-left: 0%;
     position: fixed;
     left: 0;
@@ -495,6 +480,12 @@
   .chat_bot .ch_footer a:hover {
     color: #000;
   }
+  .chat_bot.active .ch_contents {
+    transform: translateX(0%);
+  }
+  .chat_bot.active {
+    transform: translateX(0%);
+  }
   footer {
     padding-top: 0%;
     display: flex;
@@ -608,25 +599,6 @@
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
-  html, body {
-    margin: 0;
-  }
-  body {
-    font-family: Montserrat, "Noto Sans KR";
-  }
-  * {
-    box-sizing: border-box;
-  }
-  ul, li, figure, figcaption, p, h1, h2, h3, h4, h5, h6, div {
-    margin: 0;
-  }
-  ul {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-  }
   header {
     position: fixed;
     display: flex;
@@ -810,7 +782,7 @@
     height: 20%;
   }
   header h1 {
-    margin-left: 8%;
+    margin-left: 1%;
     width: 50%;
   }
   header h1 a img {
@@ -856,8 +828,13 @@
     height: 100%;
     background-color: rgba(32, 32, 32, 0.6235294118);
     border-radius: 0px;
+    transition: 0.3s;
+    transform: translateY(100%);
+    opacity: 0;
   }
   .chat_bot .ch_contents {
+    transform: translateY(100%);
+    transition: 0.3s;
     margin-left: 0%;
     position: fixed;
     left: 0;
@@ -1067,8 +1044,11 @@
   .chat_bot .ch_footer a:hover {
     color: #000;
   }
-  .chat:hover + .chat_bot {
-    opacity: 1;
+  .chat_bot.active .ch_contents {
+    transform: translateX(0%);
+  }
+  .chat_bot.active {
+    transform: translateX(0%);
   }
   footer {
     padding-top: 0%;
@@ -1184,25 +1164,6 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
-  html, body {
-    margin: 0;
-  }
-  body {
-    font-family: Montserrat, "Noto Sans KR";
-  }
-  * {
-    box-sizing: border-box;
-  }
-  ul, li, figure, figcaption, p, h1, h2, h3, h4, h5, h6, div {
-    margin: 0;
-  }
-  ul {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-  }
   header {
     position: fixed;
     display: flex;
@@ -1382,7 +1343,7 @@
     margin-left: 18%;
   }
   header h1 {
-    margin-left: 11%;
+    margin-left: 5%;
     width: 60%;
   }
   header h1 a img {
@@ -1663,9 +1624,6 @@
   .chat_bot .ch_footer a:hover {
     color: #000;
   }
-  .chat:hover + .chat_bot {
-    opacity: 1;
-  }
   footer {
     padding-top: 0%;
     display: flex;
@@ -1779,26 +1737,7 @@
     text-decoration: underline;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif&display=swap");
-  html, body {
-    margin: 0;
-  }
-  body {
-    font-family: Montserrat, "Noto Sans KR";
-  }
-  * {
-    box-sizing: border-box;
-  }
-  ul, li, figure, figcaption, p, h1, h2, h3, h4, h5, h6, div {
-    margin: 0;
-  }
-  ul {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-  }
+@media (min-width: 896px) and (max-width: 1279px) and (orientation: landscape) {
   header {
     position: fixed;
     display: flex;
@@ -1972,7 +1911,7 @@
     margin-left: 14%;
   }
   header h1 {
-    margin-left: 8%;
+    margin-left: 3%;
     width: 60%;
   }
   header h1 a img {
@@ -1994,7 +1933,8 @@
   }
   .chat {
     right: 3%;
-    top: 88%;
+    bottom: 3%;
+    top: auto;
     position: fixed;
     margin-bottom: 10px;
   }
@@ -2365,6 +2305,570 @@
     text-decoration: underline;
   }
 }
+@media (min-width: 768px) and (max-width: 896px) and (orientation: landscape) {
+  header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 70px;
+    padding: 4% 2%;
+    text-align: center;
+  }
+  header .menu-trigger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  header .menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  header .menu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  header .menu-trigger span:nth-of-type(2) {
+    top: 9px;
+  }
+  header .menu-trigger span:nth-of-type(3) {
+    bottom: 10px;
+  }
+  header .menu-trigger.black {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3px;
+  }
+  header .menu-trigger.black span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.3s;
+  }
+  header .menu-trigger.black span:nth-of-type(1) {
+    top: 0;
+  }
+  header .menu-trigger.black span:nth-of-type(2) {
+    top: 9px;
+  }
+  header .menu-trigger.black span:nth-of-type(3) {
+    bottom: 11px;
+  }
+  header .menu-trigger:hover {
+    display: none;
+  }
+  header .menu-trigger:hover span:nth-of-type(1) {
+    width: 70%;
+    left: 40%;
+    margin-top: 2px;
+    transform: rotate(45deg);
+  }
+  header .menu-trigger:hover span:nth-of-type(3) {
+    width: 70%;
+    left: 40%;
+    margin-bottom: 2px;
+    transform: rotate(-45deg);
+  }
+  header .menu_bar {
+    display: block;
+    position: absolute;
+    position: fixed;
+    text-align: start;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100;
+    height: 100vh;
+    z-index: 99999;
+  }
+  header .menu_bar nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding-left: 4%;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+  }
+  header .menu_bar nav .log {
+    padding-top: 8%;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 0.7rem;
+  }
+  header .menu_bar nav .log span {
+    display: inline-block;
+    height: 12px;
+    border: 1px solid black;
+    margin: 0 10px;
+  }
+  header .menu_bar nav .log a {
+    text-decoration: none;
+    color: #000;
+  }
+  header .menu_bar nav .log a img {
+    width: 13px;
+    height: 17px;
+    margin: 0 5px;
+  }
+  header .menu_bar nav .menu-trigger_2 {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -3%;
+    left: 82%;
+  }
+  header .menu_bar nav .menu-trigger_2 span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.3s;
+  }
+  header .menu_bar nav .menu-trigger_2 span:nth-of-type(1) {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  header .menu_bar nav .menu-trigger_2 span:nth-of-type(2) {
+    top: 9px;
+    opacity: 0;
+  }
+  header .menu_bar nav .menu-trigger_2 span:nth-of-type(3) {
+    bottom: 28.5px;
+    transform: rotate(45deg);
+  }
+  header .menu_bar nav .menu-trigger_2:hover {
+    display: none;
+  }
+  header .menu_bar nav .menu-trigger_2:hover span:nth-of-type(1) {
+    width: 70%;
+    left: -10%;
+    margin-top: 2px;
+    transform: rotate(-45deg);
+  }
+  header .menu_bar nav .menu-trigger_2:hover span:nth-of-type(3) {
+    width: 70%;
+    left: -10%;
+    margin-bottom: 2px;
+    transform: rotate(45deg);
+  }
+  header .menu_bar ul {
+    padding: 0;
+    margin-top: 10%;
+  }
+  header .menu_bar ul li {
+    margin-bottom: 15%;
+  }
+  header .menu_bar ul li a {
+    text-decoration-line: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  header .menu_bar img {
+    margin-bottom: 3%;
+    margin-left: 23%;
+    width: 40%;
+    height: 20%;
+  }
+  header h1 {
+    margin-left: 1%;
+    width: 50%;
+  }
+  header h1 a img {
+    width: 45%;
+    height: 60%;
+  }
+  header .ic {
+    display: flex;
+    gap: 10px;
+    height: 100%;
+    transform: translateY(5%);
+  }
+  header .ic a img {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-5px);
+    margin-left: 0px;
+  }
+  header .ic a:nth-of-type(3) img {
+    display: none;
+  }
+  .chat {
+    top: auto;
+    right: 3%;
+    bottom: 3%;
+    position: fixed;
+    z-index: 999;
+  }
+  .chat div a img {
+    display: inline-block;
+    width: 40px;
+    height: 70%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px rgba(119, 119, 119, 0.445);
+  }
+  .chat_bot {
+    transition: 0.3s;
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.6235294118);
+    border-radius: 0px;
+  }
+  .chat_bot .ch_contents {
+    transition: 0.3s;
+    transform: translateY(100%);
+    margin-left: 0%;
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    height: 105%;
+    top: 6%;
+    border-radius: 30px;
+    box-shadow: 1px 1px 50px rgba(49, 49, 49, 0.445);
+    background-color: rgba(247, 247, 248, 0.9);
+  }
+  .chat_bot .ch_contents .ch_bg {
+    filter: blur(30px);
+  }
+  .chat_bot .ch_contents .ch_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4% 1% 4%;
+  }
+  .chat_bot .ch_contents .ch_header h1 {
+    display: flex;
+    font-size: 1rem;
+  }
+  .chat_bot .ch_contents .ch_header h1 img {
+    width: 30px;
+    height: 30px;
+    margin: 3px 8px 0 0;
+  }
+  .chat_bot .ch_contents .ch_header div img {
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  .chat_bot .ch_contents .ch_main .top_text {
+    margin-bottom: 1%;
+  }
+  .chat_bot .ch_contents .ch_main .top_text p {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.8rem;
+    line-height: 23px;
+    font-weight: 300;
+    padding-left: 4%;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    height: 10.9rem;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(173, 173, 173, 0.671);
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text {
+    display: flex;
+    margin: 1% 0 1% 0;
+    padding: 0% 2%;
+    cursor: pointer;
+    width: 97%;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text img {
+    width: 35px;
+    height: 35px;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div {
+    width: 95%;
+    margin-bottom: 0.5%;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0 15px;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div p {
+    font-size: 0.8rem;
+    line-height: 22px;
+    color: #000;
+    font-weight: 200;
+    padding-left: 15px;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text div P:nth-of-type(1)::after {
+    content: "";
+    background: url(../img/ch_img/blush.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 0px 0 0 2px;
+    display: inline-block;
+    background-size: contain;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .box_text:hover {
+    display: none;
+    background: rgb(245, 245, 245);
+    border-radius: 15px;
+    transition: 0.5s;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .button {
+    width: 90%;
+    height: 34px;
+    margin: 0 auto;
+    background: rgb(245, 245, 245);
+    box-shadow: 1px 1px 10px rgba(173, 173, 173, 0.445);
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .button p {
+    color: #000;
+    padding: 0.8%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .button p::before {
+    content: "";
+    background: url(../img/ch_img/ch_svg/ch_object.svg) no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+    display: inline-block;
+    background-size: contain;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .button :hover {
+    display: none;
+    box-shadow: 1px 1px 10px rgba(173, 173, 173, 0.445);
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .coment {
+    font-size: 0.65rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0;
+    cursor: pointer;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_1 .coment::before {
+    content: "";
+    background: url(../img/ch_img/ch_svg/chat-error-filled.svg) no-repeat;
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    display: inline-block;
+    background-size: contain;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_2 {
+    width: 95%;
+    height: 46px;
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 1% 1% 1% 5%;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(173, 173, 173, 0.445);
+    color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_2 a {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_2 span {
+    display: inline-block;
+    width: 20%;
+    margin-top: 5px;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_2 span a {
+    display: inline-block;
+    padding-left: 10%;
+    overflow: hidden;
+    width: 35%;
+    height: 35%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .chat_bot .ch_contents .ch_main .ch_box_2 span a img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .chat_bot .ch_footer p {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+  }
+  .chat_bot .ch_footer p a {
+    transform: translateY(-2px);
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.7rem;
+  }
+  .chat_bot .ch_footer p::before {
+    content: "";
+    background: url(../img/ch_img/ch_svg/talk_page.svg) no-repeat 0 1px;
+    opacity: 0.4;
+    width: 16px;
+    height: 16px;
+    margin: 0px 0 0 2px;
+    display: inline-block;
+    background-size: contain;
+    margin-right: 3px;
+  }
+  .chat_bot .ch_footer a:hover {
+    color: #000;
+  }
+  .chat_bot.active .ch_contents {
+    transform: translateX(0%);
+  }
+  .chat_bot.active {
+    transform: translateX(0%);
+  }
+  footer {
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 38rem;
+    background-color: #031d33;
+    color: #fff;
+  }
+  footer .ft_left {
+    border-top: 1px solid #fff;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 3% 0 2% 0%;
+  }
+  footer .ft_left img {
+    width: 10%;
+    height: 50%;
+  }
+  footer .ft_left div {
+    padding-left: 0%;
+    width: 100%;
+    margin-top: 2%;
+  }
+  footer .ft_left div span {
+    padding-left: 0%;
+    font-size: 1rem;
+    margin-bottom: 3%;
+  }
+  footer .ft_left div span a {
+    color: #fff;
+    font-weight: 300;
+    padding-left: 0%;
+    margin: 0;
+  }
+  footer .ft_left div span a::after {
+    content: "|";
+    padding: 0 0.5% 0 1.1%;
+  }
+  footer .ft_left div span a:nth-of-type(3)::after {
+    content: "";
+  }
+  footer .ft_left div address {
+    font-style: normal;
+    font-size: 0.9rem;
+    margin: 1% 0 2.5% 0;
+  }
+  footer .ft_left div address a {
+    margin-left: 1.3%;
+    font-weight: 300;
+  }
+  footer .ft_left div address .ad_1, footer .ft_left div address .ad_2, footer .ft_left div address .ad_3, footer .ft_left div address .ad_4 {
+    margin: 0.2% 0;
+  }
+  footer .ft_left div address .ad_1 a:nth-of-type(1), footer .ft_left div address .ad_2 a:nth-of-type(1), footer .ft_left div address .ad_3 a:nth-of-type(1), footer .ft_left div address .ad_4 a:nth-of-type(1) {
+    margin: 0;
+  }
+  footer .ft_left div p {
+    padding-left: 0%;
+    font-size: 12px;
+    margin: 0%;
+  }
+  footer .ft_left div p b {
+    font-weight: 300;
+  }
+  footer .ft_right {
+    width: 100%;
+  }
+  footer .ft_right ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0;
+  }
+  footer .ft_right ul li {
+    border-left: 0px solid #fff;
+    padding: 2% 0% 0% 2%;
+    font-weight: 400;
+  }
+  footer .ft_right ul li h4 {
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+  }
+  footer .ft_right ul li p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0%;
+    line-height: 20px;
+    display: inline;
+  }
+  footer .ft_right ul li p .line {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  footer .ft_right ul li p a {
+    color: #fff;
+    display: block;
+    margin-bottom: 1%;
+  }
+  footer .ft_right ul li:nth-child(1) {
+    border-left: none;
+  }
+  footer .ft_right ul li:nth-child(1) a {
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+}
 body::-webkit-scrollbar {
   display: none;
   -ms-overflow-style: none;
@@ -2378,7 +2882,6 @@ main .index {
   position: relative;
 }
 main .index .spot_1 {
-  display: block;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -2393,7 +2896,6 @@ main .index .spot_1 figure img {
   object-fit: cover;
 }
 main .index .spot_1 div {
-  display: flex;
   align-items: flex-end;
   flex-direction: column;
   position: absolute;
@@ -2457,7 +2959,6 @@ main .index .spot_1.active {
   animation: fadein 1s ease-in-out;
 }
 main .index .spot_2 {
-  display: block;
   position: absolute;
   width: 100%;
   top: 0;
@@ -2475,7 +2976,6 @@ main .index .spot_2 figure img {
   object-fit: cover;
 }
 main .index .spot_2 figure div {
-  display: flex;
   align-items: flex-end;
   flex-direction: column;
   position: absolute;
@@ -2544,7 +3044,14 @@ main .index .spot_2.active {
   }
   100% {
     opacity: 1;
-    display: block;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 main .index .bottom {
@@ -2856,7 +3363,7 @@ main .main_br .br_ele .br_right {
 }
 main .main_br .br_ele .br_right div {
   transform: translateY(130%);
-  animation: br_title_3 1s 0.6s forwards;
+  animation: br_title_3 1.2s 0.5s forwards;
   overflow: hidden;
 }
 @keyframes br_title_3 {
@@ -2864,7 +3371,7 @@ main .main_br .br_ele .br_right div {
     opacity: 0;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0;
   }
   100% {
     transform: translateY(0%);
@@ -2922,35 +3429,37 @@ main .main_br .br_ele .br_right .br_but a::after {
   margin-left: 10px;
   margin-top: 10px;
 }
-main .main_br .br_ele .ani {
+main .main_br .ani {
   width: 544px;
   height: 544px;
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, 10%);
+  opacity: 0;
+  transition: 1s;
 }
-main .main_br .br_ele .ani .basmo, main .main_br .br_ele .ani .br_cir {
+main .main_br .ani .basmo, main .main_br .ani .br_cir {
   position: absolute;
   top: 0%;
   left: 0%;
 }
-main .main_br .br_ele .ani .br_cir {
+main .main_br .ani .br_cir {
   animation: a_0 10s linear infinite;
 }
-main .main_br .br_ele .ani .ob_1 {
+main .main_br .ani .ob_1 {
   position: absolute;
   top: 13%;
   left: 67%;
   animation: a_1 5s linear infinite;
 }
-main .main_br .br_ele .ani .ob_2 {
+main .main_br .ani .ob_2 {
   position: absolute;
   top: 45%;
   left: 1%;
   animation: a_2 5s linear infinite;
 }
-main .main_br .br_ele .ani .ob_3 {
+main .main_br .ani .ob_3 {
   position: absolute;
   top: 74%;
   left: 68%;
@@ -2991,8 +3500,10 @@ main .main_br .br_ele .ani .ob_3 {
 main .main_br.active .br_ele {
   display: block;
 }
-main .main_br.active .br_ele .ani {
-  transition: 1s;
+main .main_br.active .ani {
+  opacity: 1;
+  transition: 1s 1s;
+  transform: translate(-50%, 0%);
 }
 main .main_ev {
   position: relative;
@@ -3008,7 +3519,7 @@ main .main_ev h2 {
   font-weight: 700;
   color: #fff;
   text-align: center;
-  padding-top: 8%;
+  padding-top: 13%;
   transform: translateY(100%);
   animation: ev_title 1s forwards;
   overflow: hidden;
@@ -3022,21 +3533,9 @@ main .main_ev h2 {
   }
 }
 main .main_ev .ev_all {
-  display: none;
-  transform: translateY(200%);
-  animation: ev_all 1s 0.2s forwards;
+  opacity: 0;
+  transform: translateY(30%);
   margin: 3% 0;
-}
-@keyframes ev_all {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(0%);
-  }
 }
 main .main_ev .ev_all .sign .swiper-button-prev {
   background: url(../img/illust/prev01.png) no-repeat;
@@ -3092,7 +3591,9 @@ main .main_ev.active h2 {
   display: block;
 }
 main .main_ev.active .ev_all {
-  display: block;
+  opacity: 1;
+  transform: translateY(0%);
+  transition: 1s 0.5s;
 }
 main .main_vd {
   width: 100%;
@@ -3100,6 +3601,7 @@ main .main_vd {
   overflow: hidden;
 }
 main .main_vd figure {
+  display: flex;
   height: 100%;
 }
 main .main_vd figure video {
@@ -3116,9 +3618,10 @@ main .main_insta div {
   height: 600px;
 }
 main .main_insta div .ins_ani {
+  opacity: 0;
   padding-top: 15%;
   text-align: center;
-  transform: translateY(100%);
+  transform: translateY(50%);
   transition: 2s;
 }
 main .main_insta div .ins_ani h3 {
@@ -3131,17 +3634,9 @@ main .main_insta div .ins_ani h3 {
 .main_insta.active div .ins_ani {
   transition: 2s;
   transform: translateY(0%);
-  animation: ins 2s forwards ease-in;
+  opacity: 1;
 }
 
-@keyframes ins {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .right {
   position: absolute;
   display: flex;
@@ -3258,10 +3753,6 @@ main .main_insta div .ins_ani h3 {
 
 @media (max-width: 480px) {
   @import url("../css/reset.css");
-  body::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-  }
   main .index {
     position: relative;
   }
@@ -3284,7 +3775,7 @@ main .main_insta div .ins_ani h3 {
     object-fit: cover;
   }
   main .index .spot_1 div {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -3306,12 +3797,11 @@ main .main_insta div .ins_ani h3 {
     margin-bottom: 6%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(200%);
+    transform: translateY(250%);
     animation: title_1 1s forwards;
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -3329,12 +3819,11 @@ main .main_insta div .ins_ani h3 {
     color: #ffffff;
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
-    transform: translateY(200%);
+    transform: translateY(250%);
     animation: title_2 1s 0.3s forwards;
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -3365,7 +3854,7 @@ main .main_insta div .ins_ani h3 {
     object-fit: cover;
   }
   main .index .spot_2 figure div {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -3387,12 +3876,11 @@ main .main_insta div .ins_ani h3 {
     margin-bottom: 6%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(200%);
+    transform: translateY(250%);
     animation: title_3 1s forwards;
   }
   @keyframes title_3 {
     0% {
-      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -3411,11 +3899,10 @@ main .main_insta div .ins_ani h3 {
     text-align: center;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     animation: title_4 1s 0.3s forwards;
-    transform: translateY(200%);
+    transform: translateY(250%);
   }
   @keyframes title_4 {
     0% {
-      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -3448,13 +3935,15 @@ main .main_insta div .ins_ani h3 {
   }
   main .main_mat {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #e9ebf1;
   }
   main .main_mat .title {
     padding-top: 20%;
     text-align: center;
     color: #000;
+    overflow: hidden;
+    height: 20%;
   }
   main .main_mat .title p {
     font-size: 1rem;
@@ -3463,72 +3952,39 @@ main .main_insta div .ins_ani h3 {
     transform: translateY(500%);
     animation: Mt_title_1 1s forwards;
   }
-  @keyframes Mt_title_1 {
-    0% {
-      transform: translateY(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .main_mat .title h2 {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     transform: translateY(500%);
-    animation: Mt_title_2 1s forwards;
-  }
-  @keyframes Mt_title_2 {
-    0% {
-      transform: translateY(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
+    animation: Mt_title_2 1s 0.2S forwards;
   }
   main .main_mat .ele {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   main .main_mat .ele .id2_left figure {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   main .main_mat .ele .id2_left figure img {
+    transform: translateX(-200%);
     width: 50%;
-    height: 50%;
-    animation: mt_img_1 1.6s forwards ease-out;
-  }
-  @keyframes mt_img_1 {
-    0% {
-      transform: translateX(-500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0%);
-    }
+    height: 45%;
+    animation: mt_img_1 1.2s 0.5s forwards ease-out;
   }
   main .main_mat .ele .id2_left figcaption {
     padding: 0%;
     text-align: center;
+    animation: mat 1s forwards ease-out;
   }
   main .main_mat .ele .id2_left figcaption h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 6px;
     display: none;
   }
   main .main_mat .ele .id2_left figcaption h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     padding-bottom: 5px;
   }
@@ -3536,7 +3992,7 @@ main .main_insta div .ins_ani h3 {
     display: none;
   }
   main .main_mat .ele .id2_left figcaption p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 100;
     line-height: 150%;
     margin-top: 1.5%;
@@ -3544,17 +4000,17 @@ main .main_insta div .ins_ani h3 {
   }
   main .main_mat .ele .id2_left figcaption a {
     border: solid 1px black;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-decoration: none;
     color: #031d33;
     display: inline-block;
     width: 55%;
-    height: 38px;
+    height: 33px;
     text-align: center;
     padding-top: 5px;
     margin-bottom: 1%;
   }
-  main .main_mat .ele .circle {
+  main .main_mat .ele .id2_left .circle {
     position: absolute;
     display: none;
     top: 67%;
@@ -3569,70 +4025,61 @@ main .main_insta div .ins_ani h3 {
       transform: rotate(360deg);
     }
   }
-  main .main_mat .id2_right figure {
+  main .main_mat .ele .id2_right figure {
+    display: none;
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 12%;
+    margin-top: 5%;
   }
-  main .main_mat .id2_right figure img {
+  main .main_mat .ele .id2_right figure img {
     position: absolute;
     right: 0;
-    top: -2%;
+    top: 5%;
     width: 50%;
-    height: 30%;
-    animation: mt_img_2 1.6s forwards ease-out;
+    height: 25%;
+    transform: translateX(200%);
+    animation: mt_img_1 1.2s 0.5s forwards ease-out;
   }
-  @keyframes mt_img_2 {
-    0% {
-      transform: translateX(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  main .main_mat .id2_right figure figcaption {
+  main .main_mat .ele .id2_right figure figcaption {
     padding: 0%;
     text-align: center;
     margin-top: 22%;
+    animation: mat 1s forwards ease-out;
   }
-  main .main_mat .id2_right figure figcaption h4 {
-    font-size: 1rem;
+  main .main_mat .ele .id2_right figure figcaption h4 {
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 6px;
     display: none;
   }
-  main .main_mat .id2_right figure figcaption h3 {
-    font-size: 1.2rem;
+  main .main_mat .ele .id2_right figure figcaption h3 {
+    font-size: 1rem;
     font-weight: 700;
     padding-bottom: 5px;
   }
-  main .main_mat .id2_right figure figcaption span {
+  main .main_mat .ele .id2_right figure figcaption span {
     display: none;
   }
-  main .main_mat .id2_right figure figcaption p {
-    font-size: 0.85rem;
+  main .main_mat .ele .id2_right figure figcaption p {
+    font-size: 0.8rem;
     font-weight: 100;
     line-height: 150%;
     margin-top: 1.5%;
     margin-bottom: 3%;
   }
-  main .main_mat .id2_right figure figcaption a {
+  main .main_mat .ele .id2_right figure figcaption a {
     border: solid 1px black;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-decoration: none;
     color: #031d33;
     display: inline-block;
     width: 55%;
-    height: 38px;
+    height: 33px;
     text-align: center;
     padding-top: 5px;
     margin-bottom: 12%;
   }
-  main .main_mat .id2_right .circle_2 {
+  main .main_mat .ele .id2_right .circle_2 {
     position: absolute;
     display: none;
     top: 25%;
@@ -3645,21 +4092,6 @@ main .main_insta div .ins_ani h3 {
     }
     to {
       transform: rotate(360deg);
-    }
-  }
-  main .main_mat figcaption {
-    animation: Mt_ele 1s forwards;
-  }
-  @keyframes Mt_ele {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    80% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
     }
   }
   main .main_br {
@@ -3675,82 +4107,49 @@ main .main_insta div .ins_ani h3 {
     width: 100%;
     height: 100vh;
   }
-  main .main_br .br_left {
+  main .main_br .br_ele .br_left {
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%, 0%);
+    overflow: hidden;
     width: 100%;
   }
-  main .main_br .br_left h2 {
+  main .main_br .br_ele .br_left h2 {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 4%;
-    transform: translateY(10%);
+    transform: translateY(100%);
     animation: br_title_1 1s forwards;
-    overflow: hidden;
   }
-  @keyframes br_title_1 {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_left h3 {
+  main .main_br .br_ele .br_left h3 {
     font-size: 0.9rem;
     line-height: 170%;
     font-weight: 300;
-    transform: translateY(10%);
-    animation: br_title_2 1s 0.2s forwards;
+    transform: translateY(100%);
+    animation: br_title_2 1s 0.4s forwards;
     overflow: hidden;
   }
-  @keyframes br_title_2 {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right {
+  main .main_br .br_ele .br_right {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 75%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
-  main .main_br .br_right div {
-    transform: translateY(10%);
-    animation: br_title_3 1s 0.7s forwards;
+  main .main_br .br_ele .br_right div {
+    transform: translateY(150%);
+    animation: br_title_3 1s 0.6s forwards;
     overflow: hidden;
   }
-  @keyframes br_title_3 {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right div p:nth-child(1) {
+  main .main_br .br_ele .br_right div p:nth-child(1) {
     font-size: 1.2rem;
     font-weight: 400;
     margin-bottom: 1%;
   }
-  main .main_br .br_right div p:nth-child(2) {
+  main .main_br .br_ele .br_right div p:nth-child(2) {
     font-weight: 400;
     margin-bottom: 10%;
     padding: 0 20%;
@@ -3758,41 +4157,29 @@ main .main_insta div .ins_ani h3 {
     display: flex;
     justify-content: space-around;
   }
-  main .main_br .br_right div p:nth-child(2) a {
+  main .main_br .br_ele .br_right div p:nth-child(2) a {
     margin-left: -20px;
     font-size: 0.9rem;
   }
-  main .main_br .br_but {
+  main .main_br .br_ele .br_right .br_but {
     display: flex;
     flex-direction: column;
-    transform: translateY(10%);
-    animation: br_title_4 1s 1.1s forwards;
+    transform: translateY(150%);
+    animation: br_title_4 1s 0.8s forwards;
     overflow: hidden;
     width: 220px;
     z-index: 900;
   }
-  @keyframes br_title_4 {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_but a {
+  main .main_br .br_ele .br_right .br_but a {
     font-size: 0.9rem;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
   }
-  main .main_br .br_but a::after {
+  main .main_br .br_ele .br_right .br_but a::after {
     content: "";
     display: inline-block;
-    width: 10%;
+    width: 20%;
     height: 15px;
     background: url("../img/illust/view.png") 0px no-repeat;
     background-size: contain;
@@ -3801,9 +4188,9 @@ main .main_insta div .ins_ani h3 {
   }
   main .main_br .ani {
     width: 80%;
-    height: 45%;
+    height: 37%;
     position: absolute;
-    top: 26%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, 0%);
   }
@@ -3882,45 +4269,27 @@ main .main_insta div .ins_ani h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
   }
   main .main_ev h2 {
+    display: none;
     font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
     text-align: center;
     padding-top: 0%;
-    transform: translateY(15%);
+    transform: translateY(100%);
     animation: ev_title 1s forwards;
     overflow: hidden;
   }
-  @keyframes ev_title {
-    0% {
-      transform: translateY(70%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .main_ev .ev_all {
-    transform: translateY(10%);
-    animation: ev_img 1s 0.5s forwards;
+    opacity: 0;
+    transform: translateY(30%);
     margin: 5% 0;
   }
-  @keyframes ev_img {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.3;
-    }
-    100% {
-      transform: translateY(0%);
-    }
+  main .main_ev .ev_all .mySwiper {
+    width: 90%;
+    height: 100%;
   }
   main .main_ev .ev_all .sign button:nth-child(1) {
     background: url(../img/illust/prev01.png) no-repeat;
@@ -3990,31 +4359,21 @@ main .main_insta div .ins_ani h3 {
     background-color: #fff;
   }
   main .main_insta div {
-    height: 500px;
-    padding-top: 50%;
-    text-align: center;
-    transform: translateY(10%);
-    animation: int 5s forwards ease;
+    height: 70%;
     overflow: hidden;
   }
-  @keyframes int {
-    0% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
+  main .main_insta div .ins_ani {
+    height: 500px;
+    padding-top: 60%;
+    opacity: 0;
+    text-align: center;
+    transform: translateY(50%);
+    transition: 2s;
   }
-  main .main_insta div a img {
-    width: 30%;
+  main .main_insta div .ins_ani a img {
+    width: 35%;
   }
-  main .main_insta div h3 {
+  main .main_insta div .ins_ani h3 {
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: 400;
@@ -4030,10 +4389,6 @@ main .main_insta div .ins_ani h3 {
 }
 @media (min-width: 481px) and (max-width: 767px) {
   @import url("../css/reset.css");
-  body::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-  }
   main .index {
     position: relative;
   }
@@ -4056,7 +4411,7 @@ main .main_insta div .ins_ani h3 {
     object-fit: cover;
   }
   main .index .spot_1 div {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -4078,20 +4433,8 @@ main .main_insta div .ins_ani h3 {
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     color: #ffffff;
-    transform: translateY(200%);
     animation: title_1 1s forwards;
-  }
-  @keyframes title_1 {
-    0% {
-      transform: translateY(200%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
+    transform: translateY(200%);
   }
   main .index .spot_1 div h2 {
     font-size: 1.5rem;
@@ -4103,18 +4446,6 @@ main .main_insta div .ins_ani h3 {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     animation: title_2 1s 0.3s forwards;
     transform: translateY(200%);
-  }
-  @keyframes title_2 {
-    0% {
-      transform: translateY(150%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.2;
-    }
-    100% {
-      transform: translateY(0%);
-    }
   }
   main .index .spot_2 {
     position: absolute;
@@ -4137,7 +4468,7 @@ main .main_insta div .ins_ani h3 {
     object-fit: cover;
   }
   main .index .spot_2 figure div {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -4162,18 +4493,6 @@ main .main_insta div .ins_ani h3 {
     transform: translateY(200%);
     animation: title_3 1s forwards;
   }
-  @keyframes title_3 {
-    0% {
-      transform: translateY(200%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .index .spot_2 figure div h2 {
     font-size: 1.5rem;
     margin: 0;
@@ -4184,18 +4503,6 @@ main .main_insta div .ins_ani h3 {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
     animation: title_4 1s 0.3s forwards;
     transform: translateY(200%);
-  }
-  @keyframes title_4 {
-    0% {
-      transform: translateY(150%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.2;
-    }
-    100% {
-      transform: translateY(0%);
-    }
   }
   main .index .bottom {
     display: flex;
@@ -4227,48 +4534,28 @@ main .main_insta div .ins_ani h3 {
     padding-top: 8%;
     text-align: center;
     color: #000;
+    overflow: hidden;
+    height: 30%;
+    display: none;
   }
   main .main_mat .title p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-left: 1%;
     padding-bottom: 1%;
     transform: translateY(500%);
     animation: Mt_title_1 1s forwards;
   }
-  @keyframes Mt_title_1 {
-    0% {
-      transform: translateY(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .main_mat .title h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     transform: translateY(500%);
     animation: Mt_title_2 1s forwards;
   }
-  @keyframes Mt_title_2 {
-    0% {
-      transform: translateY(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .main_mat .ele {
     display: flex;
     justify-content: space-between;
+    display: none;
   }
   main .main_mat .ele .id2_left {
     position: relative;
@@ -4279,23 +4566,13 @@ main .main_insta div .ins_ani h3 {
   main .main_mat .ele .id2_left figure img {
     width: 50%;
     height: 50%;
-    animation: mt_img_1 1.6s forwards ease-out;
-  }
-  @keyframes mt_img_1 {
-    0% {
-      transform: translateX(-500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0%);
-    }
+    transform: translateX(-200%);
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
   }
   main .main_mat .ele .id2_left figcaption {
     padding: 0 0 0 10%;
     text-align: start;
+    animation: mat 1s forwards ease-out;
   }
   main .main_mat .ele .id2_left figcaption h4 {
     font-size: 0.8rem;
@@ -4324,13 +4601,13 @@ main .main_insta div .ins_ani h3 {
     text-decoration: none;
     color: #031d33;
     display: inline-block;
-    width: 35%;
+    width: 100px;
     height: 30px;
     text-align: center;
     padding-top: 4px;
-    margin-bottom: 1%;
+    margin: 2% 0 5% 0;
   }
-  main .main_mat .ele .circle {
+  main .main_mat .ele .id2_left .circle {
     display: none;
     position: absolute;
     top: 67%;
@@ -4345,73 +4622,60 @@ main .main_insta div .ins_ani h3 {
       transform: rotate(360deg);
     }
   }
-  main .main_mat .id2_right {
+  main .main_mat .ele .id2_right {
+    display: none;
     position: relative;
   }
-  main .main_mat .id2_right figure {
+  main .main_mat .ele .id2_right figure {
     margin-top: 8%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  main .main_mat .id2_right figure img {
+  main .main_mat .ele .id2_right figure img {
     width: 50%;
     height: 30%;
-    animation: mt_img_2 1.6s forwards ease-out;
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
   }
-  @keyframes mt_img_2 {
-    0% {
-      transform: translateX(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  main .main_mat .id2_right figure figcaption {
-    text-align: end;
+  main .main_mat .ele .id2_right figure figcaption {
     padding-top: -10px;
     padding-right: 10%;
+    animation: mat 1s forwards ease-out;
   }
-  main .main_mat .id2_right figure figcaption h4 {
+  main .main_mat .ele .id2_right figure figcaption h4 {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 6px;
     display: none;
   }
-  main .main_mat .id2_right figure figcaption h3 {
+  main .main_mat .ele .id2_right figure figcaption h3 {
     font-size: 1rem;
     font-weight: 700;
     padding-bottom: 5px;
   }
-  main .main_mat .id2_right figure figcaption span {
-    border-bottom: 2px solid black;
-    width: 100px;
+  main .main_mat .ele .id2_right figure figcaption span {
     display: none;
   }
-  main .main_mat .id2_right figure figcaption p {
+  main .main_mat .ele .id2_right figure figcaption p {
     font-size: 0.7rem;
     font-weight: 100;
     line-height: 150%;
     margin-top: 1.5%;
     margin-bottom: 3%;
   }
-  main .main_mat .id2_right figure figcaption a {
+  main .main_mat .ele .id2_right figure figcaption a {
     border: solid 1px black;
     font-size: 0.8rem;
     text-decoration: none;
     color: #031d33;
     display: inline-block;
-    width: 35%;
+    width: 100px;
     height: 30px;
     text-align: center;
     padding-top: 5px;
-    margin-bottom: 5%;
+    margin: 2% 0 7% 0;
   }
-  main .main_mat .id2_right .circle_2 {
+  main .main_mat .ele .id2_right .circle_2 {
     display: none;
     position: absolute;
     top: 25%;
@@ -4426,21 +4690,6 @@ main .main_insta div .ins_ani h3 {
       transform: rotate(360deg);
     }
   }
-  main .main_mat figcaption {
-    animation: Mt_ele 1s forwards;
-  }
-  @keyframes Mt_ele {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    80% {
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   main .main_br {
     color: #fff;
     position: relative;
@@ -4453,138 +4702,97 @@ main .main_insta div .ins_ani h3 {
     width: 100%;
     height: 100vh;
   }
-  main .main_br .br_left {
+  main .main_br .br_ele {
+    display: none;
+  }
+  main .main_br .br_ele .br_left {
     position: absolute;
     top: 40%;
     left: 5%;
+    overflow: hidden;
   }
-  main .main_br .br_left h2 {
+  main .main_br .br_ele .br_left h2 {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 3%;
-    transform: translateY(10%);
-    animation: br_title_1 1s forwards;
+    top: 40%;
+    left: 5%;
     overflow: hidden;
   }
-  @keyframes br_title_1 {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_left h3 {
+  main .main_br .br_ele .br_left h3 {
     font-size: 0.8rem;
     line-height: 150%;
     font-weight: 300;
-    transform: translateY(10%);
-    animation: br_title_2 1s 0.2s forwards;
+    transform: translateY(200%);
+    animation: br_title_2 1s 0.4s forwards;
     overflow: hidden;
   }
-  @keyframes br_title_2 {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right {
+  main .main_br .br_ele .br_right {
+    width: 100%;
     position: absolute;
     top: 40%;
     left: 72%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  main .main_br .br_right div {
-    transform: translateY(10%);
-    animation: br_title_3 1s 0.7s forwards;
     overflow: hidden;
   }
-  @keyframes br_title_3 {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
+  main .main_br .br_ele .br_right div {
+    transform: translateY(200%);
+    animation: br_title_3 1s 0.7s forwards;
   }
-  main .main_br .br_right div p:nth-child(1) {
+  main .main_br .br_ele .br_right div p:nth-child(1) {
     font-family: "Noto Serif", serif;
     font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: 1%;
   }
-  main .main_br .br_right div p:nth-child(2) {
+  main .main_br .br_ele .br_right div p:nth-child(2) {
     font-weight: 400;
     margin-bottom: 10%;
     text-align: center;
     display: flex;
     justify-content: space-around;
   }
-  main .main_br .br_right div p:nth-child(2) a {
+  main .main_br .br_ele .br_right div p:nth-child(2) a {
     margin-left: -20px;
     font-size: 0.8rem;
   }
-  main .main_br .br_right .br_but {
+  main .main_br .br_ele .br_right .br_but {
     display: flex;
     flex-direction: column;
-    transform: translateY(10%);
+    transform: translateY(200%);
     animation: br_title_4 1s 1.1s forwards;
     overflow: hidden;
     width: 150%;
     z-index: 900;
     font-size: 0.7rem;
   }
-  @keyframes br_title_4 {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right .br_but a {
+  main .main_br .br_ele .br_right .br_but a {
     font-size: 0.9rem;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
   }
-  main .main_br .br_right .br_but a::after {
+  main .main_br .br_ele .br_right .br_but a::after {
     content: "";
     display: inline-block;
-    width: 20%;
+    width: 4%;
     height: 15px;
-    background: url("../img/illust/view.png") 0 4px no-repeat;
+    background: url("../img/illust/view.png") 0 7px no-repeat;
     background-size: contain;
-    margin-left: 2%;
-    margin-top: 10px;
+    margin-left: 1%;
+    margin-top: 3px;
   }
   main .main_br .ani {
-    width: 35%;
+    width: 40%;
     height: 55%;
     position: absolute;
-    top: 26%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: 1s;
   }
   main .main_br .ani .basmo, main .main_br .ani .br_cir {
     width: 100%;
@@ -4658,6 +4866,7 @@ main .main_insta div .ins_ani h3 {
     height: 100vh;
     background-image: url(../img/ma_event.png);
     background-size: cover;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4667,39 +4876,15 @@ main .main_insta div .ins_ani h3 {
     font-weight: 700;
     color: #fff;
     text-align: center;
-    padding-top: 0%;
-    transform: translateY(15%);
+    padding-top: 6%;
+    transform: translateY(100%);
     animation: ev_title 1s forwards;
     overflow: hidden;
   }
-  @keyframes ev_title {
-    0% {
-      transform: translateY(70%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .main_ev .ev_all {
-    transform: translateY(10%);
-    animation: ev_img 1s 0.5s forwards;
-    margin: 2% 0;
-  }
-  @keyframes ev_img {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.3;
-    }
-    100% {
-      transform: translateY(0%);
-    }
+    opacity: 0;
+    transform: translateY(30%);
+    margin: 3% 0;
   }
   main .main_ev .ev_all .sign button:nth-child(1) {
     background: url(../img/illust/prev01.png) no-repeat;
@@ -4769,31 +4954,21 @@ main .main_insta div .ins_ani h3 {
     background-color: #fff;
   }
   main .main_insta div {
-    height: 100%;
-    padding-top: 15%;
-    text-align: center;
-    transform: translateY(10%);
-    animation: int 5s forwards ease;
+    height: 80%;
     overflow: hidden;
   }
-  @keyframes int {
-    0% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(20%);
-      opacity: 0;
-    }
+  main .main_insta div .ins_ani {
+    height: 100%;
+    padding-top: 20%;
+    opacity: 0;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 2s;
   }
-  main .main_insta div a img {
+  main .main_insta div .ins_ani a img {
     width: 20%;
   }
-  main .main_insta div h3 {
+  main .main_insta div .ins_ani h3 {
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: 400;
@@ -4809,10 +4984,6 @@ main .main_insta div .ins_ani h3 {
 }
 @media (min-width: 768px) and (max-width: 1279px) and (orientation: portrait) {
   @import url("../css/reset.css");
-  body::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-  }
   main .index {
     position: relative;
   }
@@ -4839,7 +5010,7 @@ main .main_insta div .ins_ani h3 {
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
@@ -4850,10 +5021,10 @@ main .main_insta div .ins_ani h3 {
   }
   main .index .spot_1 div p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     border-bottom: 1px solid #fff;
-    width: 245px;
+    width: 264px;
     padding-bottom: 5px;
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
@@ -4863,18 +5034,14 @@ main .main_insta div .ins_ani h3 {
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(200%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateY(0%);
     }
   }
   main .index .spot_1 div h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 0;
     font-weight: 700;
     line-height: 160%;
@@ -4886,7 +5053,6 @@ main .main_insta div .ins_ani h3 {
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -4921,7 +5087,7 @@ main .main_insta div .ins_ani h3 {
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 70%;
@@ -4932,10 +5098,10 @@ main .main_insta div .ins_ani h3 {
   }
   main .index .spot_2 figure div p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     border-bottom: 1px solid #fff;
-    width: 250px;
+    width: 294px;
     padding-bottom: 5px;
     margin-bottom: 3%;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
@@ -4956,7 +5122,7 @@ main .main_insta div .ins_ani h3 {
     }
   }
   main .index .spot_2 figure div h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 0;
     font-weight: 700;
     line-height: 160%;
@@ -5132,7 +5298,6 @@ main .main_insta div .ins_ani h3 {
     flex-direction: column;
   }
   main .main_mat .ele .id2_right figure {
-    flex-direction: column-reverse;
     margin-top: 12%;
   }
   main .main_mat .ele .id2_right figure img {
@@ -5245,7 +5410,6 @@ main .main_insta div .ins_ani h3 {
     font-weight: 300;
     text-align: center;
     transform: translateY(100%);
-    animation: br_title_2 1s 0.2s forwards;
     animation: br_title_2 1s 0.4s forwards;
     overflow: hidden;
   }
@@ -5447,25 +5611,13 @@ main .main_insta div .ins_ani h3 {
     }
   }
   main .main_ev .ev_all {
-    display: none;
-    transform: translateY(200%);
-    animation: ev_all 1s 0.2s forwards;
+    opacity: 0;
+    transform: translateY(30%);
     margin: 5% 0;
   }
   main .main_ev .ev_all .mySwiper {
     width: 90%;
     height: 100%;
-  }
-  @keyframes ev_all {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.4;
-    }
-    100% {
-      transform: translateY(0%);
-    }
   }
   main .main_ev .ev_all .sign button:nth-child(1) {
     background: url(../img/illust/prev01.png) no-repeat;
@@ -5541,8 +5693,9 @@ main .main_insta div .ins_ani h3 {
   main .main_insta div .ins_ani {
     height: 100%;
     padding-top: 40%;
+    opacity: 0;
     text-align: center;
-    transform: translateY(100%);
+    transform: translateY(50%);
     transition: 2s;
   }
   main .main_insta div .ins_ani a img {
@@ -5558,15 +5711,7 @@ main .main_insta div .ins_ani h3 {
   main .main_insta.active div .ins_ani {
     transition: 2s;
     transform: translateY(0%);
-    animation: ins 2s forwards ease-in;
-  }
-  @keyframes ins {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    opacity: 1;
   }
   .right {
     display: none;
@@ -5575,12 +5720,8 @@ main .main_insta div .ins_ani h3 {
     display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) and (orientation: landscape) {
+@media (min-width: 896px) and (max-width: 1279px) and (orientation: landscape) {
   @import url("../css/reset.css");
-  body::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-  }
   main .index {
     position: relative;
   }
@@ -5603,7 +5744,7 @@ main .main_insta div .ins_ani h3 {
     object-fit: cover;
   }
   main .index .spot_1 div {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -5612,7 +5753,7 @@ main .main_insta div .ins_ani h3 {
     left: 20%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 30%;
+    height: 37%;
     margin-bottom: 0px;
     overflow: hidden;
   }
@@ -5631,7 +5772,6 @@ main .main_insta div .ins_ani h3 {
   }
   @keyframes title_1 {
     0% {
-      transform: translateY(200%);
       opacity: 0;
     }
     50% {
@@ -5654,7 +5794,6 @@ main .main_insta div .ins_ani h3 {
   }
   @keyframes title_2 {
     0% {
-      transform: translateY(150%);
       opacity: 0;
     }
     50% {
@@ -5685,7 +5824,7 @@ main .main_insta div .ins_ani h3 {
     object-fit: cover;
   }
   main .index .spot_2 figure div {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -5693,7 +5832,7 @@ main .main_insta div .ins_ani h3 {
     left: 20%;
     transform: translate(-50%, 0%);
     width: 70%;
-    height: 30%;
+    height: 50%;
     margin-bottom: 0px;
     overflow: hidden;
     align-items: flex-end;
@@ -5771,9 +5910,11 @@ main .main_insta div .ins_ani h3 {
     background-color: #e9ebf1;
   }
   main .main_mat .title {
-    padding-top: 12%;
+    padding-top: 9%;
     text-align: center;
     color: #031d33;
+    overflow: hidden;
+    display: none;
   }
   main .main_mat .title p {
     font-size: 1rem;
@@ -5787,9 +5928,6 @@ main .main_insta div .ins_ani h3 {
       transform: translateY(500%);
       opacity: 0;
     }
-    50% {
-      opacity: 0.5;
-    }
     100% {
       transform: translateY(0%);
     }
@@ -5799,15 +5937,12 @@ main .main_insta div .ins_ani h3 {
     font-weight: 700;
     letter-spacing: 0.5px;
     transform: translateY(500%);
-    animation: Mt_title_2 1s forwards;
+    animation: Mt_title_2 1s 0.2s forwards;
   }
   @keyframes Mt_title_2 {
     0% {
       transform: translateY(500%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateY(0%);
@@ -5816,25 +5951,24 @@ main .main_insta div .ins_ani h3 {
   main .main_mat .ele {
     display: flex;
     justify-content: space-between;
+    display: none;
   }
   main .main_mat .ele .id2_left {
     position: relative;
+    display: none;
   }
   main .main_mat .ele .id2_left figure {
     margin-top: 8%;
   }
   main .main_mat .ele .id2_left figure img {
+    transform: translateX(-200%);
     width: 78%;
     height: 60%;
-    animation: mt_img_1 1.6s forwards ease-out;
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
   }
   @keyframes mt_img_1 {
     0% {
-      transform: translateX(-500%);
       opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
     }
     100% {
       transform: translateX(0%);
@@ -5843,6 +5977,7 @@ main .main_insta div .ins_ani h3 {
   main .main_mat .ele .id2_left figcaption {
     padding: 0 0 0 10%;
     text-align: start;
+    animation: mat 1s forwards ease-out;
   }
   main .main_mat .ele .id2_left figcaption h4 {
     font-size: 1rem;
@@ -5872,7 +6007,7 @@ main .main_insta div .ins_ani h3 {
     padding-top: 6px;
     margin: 1% 0;
   }
-  main .main_mat .ele .circle {
+  main .main_mat .ele .id2_left .circle {
     width: 30%;
     position: absolute;
     top: 60%;
@@ -5887,60 +6022,50 @@ main .main_insta div .ins_ani h3 {
       transform: rotate(360deg);
     }
   }
-  main .main_mat .id2_right {
+  main .main_mat .ele .id2_right {
+    display: none;
     position: relative;
   }
-  main .main_mat .id2_right figure {
+  main .main_mat .ele .id2_right figure {
     margin-top: 8%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
-  main .main_mat .id2_right figure img {
+  main .main_mat .ele .id2_right figure img {
     width: 78%;
     height: 60%;
-    animation: mt_img_2 1.6s forwards ease-out;
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
   }
-  @keyframes mt_img_2 {
-    0% {
-      transform: translateX(500%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  main .main_mat .id2_right figure figcaption {
+  main .main_mat .ele .id2_right figure figcaption {
     margin-bottom: 8%;
     text-align: end;
     padding-top: -10px;
     padding-right: 10%;
+    animation: mat 1s forwards ease-out;
   }
-  main .main_mat .id2_right figure figcaption h4 {
+  main .main_mat .ele .id2_right figure figcaption h4 {
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 6px;
   }
-  main .main_mat .id2_right figure figcaption h3 {
+  main .main_mat .ele .id2_right figure figcaption h3 {
     font-size: 1.5rem;
     font-weight: 700;
     padding-bottom: 5px;
   }
-  main .main_mat .id2_right figure figcaption span {
+  main .main_mat .ele .id2_right figure figcaption span {
     border-bottom: 2px solid black;
     width: 100px;
   }
-  main .main_mat .id2_right figure figcaption p {
+  main .main_mat .ele .id2_right figure figcaption p {
     font-size: 0.9rem;
     font-weight: 100;
     line-height: 160%;
     margin-top: 1.5%;
     margin-bottom: 3%;
   }
-  main .main_mat .id2_right figure figcaption a {
+  main .main_mat .ele .id2_right figure figcaption a {
     border: solid 1px black;
     font-size: 0.9rem;
     text-decoration: none;
@@ -5951,22 +6076,7 @@ main .main_insta div .ins_ani h3 {
     padding-top: 6px;
     margin: 1% 0;
   }
-  main .main_mat .id2_right .circle_2 {
-    width: 30%;
-    position: absolute;
-    top: 22%;
-    left: 25%;
-    animation: circle 10s linear infinite;
-  }
-  @keyframes circle {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  main .main_mat figcaption {
+  main .main_mat .ele .id2_right figure figcaption figcaption {
     animation: Mt_ele 1s forwards;
   }
   @keyframes Mt_ele {
@@ -5981,6 +6091,21 @@ main .main_insta div .ins_ani h3 {
       opacity: 1;
     }
   }
+  main .main_mat .ele .id2_right .circle_2 {
+    width: 30%;
+    position: absolute;
+    top: 22%;
+    left: 25%;
+    animation: circle 10s linear infinite;
+  }
+  @keyframes circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   main .main_br {
     color: #fff;
     position: relative;
@@ -5993,122 +6118,79 @@ main .main_insta div .ins_ani h3 {
     width: 100%;
     height: 100vh;
   }
-  main .main_br .br_left {
+  main .main_br .br_ele {
+    display: none;
+  }
+  main .main_br .br_ele .br_left {
     position: absolute;
     top: 40%;
     left: 5%;
+    overflow: hidden;
   }
-  main .main_br .br_left h2 {
+  main .main_br .br_ele .br_left h2 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 3%;
-    transform: translateY(10%);
-    animation: br_title_1 1s forwards;
+    top: 40%;
+    left: 5%;
     overflow: hidden;
   }
-  @keyframes br_title_1 {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_left h3 {
+  main .main_br .br_ele .br_left h3 {
     font-size: 1rem;
     line-height: 150%;
     font-weight: 300;
-    transform: translateY(10%);
-    animation: br_title_2 1s 0.2s forwards;
+    transform: translateY(100%);
+    animation: br_title_2 1s 0.4s forwards;
     overflow: hidden;
   }
-  @keyframes br_title_2 {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right {
+  main .main_br .br_ele .br_right {
     position: absolute;
     top: 40%;
     left: 72%;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  main .main_br .br_right div {
-    transform: translateY(10%);
-    animation: br_title_3 1s 0.7s forwards;
+  main .main_br .br_ele .br_right div {
+    transform: translateY(130%);
+    animation: br_title_3 1s 0.4s forwards;
     overflow: hidden;
   }
-  @keyframes br_title_3 {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right div p:nth-child(1) {
+  main .main_br .br_ele .br_right div p:nth-child(1) {
     font-family: "Noto Serif", serif;
     font-size: 2rem;
     font-weight: 400;
     margin-bottom: 1%;
   }
-  main .main_br .br_right div p:nth-child(2) {
+  main .main_br .br_ele .br_right div p:nth-child(2) {
     font-weight: 400;
     margin-bottom: 10%;
     text-align: center;
     display: flex;
     justify-content: space-around;
   }
-  main .main_br .br_right div p:nth-child(2) a {
+  main .main_br .br_ele .br_right div p:nth-child(2) a {
     margin-left: -20px;
     font-size: 1rem;
   }
-  main .main_br .br_right .br_but {
+  main .main_br .br_ele .br_right .br_but {
     display: flex;
     flex-direction: column;
-    transform: translateY(10%);
+    transform: translateY(200%);
     animation: br_title_4 1s 1.1s forwards;
     overflow: hidden;
     width: 150%;
     z-index: 900;
     font-size: 0.7rem;
   }
-  @keyframes br_title_4 {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
-  main .main_br .br_right .br_but a {
+  main .main_br .br_ele .br_right .br_but a {
     font-size: 1.1rem;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
   }
-  main .main_br .br_right .br_but a::after {
+  main .main_br .br_ele .br_right .br_but a::after {
     content: "";
     display: inline-block;
     width: 25%;
@@ -6125,6 +6207,8 @@ main .main_insta div .ins_ani h3 {
     top: 26%;
     left: 50%;
     transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: 1s;
   }
   main .main_br .ani .basmo, main .main_br .ani .br_cir {
     width: 100%;
@@ -6201,45 +6285,23 @@ main .main_insta div .ins_ani h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
   }
   main .main_ev h2 {
+    display: none;
     font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
     text-align: center;
     padding-top: 0%;
-    transform: translateY(15%);
+    transform: translateY(100%);
     animation: ev_title 1s forwards;
     overflow: hidden;
   }
-  @keyframes ev_title {
-    0% {
-      transform: translateY(70%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
   main .main_ev .ev_all {
-    transform: translateY(10%);
-    animation: ev_img 1s 0.5s forwards;
+    opacity: 0;
+    transform: translateY(30%);
     margin: 2% 0;
-  }
-  @keyframes ev_img {
-    0% {
-      transform: translateY(50%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0.3;
-    }
-    100% {
-      transform: translateY(0%);
-    }
   }
   main .main_ev .ev_all .sign button:nth-child(1) {
     background: url(../img/illust/prev01.png) no-repeat;
@@ -6309,31 +6371,665 @@ main .main_insta div .ins_ani h3 {
     background-color: #fff;
   }
   main .main_insta div {
+    overflow: hidden;
+    height: 75%;
+  }
+  main .main_insta div .ins_ani {
     height: 100%;
-    padding-top: 15%;
+    padding-top: 13%;
     text-align: center;
-    transform: translateY(10%);
-    animation: int 5s forwards ease;
+    transform: translateY(50%);
+    transition: 2s;
+  }
+  main .main_insta div .ins_ani a img {
+    width: 15%;
+  }
+  main .main_insta div .ins_ani h3 {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #9c9c9c;
+    font-family: "Montserrat";
+  }
+  .right {
+    display: none;
+  }
+  .right.black {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 896px) and (orientation: landscape) {
+  @import url("../css/reset.css");
+  main .index {
+    position: relative;
+  }
+  main .index .spot_1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  main .index .spot_1 figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
   }
-  @keyframes int {
+  main .index .spot_1 figure img {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    object-fit: cover;
+  }
+  main .index .spot_1 div {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-end;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, 0%);
+    width: 70%;
+    height: 40%;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  main .index .spot_1 div p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+    width: 250px;
+    padding-bottom: 5px;
+    margin-bottom: 2%;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
+    color: #ffffff;
+    animation: title_1 1s forwards;
+    transform: translateY(200%);
+  }
+  @keyframes title_1 {
     0% {
-      transform: translateY(20%);
+      transform: translateY(200%);
       opacity: 0;
     }
     50% {
-      opacity: 1;
-      transform: translateY(0%);
+      opacity: 0.5;
     }
     100% {
-      transform: translateY(20%);
-      opacity: 0;
+      transform: translateY(0%);
     }
   }
-  main .main_insta div a img {
-    width: 20%;
+  main .index .spot_1 div h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 160%;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
+    animation: title_2 1s 0.3s forwards;
+    transform: translateY(200%);
   }
-  main .main_insta div h3 {
+  @keyframes title_2 {
+    0% {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  main .index .spot_2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  main .index .spot_2 figure {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  main .index .spot_2 figure img {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  main .index .spot_2 figure div {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, 0%);
+    width: 70%;
+    height: 40%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    align-items: flex-end;
+  }
+  main .index .spot_2 figure div p {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    border-bottom: 1px solid #fff;
+    width: 250px;
+    padding-bottom: 5px;
+    margin-bottom: 2%;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
+    color: #ffffff;
+    animation: title_3 1s forwards;
+  }
+  @keyframes title_3 {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  main .index .spot_2 figure div h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 160%;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.46);
+    animation: title_4 1s 0.3s forwards;
+    transform: translateY(200%);
+  }
+  @keyframes title_4 {
+    0% {
+      transform: translateY(150%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  main .index .bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  main .index .bottom div {
+    padding-right: 0%;
+    z-index: 99;
+  }
+  main .index .bottom div span {
+    margin-left: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 5px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  main .main_mat {
+    width: 100%;
+    height: 100vh;
+    background-color: #e9ebf1;
+  }
+  main .main_mat .title {
+    padding-top: 7%;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+    height: 30%;
+    display: none;
+  }
+  main .main_mat .title p {
+    font-size: 0.9rem;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    transform: translateY(500%);
+    animation: Mt_title_1 1s forwards;
+  }
+  main .main_mat .title h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transform: translateY(500%);
+    animation: Mt_title_2 1s forwards;
+  }
+  main .main_mat .ele {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+  main .main_mat .ele .id2_left {
+    position: relative;
+  }
+  main .main_mat .ele .id2_left figure {
+    margin-top: 6%;
+  }
+  main .main_mat .ele .id2_left figure img {
+    width: 50%;
+    height: 50%;
+    transform: translateX(-200%);
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
+  }
+  main .main_mat .ele .id2_left figcaption {
+    padding: 0 0 0 10%;
+    text-align: start;
+    animation: mat 1s forwards ease-out;
+  }
+  main .main_mat .ele .id2_left figcaption h4 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: none;
+  }
+  main .main_mat .ele .id2_left figcaption h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+  main .main_mat .ele .id2_left figcaption span {
+    display: none;
+  }
+  main .main_mat .ele .id2_left figcaption p {
+    font-size: 0.7rem;
+    font-weight: 100;
+    line-height: 150%;
+    margin-top: 1.5%;
+    margin-bottom: 3%;
+  }
+  main .main_mat .ele .id2_left figcaption a {
+    border: solid 1px black;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #031d33;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 4px;
+    margin: 2% 0 5% 0;
+  }
+  main .main_mat .ele .id2_left .circle {
+    display: none;
+    position: absolute;
+    top: 67%;
+    left: 55%;
+    animation: circle 10s linear infinite;
+  }
+  @keyframes circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  main .main_mat .ele .id2_right {
+    display: none;
+    position: relative;
+  }
+  main .main_mat .ele .id2_right figure {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  main .main_mat .ele .id2_right figure img {
+    width: 50%;
+    height: 30%;
+    animation: mt_img_1 1.6s 0.5s forwards ease-out;
+  }
+  main .main_mat .ele .id2_right figure figcaption {
+    padding-top: -10px;
+    padding-right: 10%;
+    animation: mat 1s forwards ease-out;
+    margin-bottom: 2%;
+  }
+  main .main_mat .ele .id2_right figure figcaption h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: none;
+  }
+  main .main_mat .ele .id2_right figure figcaption h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+  main .main_mat .ele .id2_right figure figcaption span {
+    display: none;
+  }
+  main .main_mat .ele .id2_right figure figcaption p {
+    font-size: 0.7rem;
+    font-weight: 100;
+    line-height: 150%;
+    margin-top: 1.5%;
+    margin-bottom: 3%;
+  }
+  main .main_mat .ele .id2_right figure figcaption a {
+    border: solid 1px black;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #031d33;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    margin: 2% 0 7% 0;
+  }
+  main .main_mat .ele .id2_right .circle_2 {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    animation: circle 10s linear infinite;
+  }
+  @keyframes circle {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  main .main_br {
+    color: #fff;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  main .main_br .br_bg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  main .main_br .br_ele {
+    display: none;
+  }
+  main .main_br .br_ele .br_left {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    overflow: hidden;
+  }
+  main .main_br .br_ele .br_left h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 3%;
+    top: 40%;
+    left: 5%;
+    overflow: hidden;
+  }
+  main .main_br .br_ele .br_left h3 {
+    font-size: 0.9rem;
+    line-height: 150%;
+    font-weight: 300;
+    transform: translateY(200%);
+    animation: br_title_2 1s 0.4s forwards;
+    overflow: hidden;
+  }
+  main .main_br .br_ele .br_right {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    left: 72%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  main .main_br .br_ele .br_right div {
+    transform: translateY(200%);
+    animation: br_title_3 1s 0.7s forwards;
+  }
+  main .main_br .br_ele .br_right div p:nth-child(1) {
+    font-family: "Noto Serif", serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1%;
+  }
+  main .main_br .br_ele .br_right div p:nth-child(2) {
+    font-weight: 400;
+    margin-bottom: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  main .main_br .br_ele .br_right div p:nth-child(2) a {
+    margin-left: -20px;
+    font-size: 0.7rem;
+  }
+  main .main_br .br_ele .br_right .br_but {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(200%);
+    animation: br_title_4 1s 1.1s forwards;
+    overflow: hidden;
+    width: 150%;
+    z-index: 900;
+    font-size: 0.9rem;
+  }
+  main .main_br .br_ele .br_right .br_but a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  main .main_br .br_ele .br_right .br_but a::after {
+    content: "";
+    display: inline-block;
+    width: 4%;
+    height: 15px;
+    background: url("../img/illust/view.png") 0 7px no-repeat;
+    background-size: contain;
+    margin-left: 1%;
+    margin-top: 3px;
+  }
+  main .main_br .ani {
+    width: 35%;
+    height: 55%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: 80%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: 1s;
+  }
+  main .main_br .ani .basmo, main .main_br .ani .br_cir {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  main .main_br .ani .br_cir {
+    animation: a_0 10s linear infinite;
+  }
+  main .main_br .ani .ob_1 {
+    object-fit: cover;
+    width: 15%;
+    position: absolute;
+    top: 11%;
+    left: 66%;
+    animation: a_1 5s linear infinite;
+  }
+  main .main_br .ani .ob_2 {
+    object-fit: cover;
+    width: 15%;
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    animation: a_2 5s linear infinite;
+  }
+  main .main_br .ani .ob_3 {
+    object-fit: cover;
+    width: 15%;
+    position: absolute;
+    top: 65%;
+    left: 72%;
+    animation: a_3 5s linear infinite;
+  }
+  @keyframes a_0 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes a_1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes a_2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes a_3 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  main .main_ev {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/ma_event.png);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .main_ev h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding-top: 6%;
+    transform: translateY(100%);
+    animation: ev_title 1s forwards;
+    overflow: hidden;
+  }
+  main .main_ev .ev_all {
+    opacity: 0;
+    transform: translateY(30%);
+    margin: 3% 0;
+  }
+  main .main_ev .ev_all .sign button:nth-child(1) {
+    background: url(../img/illust/prev01.png) no-repeat;
+    width: 50px;
+    height: 90px;
+    border: none;
+    position: absolute;
+    top: 42%;
+    left: 14%;
+    display: none;
+  }
+  main .main_ev .ev_all .sign button:nth-child(2) {
+    background: url(../img/illust/next01.png) no-repeat;
+    width: 50px;
+    height: 90px;
+    border: none;
+    position: absolute;
+    top: 42%;
+    left: 84%;
+    display: none;
+  }
+  main .main_ev .ev_all .ev_img {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  main .main_ev .ev_all .ev_img figure {
+    white-space: nowrap;
+    margin: 0;
+    transition: 0.5s;
+  }
+  main .main_ev .ev_all .ev_img figure a img {
+    width: 100%;
+  }
+  main .main_ev .ev_all .ev_img .ev_bar {
+    text-align: center;
+    margin-top: 0%;
+  }
+  main .main_ev .ev_all .ev_img .ev_bar progress {
+    width: 100%;
+    height: 6px;
+    margin: 0 auto;
+    appearance: none;
+  }
+  main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-bar {
+    background-color: #fff;
+    border: #fff;
+  }
+  main .main_ev .ev_all .ev_img .ev_bar progress::-webkit-progress-value {
+    background-color: #9c9c9c;
+  }
+  main .main_vd figure {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  main .main_vd figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  main .main_insta {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+  }
+  main .main_insta div {
+    height: 80%;
+    overflow: hidden;
+  }
+  main .main_insta div .ins_ani {
+    height: 100%;
+    padding-top: 13%;
+    opacity: 0;
+    text-align: center;
+    transform: translateY(100%);
+    transition: 2s;
+  }
+  main .main_insta div .ins_ani a img {
+    width: 18%;
+  }
+  main .main_insta div .ins_ani h3 {
     margin-top: 10px;
     font-size: 1.2rem;
     font-weight: 400;

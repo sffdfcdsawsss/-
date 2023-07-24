@@ -18,7 +18,8 @@ main{
                 left: 50%;
                 transform: translate(-50%, 0%);
                 overflow: hidden;
-                h2{font-size: 38px;
+                h2{
+                    font-size: 38px;
                     transform: translateY(200%);
                     animation: mat_title 0.5s forwards ease-out; 
                     }

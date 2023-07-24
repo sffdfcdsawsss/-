@@ -17,12 +17,13 @@ main{
                 left: 50%;
                 transform: translate(-50%, 0%);
                 overflow: hidden;
-                h2{font-size: 38px;
+                h2{
+                    font-size: 38px;
                     transform: translateY(200%);
                     animation: ev_title 0.5s forwards ease-out; 
                     }
                     @keyframes ev_title{
-                        0%{transform: translateY(100%);opacity: 0;}
+                        0%{transform: translateY(200%);opacity: 0;}
                         50%{opacity: 0.5;}
                         100%{transform: translateY(-10%);}
                     }
@@ -31,7 +32,7 @@ main{
                 font-size: 18px;
                 font-weight: 500;
                 margin-top: 5%;
-                transform: translateY(300%);
+                transform: translateY(200%);
                 animation: ev_title 0.5s 0.5s forwards ease-out; 
                 }
             }
@@ -68,6 +69,5 @@ main{
         }
     }
 }
-
 
 @import "_m_sub_ev";

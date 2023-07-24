@@ -2,7 +2,7 @@
 $('body').prepend('<header></header>');
 $('header').load('./header.html .menu-trigger,.menu_bar,h1,.ic', menu, contentsMove);
 chat();
-idx();
+idx ()
 
 
 //init
@@ -89,30 +89,39 @@ function contentsMove(){
 window.addEventListener('load',contentsMove);
 
 
-function menu(){
-
-    const elS3 = document.querySelector('header .menu-trigger'),
-    elS3Nav = document.querySelector('.menu_bar nav'),
-    elS3Back = document.querySelector('.menu_bar'),
-    elS3NavMenu = document.querySelector('header .menu_bar .menu-trigger_2');
-
-
-    elS3.onclick = function(e){
+function menu() {
+    const elS3 = document.querySelector('header .menu-trigger');
+    const elS3Nav = document.querySelector('.menu_bar nav');
+    const elS3Back = document.querySelector('.menu_bar');
+    const elS3NavMenu = document.querySelector('header .menu_bar .menu-trigger_2');
+  
+    let menuOpened = false; 
+  
+    function toggleMenu(e) {
         e.preventDefault();
-        elS3Nav.classList.add('active');
-        elS3Back.classList.add('active');
-    }
-
-    elS3Back.onclick = function(e){
-        let target = e.target.classList;                
-        if(target.contains('menu_bar') || target.contains('menu-trigger_2') || e.target.tagName == 'SPAN'){
-            elS3Nav.classList.remove('active');
-            elS3Back.classList.remove('active');
+        menuOpened = !menuOpened;
+    
+        if (menuOpened) {
+          elS3Nav.classList.add('active');
+          elS3Back.classList.add('active');
+        } else {
+          elS3Nav.classList.remove('active');
+          elS3Back.classList.remove('active');
         }
-    }
-
-
-};
+      }
+  
+    elS3Back.onclick = function(e) {
+      let target = e.target.classList;
+      if (menuOpened && (target.contains('menu_bar') || target.contains('menu-trigger_2') || e.target.tagName === 'SPAN')) {
+        toggleMenu(e); 
+      }
+    };
+  
+    elS3.addEventListener('click', toggleMenu);
+    elS3.addEventListener('touchstart', toggleMenu);
+    elS3NavMenu.addEventListener('click', toggleMenu);
+    elS3NavMenu.addEventListener('touchstart', toggleMenu);
+  }
 
 
 function chat(){
@@ -131,27 +140,56 @@ function chat(){
 }
 
 
-function idx(){
-    const elSpan_1 = document.querySelector('main .index .bottom div span:nth-of-type(1)'),
-    elSpan_2 = document.querySelector('main .index .bottom div span:nth-of-type(2)'),
-    elSpot_1 = document.querySelector('main .index .spot_1'),
-    elSpot_2 = document.querySelector('main .index .spot_2');
 
-    let num = 0;
-
-    elSpan_1.onclick =function(){
-            elSpan_1.classList.add('active');
-            elSpan_2.classList.remove('active');
-            elSpot_2.classList.remove('active');
-            elSpot_1.classList.add('active');
+function idx (){
+    const spot1 = document.querySelector('.spot_1');
+    const spot2 = document.querySelector('.spot_2');
+    const bottomSpans = document.querySelectorAll('.bottom span');
+  
+    let currentSlide = 1;
+    let intervalId = setInterval(switchSlide, 5000);
+  
+    spot1.querySelector('div').style.animationPlayState = 'running';
+    spot1.querySelector('div').style.display = 'flex';
+    spot2.querySelector('div').style.animationPlayState = 'paused';
+    spot2.querySelector('div').style.display = 'none';
+  
+    bottomSpans.forEach((span, index) => {
+      span.addEventListener('click', () => {
+        bottomSpans[currentSlide - 1].classList.remove('active');
+        bottomSpans[index].classList.add('active');
+        if (index === 0) {
+          spot1.classList.add('active');
+          spot1.querySelector('div').style.animationPlayState = 'running';
+          spot1.querySelector('div').style.display = 'flex';
+          spot2.classList.remove('active');
+          spot2.querySelector('div').style.animationPlayState = 'paused';
+          spot2.querySelector('div').style.display = 'none';
+          currentSlide = 1;
+        } else {
+          spot1.classList.remove('active');
+          spot1.querySelector('div').style.animationPlayState = 'paused';
+          spot1.querySelector('div').style.display = 'none';
+          spot2.classList.add('active');
+          spot2.querySelector('div').style.animationPlayState = 'running';
+          spot2.querySelector('div').style.display = 'flex';
+          currentSlide = 2;
         }
-    elSpan_2.onclick =function(){
-        elSpan_2.classList.add('active');
-        elSpan_1.classList.remove('active');
-        elSpot_1.classList.remove('active');
-        elSpot_2.classList.add('active');
+        clearInterval(intervalId);
+        intervalId = setInterval(switchSlide, 5000);
+      });
+    });
+  
+    function switchSlide() {
+      if (currentSlide === 1) {
+        bottomSpans[1].click();
+      } else {
+        bottomSpans[0].click();
+      }
     }
-} 
+}
+
+
 
 const elSection = document.querySelectorAll('.section');
 
@@ -173,6 +211,3 @@ let observer = new IntersectionObserver(callback, options);
 elSection.forEach(function(selector){
     observer.observe( selector)
 })
-
-
-

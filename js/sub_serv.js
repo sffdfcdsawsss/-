@@ -14,3 +14,11 @@ elLi.forEach(function(ele, key){
     }
 })
 
+const mediaViewContent = window.matchMedia(`(max-width:1279px)`);
+const elServ =  document.querySelector('main .q_a a:nth-of-type(1)');
+
+if (mediaViewContent.matches) {
+    elServ.onclick = function(e) {
+        e.preventDefault();
+    };
+}

@@ -11,7 +11,6 @@ main{
   .index{
     position: relative;
     .spot_1{
-      display: block;
       position: relative;
       width: 100%;
       height: 100vh;
@@ -23,7 +22,6 @@ main{
       }
   
       div{
-          display: flex;
           align-items: flex-end;
           flex-direction: column;
           position: absolute;
@@ -80,7 +78,7 @@ main{
     }
 
     .spot_2{
-      display: block;
+
       position: absolute;
       width: 100%;
       top: 0; left: 0;
@@ -94,7 +92,7 @@ main{
         img{width: 100%;
           object-fit: cover;}
         div
-          { display: flex;
+          {
           align-items: flex-end;
           flex-direction: column;
           position: absolute;
@@ -149,9 +147,13 @@ main{
       z-index: 0;
     }
     @keyframes fadein {
-      0% {opacity:0;}
-    100% {opacity:1;
-      display: block;}
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    @keyframes fadeout {
+      0% { opacity: 1; }
+      100% { opacity: 0;}
     }
 
     .bottom {
@@ -182,9 +184,9 @@ main{
   .index.active .spot_2 figure div{ display: flex;}
 
   .main_mat{
-  width: 100%;
-  height: 100vh;
-  background-color: #e9ebf1;
+    width: 100%;
+    height: 100vh;
+    background-color: #e9ebf1;
     .title{
       padding-top: 6%;
       text-align: center;
@@ -224,8 +226,10 @@ main{
       justify-content: space-between;
       overflow: hidden;
       display: none;
-      .id2_left{position: relative; display: none;
-        figure{margin-top:8%;
+      .id2_left{
+        position: relative; display: none;
+        figure{
+          margin-top:8%;
           img{
             transform: translateX(-200%);
             width: 720px; height: 280px;
@@ -241,22 +245,28 @@ main{
           padding-left: 26%;
           animation: mat 1s forwards ease-out;
 
-          h4{font-size: 22px;
+          h4{
+            font-size: 22px;
             font-weight: 500;
-          margin-bottom: 6px;}
-          h3{font-size: 30px;
+            margin-bottom: 6px;
+          }
+          h3{
+            font-size: 30px;
             font-weight: 700;
             padding-bottom: 5px;
           }
           span{
             border-bottom: 2px solid black;
             width: 100px;
-            display: inline-block;}
-          p{font-size: 15.6px;
-          font-weight: 100;
-          line-height: 28px;
-          margin-top: 15px;
-          margin-bottom: 20px;}
+            display: inline-block;
+          }
+          p{
+            font-size: 15.6px;
+            font-weight: 100;
+            line-height: 28px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
           a{border: solid 1px black;
             font-size: 14px;
             text-decoration: none;
@@ -301,23 +311,30 @@ main{
             padding-top: -10px;
             padding-right: 26%;
             animation: mat 1s forwards ease-out;
-            h4{font-size: 22px;
+            h4{
+              font-size: 22px;
               font-weight: 500;
-            margin-bottom: 6px;}
-            h3{font-size: 30px;
+              margin-bottom: 6px;
+          }
+            h3{
+              font-size: 30px;
               font-weight: 700;
               padding-bottom: 5px;
             }
             span{
               border-bottom: 2px solid black;
               width: 100px;
-              display: inline-block;}
-            p{font-size: 15.6px;
-            font-weight: 100;
-            line-height: 28px;
-            margin-top: 15px;
-            margin-bottom: 20px;}
-            a{border: solid 1px black;
+              display: inline-block;
+            }
+            p{
+              font-size: 15.6px;
+              font-weight: 100;
+              line-height: 28px;
+              margin-top: 15px;
+              margin-bottom: 20px;
+            }
+            a{
+              border: solid 1px black;
               font-size: 14px;
               text-decoration: none;
               color: #031d33;
@@ -357,9 +374,10 @@ main{
     display: block;
     .br_bg{
       height: 100%;
-      img
-      {object-fit:cover;
-      width: 100%; height: 100%;}
+      img{
+        object-fit:cover;
+        width: 100%; height: 100%;
+      }
     }
     .br_ele{
       display: none;
@@ -400,12 +418,12 @@ main{
         
         div{
         transform: translateY(130%);
-        animation: br_title_3 1s .6s forwards;
+        animation: br_title_3 1.2s .5s forwards;
         overflow: hidden;
         
         @keyframes br_title_3{
           0%{opacity: 0;}
-          50%{opacity: 0.3;}
+          50%{opacity: 0;}
           100%{transform: translateY(0%);}
         }
   
@@ -459,63 +477,65 @@ main{
             }
           }
       }
-      .ani{
-        width: 544px; height: 544px;
+    }
+    .ani{
+      width: 544px; height: 544px;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, 10%);
+      opacity: 0;
+      transition: 1s;
+      .basmo,.br_cir{
         position: absolute;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        .basmo,.br_cir{
-          position: absolute;
-          top:0%; left:0%;}
-  
-          .br_cir{ 
-            animation: a_0 10s linear infinite;
+        top:0%; left:0%;}
+
+        .br_cir{ 
+          animation: a_0 10s linear infinite;
+        }
+
+      .ob_1{
+        position: absolute;
+        top: 13%; left: 67%;
+        animation: a_1 5s linear infinite;
+      }
+      .ob_2{
+        position: absolute;
+        top: 45%; left: 1%;
+        animation: a_2 5s linear infinite;
+      }
+      .ob_3{
+        position: absolute;
+        top: 74%; left: 68%;
+        animation: a_3 5s linear infinite;
+      }
+
+        @keyframes a_0{
+          from{transform: rotate(0deg);}
+          to{transform: rotate(360deg);}
           }
-  
-        .ob_1{
-          position: absolute;
-          top: 13%; left: 67%;
-          animation: a_1 5s linear infinite;
-        }
-        .ob_2{
-          position: absolute;
-          top: 45%; left: 1%;
-          animation: a_2 5s linear infinite;
-        }
-        .ob_3{
-          position: absolute;
-          top: 74%; left: 68%;
-          animation: a_3 5s linear infinite;
-        }
-  
-          @keyframes a_0{
+
+          @keyframes a_1{
             from{transform: rotate(0deg);}
             to{transform: rotate(360deg);}
             }
-  
-            @keyframes a_1{
-              from{transform: rotate(0deg);}
-              to{transform: rotate(360deg);}
-              }
-  
-            @keyframes a_2{
-              from{transform: rotate(0deg);}
-              to{transform: rotate(360deg);}
-              }
-  
-            @keyframes a_3{
-              from{transform: rotate(0deg);}
-              to{transform: rotate(360deg);}
-              }
-       }
-    }
+
+          @keyframes a_2{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+            }
+
+          @keyframes a_3{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+            }
+     }
 
   }
 
   .main_br.active .br_ele {display: block;}
-  .main_br.active .br_ele .ani {
-    transition: 1s;}
+  .main_br.active .ani {opacity: 1;
+    transition: 1s 1s; transform: translate(-50%, 0%); }
 
   .main_ev{
     position: relative;
@@ -530,7 +550,7 @@ main{
       font-weight: 700;
       color: #fff;
       text-align: center;
-      padding-top: 8%;
+      padding-top: 13%;
       transform: translateY(100%);
       animation: ev_title 1s forwards; 
       overflow: hidden;
@@ -541,16 +561,9 @@ main{
     }
 
     .ev_all{
-      display: none;
-      transform: translateY(200%);
-      animation:ev_all 1s .2s forwards;
+      opacity: 0;
+      transform: translateY(30%);
       margin: 3% 0;
-
-        @keyframes ev_all{
-        0%{opacity: 0;}
-        50%{opacity: 0.4;}
-        100%{transform: translateY(0%);}
-      } 
 
       .sign{
         .swiper-button-prev{
@@ -605,11 +618,13 @@ main{
   }
 
   .main_ev.active h2{display: block;} 
-  .main_ev.active .ev_all{display: block;} 
+  .main_ev.active .ev_all{opacity: 1;transform: translateY(0%); transition: 1s .5s ;} 
 
   .main_vd{
     width: 100%; height:100vh; overflow:hidden;
-    figure{height: 100%;
+    figure{
+      display: flex;
+      height: 100%;
       video{
         width: 100%;
         object-fit: cover;}
@@ -623,9 +638,10 @@ main{
       overflow: hidden;
       height: 600px;
       .ins_ani{
+        opacity: 0;
         padding-top: 15%; 
         text-align: center;
-        transform: translateY(100%);
+        transform: translateY(50%);
         transition: 2s;
         h3{
           margin-top: 10px;
@@ -639,13 +655,8 @@ main{
   }
 
   .main_insta.active div .ins_ani{ 
-    transition: 2s; transform: translateY(0%);
-   animation: ins 2s forwards ease-in;}
+    transition: 2s; transform: translateY(0%); opacity: 1;}
 
-  @keyframes ins{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-  }
 
 
   

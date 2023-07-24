@@ -18,10 +18,11 @@ main{
                 left: 50%;
                 transform: translate(-50%, 0%);
                 overflow: hidden;
-                h2{font-size: 38px;
+                h2{
+                    font-size: 38px;
                     transform: translateY(200%);
                     animation: serv_title 0.5s forwards ease-out; 
-                    }
+                }
                     @keyframes serv_title{
                         0%{transform: translateY(100%);opacity: 0;}
                         50%{opacity: 0.5;}
